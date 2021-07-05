@@ -10767,3 +10767,145 @@ Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-05 22:46:12 +0100
   
 ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
   
+Started GET "/" for ::1 at 2021-07-05 22:47:50 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_navigation.html.erb (Duration: 5.3ms | Allocations: 827)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 196)
+  Rendered home/index.html.erb within layouts/application (Duration: 50.0ms | Allocations: 6215)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.2ms | Allocations: 10042)
+Completed 200 OK in 100ms (Views: 91.1ms | Allocations: 11362)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-05 22:47:50 +0100
+Started GET "/img/product/product1.png" for ::1 at 2021-07-05 22:47:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/img/product/product4.png" for ::1 at 2021-07-05 22:47:50 +0100
+Started GET "/img/product/product3.png" for ::1 at 2021-07-05 22:47:50 +0100
+Started GET "/img/product/product2.png" for ::1 at 2021-07-05 22:47:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product4.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product3.png"):
+  
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-05 22:47:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-05 22:47:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-05 22:47:51 +0100
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-05 22:47:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-05 22:47:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/js/main.js" for ::1 at 2021-07-05 22:47:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-05 22:47:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+Started GET "/" for ::1 at 2021-07-05 22:48:14 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_navigation.html.erb (Duration: 6.7ms | Allocations: 827)
+  Rendered home/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 7237)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 7306)
+Completed 500 Internal Server Error in 35ms (Allocations: 8577)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_fooer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/admin/Documents/Clouva/app/views"
+  * "/Users/admin/.rvm/gems/ruby-3.0.0/gems/devise-4.8.0/app/views"
+  * "/Users/admin/.rvm/gems/ruby-3.0.0/gems/actiontext-6.1.4/app/views"
+  * "/Users/admin/.rvm/gems/ruby-3.0.0/gems/actionmailbox-6.1.4/app/views"
+):
+    370: 
+    371: 
+    372:   <!--================ Start footer Area  =================-->	
+    373: 	<%= render 'layouts/fooer' %>
+    374: 	<!--================ End footer Area  =================-->
+    375: 
+    376: 
+  
+app/views/home/index.html.erb:373
+Started GET "/" for ::1 at 2021-07-05 22:48:41 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered layouts/_navigation.html.erb (Duration: 7.9ms | Allocations: 827)
+  Rendered layouts/_footer.html.erb (Duration: 8.7ms | Allocations: 194)
+  Rendered home/index.html.erb within layouts/application (Duration: 34.1ms | Allocations: 6201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 10028)
+Completed 200 OK in 61ms (Views: 59.3ms | Allocations: 11333)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-05 22:48:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/img/product/product1.png" for ::1 at 2021-07-05 22:48:41 +0100
+Started GET "/img/product/product4.png" for ::1 at 2021-07-05 22:48:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product1.png"):
+  
+Started GET "/img/product/product3.png" for ::1 at 2021-07-05 22:48:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product4.png"):
+  
+Started GET "/img/product/product2.png" for ::1 at 2021-07-05 22:48:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product2.png"):
+  
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-05 22:48:41 +0100
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-05 22:48:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-05 22:48:42 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-05 22:48:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-05 22:48:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-05 22:48:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
