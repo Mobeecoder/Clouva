@@ -1,62 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Clouva Shop - Home</title>
-	<link rel="icon" href="img/Fevicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
-  <link rel="stylesheet" href="vendors/nice-select/nice-select.css">
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
-  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
   <!--================ Start Header Menu Area =================-->
-	<header class="header_area">
-
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <a style="width:10%" class="navbar-brand logo_h" href="index.html"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item active"><a class="nav-link font-weight-bold"  href="index.html">Home</a></li>
-              <li class="nav-item">
-                <a href="category.html" class="nav-link font-weight-bold" role="button">Shop</a>
-              </li>
-              
-              <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
-            </ul>
-
-            <ul class="nav-shop" style="width: 520px">
-              <li class="nav-item"><button><i class="ti-search"></i></button></li>
-                <li class="nav-item">
-                    <a href="login.html" class="icons">
-                      <i class="ti-user" aria-hidden="true"></i>
-                    </a>
-                  </li>
-              <li class="nav-item"><button><a href="cart.html"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle">3</span></button> </li>
-
-              <li class="nav-item font-weight-bold"><a class="btn btn-light ml-2" href="login.html">Login as a buyer</a></li>
-                <li class="nav-item font-weight-bold"><a class="btn btn-light m-0" href="login2.html">Login as a seller</a></li>
-
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <%= render 'layouts/navigation' %>
 	<!--================ End Header Menu Area =================-->
 
   <main class="site-main">
@@ -519,12 +462,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-  <script src="vendors/skrollr.min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-  <script src="vendors/jquery.ajaxchimp.min.js"></script>
-  <script src="vendors/mail-script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
