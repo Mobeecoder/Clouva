@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'admin_session/new'
   # get 'admin/index'
   # get 'admin/new'
   # get 'admin/create'
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
     get   "/admin/sign_up", to: "admin#new", as: :admin_sign_up
     get   "/admin/sign_in", to: "admin_session#new", as: :admin_sign_in
     post  "/admin/sign_up",    to: "admin#create", as: :admin_create
+    post   "/admin/sign_in", to: "admin_session#create", as: :admin_session_create
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
