@@ -29,8 +29,16 @@
                   </li>
               <li class="nav-item"><button><a href="cart.html"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle">3</span></button> </li>
 
-              <li class="nav-item font-weight-bold"><a class="btn btn-light ml-2" href="login.html">Login as a buyer</a></li>
-                <li class="nav-item font-weight-bold"><a class="btn btn-light m-0" href="login2.html">Login as a seller</a></li>
+                <% if admin_signed_in? %>
+                  <li class="nav-item font-weight-bold ml-5"><%= current_admin['email'] %></li>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+                <% elsif user_signed_in? %>
+                  <li class="nav-item font-weight-bold ml-5"><%= current_user.email %></li>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+                <% else %>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Login as a buyer', new_user_session_path, class: 'btn btn-light ml-2' %></li>              
+                  <li class="nav-item font-weight-bold"><%= link_to 'Login as a seller', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+                <% end %>
 
             </ul>
           </div>
