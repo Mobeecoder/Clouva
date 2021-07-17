@@ -1,14 +1,7 @@
 Rails.application.routes.draw do
-  get 'admin_session/new'
-  # get 'admin/index'
-  # get 'admin/new'
-  # get 'admin/create'
-  # get 'admin/show'
-  # get 'admin/edit'
-  # get 'admin/update'
-  # get 'admin/destroy'
+  resource :products
   devise_for :users
-  root 'home#index'
+  root 'product#index'
 
   # This is the mapping for the "quickstart" routes
   devise_for :admin,

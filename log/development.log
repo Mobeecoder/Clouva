@@ -21542,3 +21542,322 @@ FOREIGN KEY ("merchant_id")
   [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."merchant_id" = ? /* loading for inspect */ LIMIT ?[0m  [["merchant_id", 10], ["LIMIT", 11]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."merchant" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["merchant", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Create (10.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "merchant_id", "size", "image", "description", "num_available", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Atiku Kaftan"], ["merchant_id", 10], ["size", "L"], ["image", "https://res.cloudinary.com/moaminu/image/upload/v1625017381/Clouva/e2e78baa8d4b3167dafde1d0cfb287a1_iypyzr.jpg"], ["description", "Lorem Ipsum"], ["num_available", 3], ["created_at", "2021-07-06 23:09:56.996250"], ["updated_at", "2021-07-06 23:09:56.996250"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."merchant_id" = ? /* loading for inspect */ LIMIT ?[0m  [["merchant_id", 10], ["LIMIT", 11]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-07-07 00:16:19 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:1
+  Rendered product/index.html.erb within layouts/application (Duration: 325.3ms | Allocations: 5264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (120.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 160.3ms | Allocations: 5564)
+  Rendered layout layouts/application.html.erb (Duration: 944.0ms | Allocations: 30756)
+Completed 200 OK in 992ms (Views: 829.9ms | ActiveRecord: 124.9ms | Allocations: 33501)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-07 00:16:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-07 00:22:27 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  Rendered product/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/_navigation.html.erb:32
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 130.9ms | Allocations: 2591)
+  Rendered layout layouts/application.html.erb (Duration: 307.3ms | Allocations: 7150)
+Completed 200 OK in 437ms (Views: 378.7ms | ActiveRecord: 10.4ms | Allocations: 8468)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-07 00:22:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-07 00:24:52 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  Rendered product/index.html.erb within layouts/application (Duration: 29.8ms | Allocations: 223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 119.5ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 2160.9ms | Allocations: 6349)
+Completed 200 OK in 2183ms (Views: 2172.4ms | ActiveRecord: 0.3ms | Allocations: 7673)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-07 00:24:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/img/product/product1.png" for ::1 at 2021-07-07 00:24:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/product1.png"):
+  
+Started GET "/" for ::1 at 2021-07-07 00:26:12 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  Rendered product/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 984)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 140.5ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 254.0ms | Allocations: 7113)
+Completed 200 OK in 290ms (Views: 268.0ms | ActiveRecord: 2.7ms | Allocations: 8441)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-07 00:26:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-07 00:27:15 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  Rendered product/index.html.erb within layouts/application (Duration: 30.2ms | Allocations: 955)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 11.8ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 233.1ms | Allocations: 7076)
+Completed 200 OK in 336ms (Views: 326.9ms | ActiveRecord: 0.9ms | Allocations: 8397)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-07 00:27:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-07 00:27:51 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  Rendered product/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 40.7ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 142.5ms | Allocations: 7093)
+Completed 200 OK in 158ms (Views: 148.8ms | ActiveRecord: 0.3ms | Allocations: 8416)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-07 00:27:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-07 00:29:11 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 186.8ms | Allocations: 6578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 7.7ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 237.8ms | Allocations: 12597)
+Completed 200 OK in 244ms (Views: 240.0ms | ActiveRecord: 2.1ms | Allocations: 13918)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-07 00:29:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 10:46:13 +0100
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 122.6ms | Allocations: 14113)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 11.2ms | Allocations: 1113)
+  Rendered layout layouts/application.html.erb (Duration: 1829.1ms | Allocations: 92641)
+Completed 200 OK in 1902ms (Views: 1841.9ms | ActiveRecord: 3.0ms | Allocations: 97394)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:46:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 10:47:01 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (21.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 1171.1ms | Allocations: 2214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 19.5ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 2394.4ms | Allocations: 6750)
+Completed 200 OK in 2696ms (Views: 2386.6ms | ActiveRecord: 22.1ms | Allocations: 7214)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:47:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-07-17 10:48:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.6ms | Allocations: 621)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 217.4ms | Allocations: 4660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 6.0ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 359.4ms | Allocations: 9221)
+Completed 200 OK in 629ms (Views: 436.6ms | ActiveRecord: 0.0ms | Allocations: 11305)
+
+
+Started GET "/users/js/main.js" for ::1 at 2021-07-17 10:48:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/main.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-07-17 10:48:35 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"mobello@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "mobello@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 507ms (ActiveRecord: 7.0ms | Allocations: 4472)
+
+
+Started GET "/" for ::1 at 2021-07-17 10:48:36 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 42.6ms | Allocations: 2214)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.0ms | Allocations: 1525)
+  Rendered layout layouts/application.html.erb (Duration: 90.9ms | Allocations: 7619)
+Completed 200 OK in 108ms (Views: 103.3ms | ActiveRecord: 1.6ms | Allocations: 8091)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:48:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started DELETE "/users/sign_out" for ::1 at 2021-07-17 10:48:43 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 0.4ms | Allocations: 2590)
+
+
+Started GET "/" for ::1 at 2021-07-17 10:48:43 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (10.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 2216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.8ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 124.3ms | Allocations: 6760)
+Completed 200 OK in 131ms (Views: 116.0ms | ActiveRecord: 11.1ms | Allocations: 7228)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:48:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-07-17 10:48:46 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.5ms | Allocations: 627)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 5533)
+Completed 200 OK in 44ms (Views: 36.6ms | ActiveRecord: 0.0ms | Allocations: 6221)
+
+
+Started GET "/users/js/main.js" for ::1 at 2021-07-17 10:48:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/js/main.js"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-07-17 10:48:55 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 307ms (ActiveRecord: 0.5ms | Allocations: 2374)
+
+
+Started GET "/" for ::1 at 2021-07-17 10:48:55 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 30.5ms | Allocations: 2212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 21.2ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 114.5ms | Allocations: 7568)
+Completed 200 OK in 129ms (Views: 127.6ms | ActiveRecord: 0.6ms | Allocations: 8038)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:48:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
