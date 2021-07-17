@@ -22584,3 +22584,1201 @@ Started GET "/js/main.js" for ::1 at 2021-07-17 15:21:19 +0100
   
 ActionController::RoutingError (No route matches [GET] "/js/main.js"):
   
+Started GET "/products/1" for ::1 at 2021-07-17 15:26:11 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 158)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 66.5ms | Allocations: 1772)
+  Rendered layout layouts/application.html.erb (Duration: 108.4ms | Allocations: 6292)
+Completed 200 OK in 291ms (Views: 220.0ms | ActiveRecord: 0.7ms | Allocations: 8212)
+
+
+Started GET "/products/img/category/s-p1.jpg" for ::1 at 2021-07-17 15:26:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/category/s-p1.jpg"):
+  
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:26:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:26:13 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.7ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 5386)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.2ms | Allocations: 5839)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:26:13 +0100
+Started GET "/products/img/category/s-p1.jpg" for ::1 at 2021-07-17 15:26:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/category/s-p1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/products/1" for ::1 at 2021-07-17 15:32:58 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 32.7ms | Allocations: 3450)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 3519)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.9ms | Allocations: 10994)
+
+
+  
+ActionView::Template::Error (undefined method `price' for #<Product id: 1, name: "Adire shirt", merchant_id: 10, size: "XL", image: "https://res.cloudinary.com/moaminu/image/upload/v1...", description: "Lorem Ipsum", num_available: 5, created_at: "2021-07-06 23:03:59.083447000 +0000", updated_at: "2021-07-06 23:03:59.083447000 +0000">):
+    18: 				<div class="col-lg-5 offset-lg-1">
+    19: 					<div class="s_product_text">
+    20: 						<h3><%= @product.name %></h3>
+    21: 						<h2><%= @product.price %></h2>
+    22: 						<ul class="list">
+    23: 							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
+    24: 							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
+  
+app/views/products/show.html.erb:21
+Started GET "/products/1" for ::1 at 2021-07-17 15:33:38 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 32.1ms | Allocations: 5622)
+  Rendered layout layouts/application.html.erb (Duration: 75.7ms | Allocations: 10180)
+Completed 200 OK in 102ms (Views: 88.6ms | ActiveRecord: 3.0ms | Allocations: 12042)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:33:39 +0100
+Started GET "/products/img/category/s-p1.jpg" for ::1 at 2021-07-17 15:33:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/category/s-p1.jpg"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:34:17 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.0ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 6344)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.4ms | Allocations: 8207)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:34:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:34:48 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 5.6ms | Allocations: 1772)
+  Rendered layout layouts/application.html.erb (Duration: 38.4ms | Allocations: 6345)
+Completed 200 OK in 55ms (Views: 45.7ms | ActiveRecord: 0.6ms | Allocations: 8209)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:34:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:35:29 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.6ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 6331)
+Completed 200 OK in 60ms (Views: 54.6ms | ActiveRecord: 0.6ms | Allocations: 8194)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:35:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:36:02 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 44.2ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 92.7ms | Allocations: 5390)
+Completed 200 OK in 109ms (Views: 101.6ms | ActiveRecord: 0.7ms | Allocations: 6401)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:36:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:36:04 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.8ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 5390)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.5ms | Allocations: 6394)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:36:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:36:05 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 4.8ms | Allocations: 1479)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 5380)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.3ms | Allocations: 6383)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:36:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:36:06 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 44)
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:36:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.3ms | Allocations: 1480)
+  Rendered layout layouts/application.html.erb (Duration: 86.3ms | Allocations: 16490)
+Completed 200 OK in 92ms (Views: 87.1ms | ActiveRecord: 0.4ms | Allocations: 17494)
+
+
+Started GET "/products/1" for ::1 at 2021-07-17 15:36:07 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 35.4ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 74.2ms | Allocations: 5390)
+Completed 200 OK in 80ms (Views: 76.3ms | ActiveRecord: 0.4ms | Allocations: 6394)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:36:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:36:07 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 4.2ms | Allocations: 1479)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 5380)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.4ms | Allocations: 6384)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:36:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:37:03 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.9ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 6368)
+Completed 200 OK in 55ms (Views: 46.9ms | ActiveRecord: 0.4ms | Allocations: 8231)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:37:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:37:18 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 10.1ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 6365)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 0.4ms | Allocations: 8222)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:37:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:38:10 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.5ms | Allocations: 1774)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 6364)
+Completed 200 OK in 58ms (Views: 48.6ms | ActiveRecord: 2.1ms | Allocations: 8222)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:38:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/products/1" for ::1 at 2021-07-17 15:45:12 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 25.8ms | Allocations: 5564)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 10148)
+Completed 200 OK in 102ms (Views: 64.3ms | ActiveRecord: 1.4ms | Allocations: 17691)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:45:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:45:17 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 3.7ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 5392)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.4ms | Allocations: 6396)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:45:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Update (1.5ms)[0m  [1m[33mUPDATE "products" SET "num_available" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["num_available", 0], ["updated_at", "2021-07-17 14:46:10.229600"], ["id", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products/1" for ::1 at 2021-07-17 15:46:13 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.1ms | Allocations: 1480)
+  Rendered layout layouts/application.html.erb (Duration: 67.4ms | Allocations: 5383)
+Completed 200 OK in 83ms (Views: 67.8ms | ActiveRecord: 0.7ms | Allocations: 6383)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:46:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "num_available" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["num_available", 5], ["updated_at", "2021-07-17 14:46:56.490520"], ["id", 1]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products/1" for ::1 at 2021-07-17 15:46:59 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 7.1ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 6386)
+Completed 200 OK in 70ms (Views: 59.3ms | ActiveRecord: 0.3ms | Allocations: 8249)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:46:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:48:46 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.8ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 6380)
+Completed 200 OK in 50ms (Views: 44.7ms | ActiveRecord: 0.8ms | Allocations: 8238)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:48:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:49:32 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 7.8ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 6391)
+Completed 200 OK in 55ms (Views: 49.7ms | ActiveRecord: 0.5ms | Allocations: 8249)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:49:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:50:17 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 5.7ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 77.2ms | Allocations: 6720)
+Completed 200 OK in 87ms (Views: 83.2ms | ActiveRecord: 0.3ms | Allocations: 8584)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:50:17 +0100
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:50:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:50:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:50:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:50:59 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 5.3ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 6717)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 0.6ms | Allocations: 8580)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:50:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:50:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:50:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:50:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:51:14 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 588)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 30.6ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 62.3ms | Allocations: 6720)
+Completed 200 OK in 78ms (Views: 70.4ms | ActiveRecord: 0.7ms | Allocations: 8584)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:51:15 +0100
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:51:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:51:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:51:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:51:50 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 586)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 7.3ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 6717)
+Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 0.4ms | Allocations: 8581)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:51:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:51:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:51:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:51:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:52:02 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.1ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 6716)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 3.5ms | Allocations: 8580)
+
+
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:52:02 +0100
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:52:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:52:02 +0100
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:52:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:52:37 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 12.0ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 5392)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.4ms | Allocations: 6393)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:52:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:52:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:52:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:52:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:54:09 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 504)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 12.2ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 6636)
+Completed 200 OK in 56ms (Views: 50.5ms | ActiveRecord: 0.6ms | Allocations: 8499)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:54:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:54:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:54:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:54:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:54:24 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 501)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 11.5ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 75.4ms | Allocations: 6633)
+Completed 200 OK in 106ms (Views: 96.7ms | ActiveRecord: 0.5ms | Allocations: 8496)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:54:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:54:24 +0100
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:54:24 +0100
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:54:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:56:16 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 22.9ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 56.1ms | Allocations: 6514)
+Completed 200 OK in 75ms (Views: 68.2ms | ActiveRecord: 0.7ms | Allocations: 8378)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:56:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:56:42 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 14.7ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 6498)
+Completed 200 OK in 65ms (Views: 56.5ms | ActiveRecord: 0.9ms | Allocations: 8355)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:56:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:56:45 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 7.7ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 5392)
+Completed 200 OK in 35ms (Views: 29.2ms | ActiveRecord: 0.4ms | Allocations: 6394)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:56:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:56:47 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 3.6ms | Allocations: 1479)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 5382)
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 1.0ms | Allocations: 6382)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:56:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:56:54 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.0ms | Allocations: 1483)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 5394)
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 0.5ms | Allocations: 6394)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:56:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:57:34 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 501)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.6ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 6630)
+Completed 200 OK in 48ms (Views: 40.6ms | ActiveRecord: 0.7ms | Allocations: 8492)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:57:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:57:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:57:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:57:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:57:41 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 46)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 13.3ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 5392)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.5ms | Allocations: 6393)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:57:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:57:41 +0100
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:57:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:57:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:59:10 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.9ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 6637)
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 0.5ms | Allocations: 8500)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:59:10 +0100
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:59:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:59:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:59:10 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:59:28 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 501)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 10.2ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 6633)
+Completed 200 OK in 54ms (Views: 49.1ms | ActiveRecord: 0.3ms | Allocations: 8496)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:59:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/img/product/review-1.png" for ::1 at 2021-07-17 15:59:29 +0100
+Started GET "/products/img/product/review-3.png" for ::1 at 2021-07-17 15:59:29 +0100
+Started GET "/products/img/product/review-2.png" for ::1 at 2021-07-17 15:59:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-2.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/products/img/product/review-3.png"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:00:07 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 23.9ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 6513)
+Completed 200 OK in 128ms (Views: 116.4ms | ActiveRecord: 0.3ms | Allocations: 8376)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:00:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:00:22 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 378)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.1ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | Allocations: 6509)
+Completed 200 OK in 44ms (Views: 38.0ms | ActiveRecord: 0.5ms | Allocations: 8372)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:00:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:03:21 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.2ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 6514)
+Completed 200 OK in 67ms (Views: 61.1ms | ActiveRecord: 0.5ms | Allocations: 8378)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:03:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Update (0.6ms)[0m  [1m[33mUPDATE "products" SET "description" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["description", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, sequi obcaecati! Cum repudiandae nemo numquam quod mollitia et deserunt quos, at assumenda pariatur odio corporis magni porro fugiat vel temporibus? A enim suscipit sunt quidem dignissimos perspiciatis ipsa tenetur culpa. Aspernatur deleniti esse reiciendis similique. Vitae sunt quod iure molestias laudantium nesciunt quo consectetur, nam, voluptatibus aliquam iste dolore est natus eligendi quia possimus? Officia consequatur suscipit repellat autem necessitatibus nostrum debitis soluta, reiciendis dolorum vel quam repellendus rerum explicabo vitae et sint odit doloribus corrupti quasi nesciunt. Debitis dolor facere aliquam, sunt qui optio, nesciunt eligendi minima, quo esse magni accusantium deleniti doloremque earum eaque sint nisi! Exercitationem cupiditate voluptates ipsam facere sit dolore numquam laboriosam esse molestias nobis repellendus, neque accusamus voluptatem doloremque, quaerat pariatur officia quisquam quam. Nam aspernatur ducimus natus, deleniti hic quas, explicabo consequatur magnam quasi odio sapiente expedita accusantium eligendi pariatur mollitia aut dolores deserunt! Ipsa, deserunt! Ut tempore natus ipsa quis assumenda iure praesentium sequi. Officiis minus eum libero, nulla nemo voluptatum impedit aperiam voluptate dolorum iste sint accusamus in perferendis cupiditate minima maxime unde eos repudiandae eligendi quod cum animi inventore? Ab nostrum est ad minus repudiandae qui dicta mollitia, unde blanditiis labore, laudantium doloremque quis animi vero tenetur quaerat, iure quasi sint inventore ipsa atque. Itaque, nam nesciunt ad, sed dolores sit explicabo dolorem fugiat corrupti totam, tenetur blanditiis rerum"], ["updated_at", "2021-07-17 15:04:51.806228"], ["id", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products/1" for ::1 at 2021-07-17 16:04:57 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 7.1ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 6511)
+Completed 200 OK in 79ms (Views: 66.7ms | ActiveRecord: 0.8ms | Allocations: 8375)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:04:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:07:51 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.3ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 57.0ms | Allocations: 6511)
+Completed 200 OK in 73ms (Views: 65.2ms | ActiveRecord: 0.7ms | Allocations: 8375)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:07:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:07:53 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 50)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 5.3ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 5396)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 0.6ms | Allocations: 6397)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:07:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:08:01 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.6ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 6512)
+Completed 200 OK in 47ms (Views: 38.8ms | ActiveRecord: 0.6ms | Allocations: 8375)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:08:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:08:12 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 385)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 11.6ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 6517)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.6ms | Allocations: 8381)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:08:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:08:22 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 10.1ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 6513)
+Completed 200 OK in 45ms (Views: 36.3ms | ActiveRecord: 1.1ms | Allocations: 8376)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:08:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:08:35 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.4ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 6514)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 0.6ms | Allocations: 8378)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:08:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:09:07 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.8ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 6514)
+Completed 200 OK in 43ms (Views: 38.2ms | ActiveRecord: 0.7ms | Allocations: 8377)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:09:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 16:09:28 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 11.5ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 6514)
+Completed 200 OK in 64ms (Views: 58.7ms | ActiveRecord: 0.4ms | Allocations: 8377)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 16:09:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
