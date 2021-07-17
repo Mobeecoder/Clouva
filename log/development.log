@@ -21861,3 +21861,726 @@ Started GET "/js/main.js" for ::1 at 2021-07-17 10:48:56 +0100
   
 ActionController::RoutingError (No route matches [GET] "/js/main.js"):
   
+Started GET "/login.html" for ::1 at 2021-07-17 10:50:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login.html"):
+  
+Started GET "/" for ::1 at 2021-07-17 10:50:59 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 115.2ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 162.7ms | Allocations: 7558)
+Completed 200 OK in 171ms (Views: 163.8ms | ActiveRecord: 0.9ms | Allocations: 8026)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:50:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/login.html" for ::1 at 2021-07-17 10:51:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login.html"):
+  
+Started GET "/" for ::1 at 2021-07-17 10:51:04 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 91.2ms | Allocations: 2212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.6ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 131.2ms | Allocations: 7558)
+Completed 200 OK in 134ms (Views: 129.6ms | ActiveRecord: 2.7ms | Allocations: 8023)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:51:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 10:52:58 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (21.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 117.5ms | Allocations: 2488)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 25.1ms | Allocations: 1770)
+  Rendered layout layouts/application.html.erb (Duration: 216.8ms | Allocations: 8620)
+Completed 200 OK in 291ms (Views: 250.2ms | ActiveRecord: 24.0ms | Allocations: 9948)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 10:52:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 12:23:31 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  Rendered product/index.html.erb within layouts/application (Duration: 286.3ms | Allocations: 6066)
+  Rendered layout layouts/application.html.erb (Duration: 286.8ms | Allocations: 6135)
+Completed 500 Internal Server Error in 484ms (ActiveRecord: 11.2ms | Allocations: 7439)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `show_product_path' for #<ActionView::Base:0x0000000000b900>
+Did you mean?  new_products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name,  show_product_path %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/product/index.html.erb:113
+app/views/product/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 12:23:52 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  Rendered product/index.html.erb within layouts/application (Duration: 54.1ms | Allocations: 5276)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 5346)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.8ms | Allocations: 6648)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `show_products_path' for #<ActionView::Base:0x0000000000bd60>
+Did you mean?  new_products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name,  show_products_path %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/product/index.html.erb:113
+app/views/product/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 12:24:38 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 17.8ms | Allocations: 1767)
+  Rendered layout layouts/application.html.erb (Duration: 133.5ms | Allocations: 8714)
+Completed 200 OK in 155ms (Views: 151.7ms | ActiveRecord: 1.2ms | Allocations: 10041)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 12:24:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 12:24:59 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 36.3ms | Allocations: 2621)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 9.4ms | Allocations: 1749)
+  Rendered layout layouts/application.html.erb (Duration: 84.4ms | Allocations: 8728)
+Completed 200 OK in 120ms (Views: 112.4ms | ActiveRecord: 0.8ms | Allocations: 10056)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 12:25:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 12:25:18 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2614)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 5.7ms | Allocations: 1748)
+  Rendered layout layouts/application.html.erb (Duration: 65.0ms | Allocations: 8720)
+Completed 200 OK in 76ms (Views: 72.0ms | ActiveRecord: 1.2ms | Allocations: 10048)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 12:25:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 14:57:30 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  Rendered product/index.html.erb within layouts/application (Duration: 92.1ms | Allocations: 9846)
+  Rendered layout layouts/application.html.erb (Duration: 92.6ms | Allocations: 9915)
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.9ms | Allocations: 12318)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product_path' for #<ActionView::Base:0x0000000000e858>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name,  product_path %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/product/index.html.erb:113
+app/views/product/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 14:57:50 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  Rendered product/index.html.erb within layouts/application (Duration: 44.9ms | Allocations: 5341)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 5410)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.3ms | Allocations: 6699)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product_path' for #<ActionView::Base:0x0000000000ecb8>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name, product_path %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/product/index.html.erb:113
+app/views/product/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 14:59:26 +0100
+Processing by ProductController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/product/index.html.erb:100
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/product/index.html.erb:114
+  Rendered product/index.html.erb within layouts/application (Duration: 82.4ms | Allocations: 7144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 12.9ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 154.1ms | Allocations: 13288)
+Completed 200 OK in 198ms (Views: 190.3ms | ActiveRecord: 3.3ms | Allocations: 14615)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 14:59:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/products" for ::1 at 2021-07-17 14:59:28 +0100
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProductController):
+  
+Started GET "/products" for ::1 at 2021-07-17 15:00:27 +0100
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProductController):
+  
+Started GET "/products" for ::1 at 2021-07-17 15:00:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+Started GET "/products" for ::1 at 2021-07-17 15:02:17 +0100
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProductController):
+  
+Started GET "/products" for ::1 at 2021-07-17 15:03:10 +0100
+  
+ActionController::RoutingError (uninitialized constant ProductsController
+Did you mean?  ProductController):
+  
+Started GET "/products" for ::1 at 2021-07-17 15:03:39 +0100
+Processing by ProductsController#show as HTML
+Completed 406 Not Acceptable in 11ms (Allocations: 2946)
+
+
+  
+ActionController::MissingExactTemplate (ProductsController#show is missing a template for request formats: text/html):
+  
+actionpack (6.1.4) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.1.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (6.1.4) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:228:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.1.4) lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+actiontext (6.1.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-07-17 15:05:26 +0100
+  
+ActionController::RoutingError (uninitialized constant ProductController
+Did you mean?  ProductsController):
+  
+Started GET "/" for ::1 at 2021-07-17 15:05:47 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 66.8ms | Allocations: 10326)
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 10395)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 2.1ms | Allocations: 12800)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product_path' for #<ActionView::Base:0x0000000001b1c0>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name, product_path %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:11:56 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (3.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 88.4ms | Allocations: 8905)
+  Rendered layout layouts/application.html.erb (Duration: 88.7ms | Allocations: 8974)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 3.6ms | Allocations: 11381)
+
+
+  
+ActionView::Template::Error (undefined method `product_path' for #<ActionView::Base:0x0000000001ce30>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name, product %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:12:29 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 5340)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 5409)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.2ms | Allocations: 6698)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `products' for #<ActionView::Base:0x0000000001d3d0>
+Did you mean?  product
+               @products):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name, products %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:12:40 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 30.1ms | Allocations: 4340)
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 4409)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.4ms | Allocations: 5699)
+
+
+  
+ActionView::Template::Error (undefined method `product_path' for #<ActionView::Base:0x0000000001d808>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to product.name, product %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:12:53 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 63.2ms | Allocations: 7596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 14.2ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 116.5ms | Allocations: 13742)
+Completed 200 OK in 130ms (Views: 122.8ms | ActiveRecord: 2.5ms | Allocations: 15069)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 15:12:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/products" for ::1 at 2021-07-17 15:12:56 +0100
+Processing by ProductsController#show as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 105)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 3.2ms | Allocations: 1482)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 5444)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.1ms | Allocations: 6027)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 15:12:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/js/main.js" for ::1 at 2021-07-17 15:13:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 15:13:51 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2566)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 12.4ms | Allocations: 1744)
+  Rendered layout layouts/application.html.erb (Duration: 69.4ms | Allocations: 8669)
+Completed 200 OK in 85ms (Views: 78.0ms | ActiveRecord: 3.3ms | Allocations: 9994)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 15:13:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 15:14:20 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 4340)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4409)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms | Allocations: 5699)
+
+
+  
+ActionView::Template::Error (undefined method `product_path' for #<ActionView::Base:0x0000000001ecf8>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to(product.name, product) %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:14:32 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 5341)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 5410)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.2ms | Allocations: 6700)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product_path' for #<ActionView::Base:0x0000000001f158>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to(product.name, product_path) %><a href="<single-product.html>"><%= product.name %></a></h4>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:16:32 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 55.0ms | Allocations: 10317)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 10386)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 2.3ms | Allocations: 12791)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product_path' for #<ActionView::Base:0x00000000020dc8>
+Did you mean?  products_path):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to(product.name, product_path) %>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:17:32 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 36.4ms | Allocations: 6905)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 6974)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 2.2ms | Allocations: 8679)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"products"}, missing required keys: [:id]
+Did you mean?  product_url
+               products_url
+               products_path
+               new_product_url):
+    110:                   </div>
+    111:                   <div class="card-body">
+    112:                     <p>Accessories</p>
+    113:                     <h4 class="card-product__title"><%= link_to(product.name, product_path) %>
+    114:                     <p><%= product.merchant.email.split('@')[0] %></p>
+    115:                     <p class="card-product__price">$150.00</p>
+    116:                   </div>
+  
+app/views/products/index.html.erb:113
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-17 15:19:40 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 35.3ms | Allocations: 7661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 21.5ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 94.8ms | Allocations: 13805)
+Completed 200 OK in 108ms (Views: 102.2ms | ActiveRecord: 3.6ms | Allocations: 15131)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 15:19:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-17 15:19:54 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 6.6ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 5452)
+Completed 200 OK in 33ms (Views: 28.7ms | ActiveRecord: 0.1ms | Allocations: 6035)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-17 15:19:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-17 15:21:18 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 65.6ms | Allocations: 2277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.3ms | Allocations: 1465)
+  Rendered layout layouts/application.html.erb (Duration: 105.0ms | Allocations: 7598)
+Completed 200 OK in 109ms (Views: 105.7ms | ActiveRecord: 1.0ms | Allocations: 8062)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-17 15:21:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  

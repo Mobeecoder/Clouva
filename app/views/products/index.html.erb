@@ -110,7 +110,7 @@
                   </div>
                   <div class="card-body">
                     <p>Accessories</p>
-                    <h4 class="card-product__title"><a href="single-product.html"><%= product.name %></a></h4>
+                    <h4 class="card-product__title"><%= link_to(product.name, product) %>
                     <p><%= product.merchant.email.split('@')[0] %></p>
                     <p class="card-product__price">$150.00</p>
                   </div>

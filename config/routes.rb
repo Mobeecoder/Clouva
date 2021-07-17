@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resource :products
+  root 'products#index'
+  resources :products, only: %i[show new create edit update]
   devise_for :users
-  root 'product#index'
 
   # This is the mapping for the "quickstart" routes
   devise_for :admin,
