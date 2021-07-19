@@ -24253,3 +24253,102 @@ FOREIGN KEY ("merchant_id")
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Update (0.7ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ?, "price" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2021-07-19 21:02:41.307741"], ["price", 18000.0], ["id", 1]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mProduct Update (0.9ms)[0m  [1m[33mUPDATE "products" SET "updated_at" = ?, "price" = ? WHERE "products"."id" = ?[0m  [["updated_at", "2021-07-19 21:03:16.519350"], ["price", 22000.0], ["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/products/2" for ::1 at 2021-07-19 22:04:04 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (15.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 20.9ms | Allocations: 458)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 91.4ms | Allocations: 5564)
+  Rendered layout layouts/application.html.erb (Duration: 172.8ms | Allocations: 10347)
+Completed 200 OK in 406ms (Views: 174.5ms | ActiveRecord: 18.1ms | Allocations: 17240)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-19 22:04:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/2" for ::1 at 2021-07-19 22:05:22 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 402)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 45.0ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 116.1ms | Allocations: 6533)
+Completed 200 OK in 151ms (Views: 129.4ms | ActiveRecord: 0.7ms | Allocations: 8396)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-19 22:05:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-19 22:05:33 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 104.1ms | Allocations: 3523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 223.6ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 748.8ms | Allocations: 8754)
+Completed 200 OK in 751ms (Views: 748.9ms | ActiveRecord: 0.7ms | Allocations: 9348)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-19 22:05:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
+Started GET "/" for ::1 at 2021-07-19 22:06:15 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 2611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 5.0ms | Allocations: 1744)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 8713)
+Completed 200 OK in 67ms (Views: 62.1ms | ActiveRecord: 0.8ms | Allocations: 10039)
+
+
+Started GET "/js/main.js" for ::1 at 2021-07-19 22:06:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/js/main.js"):
+  
