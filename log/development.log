@@ -30099,3 +30099,797 @@ Processing by ProductsController#cart as HTML
 Completed 200 OK in 340ms (Views: 328.3ms | ActiveRecord: 2.2ms | Allocations: 9433)
 
 
+Started GET "/9/cart" for ::1 at 2021-07-21 22:30:22 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 231.0ms | Allocations: 10982)
+  Rendered layout layouts/application.html.erb (Duration: 231.9ms | Allocations: 11051)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 2.0ms | Allocations: 13001)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cart_helper' for #<ActionView::Base:0x000000000ba630>
+Did you mean?  cart_details):
+    70:                                   <h5>Subtotal</h5>
+    71:                               </td>
+    72:                               <td>
+    73:                                   <h5>$2<%= cart_total %></h5>
+    74:                               </td>
+    75:                           </tr>
+    76:                           <tr class="shipping_area">
+  
+app/helpers/cart_helper.rb:3:in `cart_total'
+app/views/products/cart.html.erb:73
+Started GET "/9/cart" for ::1 at 2021-07-21 22:30:50 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "products"."price" FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `cart_total'
+  Rendered products/cart.html.erb within layouts/application (Duration: 184.1ms | Allocations: 7601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 115.8ms | Allocations: 6815)
+  Rendered layout layouts/application.html.erb (Duration: 366.1ms | Allocations: 18735)
+Completed 200 OK in 381ms (Views: 369.9ms | ActiveRecord: 39.7ms | Allocations: 20015)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:31:20 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "products"."price" FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `cart_total'
+  Rendered products/cart.html.erb within layouts/application (Duration: 62.0ms | Allocations: 7577)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 74.7ms | Allocations: 6525)
+  Rendered layout layouts/application.html.erb (Duration: 165.9ms | Allocations: 17993)
+Completed 200 OK in 183ms (Views: 174.3ms | ActiveRecord: 4.2ms | Allocations: 19272)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:31:31 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "products"."price" FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `cart_total'
+  Rendered products/cart.html.erb within layouts/application (Duration: 50.4ms | Allocations: 7575)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 32.0ms | Allocations: 6524)
+  Rendered layout layouts/application.html.erb (Duration: 123.9ms | Allocations: 17987)
+Completed 200 OK in 129ms (Views: 126.6ms | ActiveRecord: 8.4ms | Allocations: 19265)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:31:54 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "products"."price" FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `cart_total'
+  Rendered products/cart.html.erb within layouts/application (Duration: 58.2ms | Allocations: 7577)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 42.4ms | Allocations: 6524)
+  Rendered layout layouts/application.html.erb (Duration: 122.0ms | Allocations: 17989)
+Completed 200 OK in 135ms (Views: 129.9ms | ActiveRecord: 5.3ms | Allocations: 19267)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:32:13 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "products"."price" FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `cart_total'
+  Rendered products/cart.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1944)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 18.9ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 104.6ms | Allocations: 8842)
+Completed 200 OK in 123ms (Views: 109.2ms | ActiveRecord: 2.7ms | Allocations: 10163)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:32:38 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "products"."price" FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `cart_total'
+  Rendered products/cart.html.erb within layouts/application (Duration: 65.9ms | Allocations: 7597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 68.3ms | Allocations: 6526)
+  Rendered layout layouts/application.html.erb (Duration: 171.7ms | Allocations: 18019)
+Completed 200 OK in 214ms (Views: 209.8ms | ActiveRecord: 7.0ms | Allocations: 19299)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:34:33 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 105.1ms | Allocations: 10863)
+  Rendered layout layouts/application.html.erb (Duration: 105.5ms | Allocations: 10932)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 2.5ms | Allocations: 12180)
+
+
+  
+ActionView::Template::Error (undefined method `*' for #<Product id: 1, name: "Adire shirt", merchant_id: 10, size: "XL", image: "https://res.cloudinary.com/moaminu/image/upload/v1...", description: "Lorem, ipsum dolor sit amet consectetur adipisicin...", num_available: 5, created_at: "2021-07-06 23:03:59.083447000 +0000", updated_at: "2021-07-19 21:02:41.307741000 +0000", price: 18000.0>):
+    70:                                   <h5>Subtotal</h5>
+    71:                               </td>
+    72:                               <td>
+    73:                                   <h5>$<%= cart_total %></h5>
+    74:                               </td>
+    75:                           </tr>
+    76:                           <tr class="shipping_area">
+  
+app/helpers/cart_helper.rb:3:in `block in cart_total'
+app/helpers/cart_helper.rb:3:in `map'
+app/helpers/cart_helper.rb:3:in `cart_total'
+app/views/products/cart.html.erb:73
+Started GET "/9/cart" for ::1 at 2021-07-21 22:34:50 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 80.4ms | Allocations: 8559)
+  Rendered layout layouts/application.html.erb (Duration: 81.0ms | Allocations: 8628)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 4.9ms | Allocations: 9876)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Float):
+    70:                                   <h5>Subtotal</h5>
+    71:                               </td>
+    72:                               <td>
+    73:                                   <h5>$<%= cart_total %></h5>
+    74:                               </td>
+    75:                           </tr>
+    76:                           <tr class="shipping_area">
+  
+app/helpers/cart_helper.rb:3:in `*'
+app/helpers/cart_helper.rb:3:in `block in cart_total'
+app/helpers/cart_helper.rb:3:in `map'
+app/helpers/cart_helper.rb:3:in `cart_total'
+app/views/products/cart.html.erb:73
+Started GET "/9/cart" for ::1 at 2021-07-21 22:35:34 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:3:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 23.8ms | Allocations: 7587)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 21.3ms | Allocations: 6534)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 18014)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 3.6ms | Allocations: 19294)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:38:09 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 29.3ms | Allocations: 7567)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 26.5ms | Allocations: 6531)
+  Rendered layout layouts/application.html.erb (Duration: 85.7ms | Allocations: 17986)
+Completed 200 OK in 91ms (Views: 87.1ms | ActiveRecord: 4.9ms | Allocations: 19265)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:38:57 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1942)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 13.1ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 78.5ms | Allocations: 8844)
+Completed 200 OK in 89ms (Views: 84.5ms | ActiveRecord: 1.0ms | Allocations: 10165)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:45:57 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 43.6ms | Allocations: 2507)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 26.8ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 126.9ms | Allocations: 9394)
+Completed 200 OK in 163ms (Views: 148.5ms | ActiveRecord: 4.3ms | Allocations: 10708)
+
+
+Started GET "/" for ::1 at 2021-07-21 22:46:42 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 166.0ms | Allocations: 3540)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 30.7ms | Allocations: 2492)
+  Rendered layout layouts/application.html.erb (Duration: 252.1ms | Allocations: 10279)
+Completed 200 OK in 366ms (Views: 350.1ms | ActiveRecord: 0.8ms | Allocations: 11604)
+
+
+Started GET "/products/1" for ::1 at 2021-07-21 22:46:47 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 296.6ms | Allocations: 2188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 103.0ms | Allocations: 2214)
+  Rendered layout layouts/application.html.erb (Duration: 533.5ms | Allocations: 8140)
+Completed 200 OK in 572ms (Views: 530.9ms | ActiveRecord: 5.3ms | Allocations: 9405)
+
+
+Started POST "/products/add_cart" for ::1 at 2021-07-21 22:46:49 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1", "qty"=>"1"}
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 368)
+
+
+Started GET "/products/1" for ::1 at 2021-07-21 22:46:49 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.2ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 7133)
+Completed 200 OK in 134ms (Views: 98.2ms | ActiveRecord: 0.7ms | Allocations: 8146)
+
+
+Started POST "/products/add_cart" for ::1 at 2021-07-21 22:46:51 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1", "qty"=>"1"}
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms | Allocations: 329)
+
+
+Started GET "/products/1" for ::1 at 2021-07-21 22:46:51 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 21.3ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.4ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 7133)
+Completed 200 OK in 68ms (Views: 59.2ms | ActiveRecord: 1.4ms | Allocations: 8146)
+
+
+Started GET "/products/2" for ::1 at 2021-07-21 22:46:56 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1167)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 27.5ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 104.9ms | Allocations: 7123)
+Completed 200 OK in 119ms (Views: 107.4ms | ActiveRecord: 0.7ms | Allocations: 8128)
+
+
+Started POST "/products/add_cart" for ::1 at 2021-07-21 22:47:01 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2", "qty"=>"2"}
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 331)
+
+
+Started GET "/products/2" for ::1 at 2021-07-21 22:47:01 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.0ms | Allocations: 2236)
+  Rendered layout layouts/application.html.erb (Duration: 58.2ms | Allocations: 7147)
+Completed 200 OK in 72ms (Views: 57.7ms | ActiveRecord: 2.2ms | Allocations: 8162)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:47:05 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (5.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 84.5ms | Allocations: 2516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 86.8ms | Allocations: 2245)
+  Rendered layout layouts/application.html.erb (Duration: 309.7ms | Allocations: 8620)
+Completed 200 OK in 320ms (Views: 308.4ms | ActiveRecord: 5.8ms | Allocations: 9209)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:53:07 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 117.7ms | Allocations: 2656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 35.6ms | Allocations: 2572)
+  Rendered layout layouts/application.html.erb (Duration: 221.6ms | Allocations: 9580)
+Completed 200 OK in 270ms (Views: 253.8ms | ActiveRecord: 4.6ms | Allocations: 10898)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:53:56 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 95.1ms | Allocations: 1954)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 33.7ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 259.7ms | Allocations: 8852)
+Completed 200 OK in 279ms (Views: 272.2ms | ActiveRecord: 5.4ms | Allocations: 10169)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:57:49 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 55.0ms | Allocations: 1962)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 41.2ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 212.6ms | Allocations: 8861)
+Completed 200 OK in 291ms (Views: 217.6ms | ActiveRecord: 2.9ms | Allocations: 10177)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:57:57 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 17.6ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 18.4ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 7655)
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 1.1ms | Allocations: 8114)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:58:49 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 33.1ms | Allocations: 1963)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 216.2ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 342.8ms | Allocations: 8862)
+Completed 200 OK in 375ms (Views: 345.6ms | ActiveRecord: 2.6ms | Allocations: 10184)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:59:20 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 42.3ms | Allocations: 1966)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.0ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 113.6ms | Allocations: 8870)
+Completed 200 OK in 147ms (Views: 118.5ms | ActiveRecord: 2.4ms | Allocations: 10193)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:59:31 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 25.2ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.6ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 96.0ms | Allocations: 7655)
+Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 1.5ms | Allocations: 8114)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:59:54 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 13.8ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 101.9ms | Allocations: 8858)
+Completed 200 OK in 112ms (Views: 107.4ms | ActiveRecord: 2.3ms | Allocations: 10173)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 23:00:29 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 27.8ms | Allocations: 2550)
+  Rendered layout layouts/application.html.erb (Duration: 170.7ms | Allocations: 8866)
+Completed 200 OK in 198ms (Views: 195.6ms | ActiveRecord: 1.2ms | Allocations: 10182)
+
+
+Started GET "/products/2" for ::1 at 2021-07-21 23:00:44 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (41.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 73.2ms | Allocations: 1591)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 128.5ms | Allocations: 2234)
+  Rendered layout layouts/application.html.erb (Duration: 464.1ms | Allocations: 7558)
+Completed 200 OK in 958ms (Views: 474.6ms | ActiveRecord: 45.1ms | Allocations: 8829)
+
+
+Started GET "/products/2" for ::1 at 2021-07-21 23:01:00 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1603)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 40.2ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 100.7ms | Allocations: 8374)
+Completed 200 OK in 138ms (Views: 121.3ms | ActiveRecord: 1.2ms | Allocations: 10243)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 23:01:02 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 21.7ms | Allocations: 2091)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 87.7ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 237.1ms | Allocations: 8193)
+Completed 200 OK in 244ms (Views: 239.3ms | ActiveRecord: 1.6ms | Allocations: 8782)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 23:01:18 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 17.5ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 31.5ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 7655)
+Completed 200 OK in 90ms (Views: 84.5ms | ActiveRecord: 1.7ms | Allocations: 8113)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 23:01:48 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 47.4ms | Allocations: 1961)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 446.4ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 572.4ms | Allocations: 8859)
+Completed 200 OK in 596ms (Views: 580.9ms | ActiveRecord: 1.2ms | Allocations: 10174)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 23:04:49 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 46.1ms | Allocations: 1965)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 46.1ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 131.0ms | Allocations: 8866)
+Completed 200 OK in 178ms (Views: 149.9ms | ActiveRecord: 1.3ms | Allocations: 10182)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 23:05:00 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 25.0ms | Allocations: 1966)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 15.1ms | Allocations: 2554)
+  Rendered layout layouts/application.html.erb (Duration: 212.1ms | Allocations: 8872)
+Completed 200 OK in 226ms (Views: 222.7ms | ActiveRecord: 1.1ms | Allocations: 10195)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 23:05:51 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 15.6ms | Allocations: 2235)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 7660)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 1.1ms | Allocations: 8120)
+
+

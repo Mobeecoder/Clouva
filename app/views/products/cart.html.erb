@@ -13,6 +13,7 @@
                           </tr>
                       </thead>
                       <tbody>
+
                             <% for item in cart_details %>
                                 <tr>
                                     <td>
@@ -70,7 +71,7 @@
                                   <h5>Subtotal</h5>
                               </td>
                               <td>
-                                  <h5>$2160.00</h5>
+                                  <h5>&#8358;<span id="sub-total"><%= cart_total %></span></h5>
                               </td>
                           </tr>
                           <tr class="shipping_area">
@@ -135,17 +136,32 @@
   <script>
     const qtyInput = document.querySelectorAll('.qty')
 
-    const myFunction = function() {
+    let subTotal = 0
+
+    const calcSubTotal = () => {
+        itemTotals = document.querySelectorAll('.item-total');
+
+        itemTotals.forEach(element => {
+            subTotal += parseInt(element.textContent)
+        });
+
+        document.querySelector('#sub-total').textContent = subTotal.toFixed(2)
+        subTotal = 0
+    }
+
+    const calcItemPrices = function() {
         let itemParent = this.closest('tr');
         let price = itemParent.querySelector('.item-price').textContent;
         let quantity = itemParent.querySelector('.qty').value
 
         itemParent.querySelector('.item-total').textContent = (price * quantity).toFixed(2)
 
+        calcSubTotal()
+        
     };
 
     qtyInput.forEach(element => {
-      element.addEventListener('change', myFunction, false);
+      element.addEventListener('change', calcItemPrices, false);
     });
 
   </script>
