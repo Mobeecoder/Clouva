@@ -28568,3 +28568,1534 @@ ActionController::RoutingError (No route matches [GET] "/9/img/cart/cart1.png"):
   
 ActionController::RoutingError (No route matches [GET] "/9/img/cart/cart2.png"):
   
+Started GET "/9/cart" for ::1 at 2021-07-21 13:06:38 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  Rendered products/cart.html.erb within layouts/application (Duration: 1.1ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 16.4ms | Allocations: 2545)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 7150)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 0.5ms | Allocations: 8480)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:06:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/img/cart/cart1.png" for ::1 at 2021-07-21 13:06:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/img/cart/cart1.png"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:07:22 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  Rendered products/cart.html.erb within layouts/application (Duration: 0.8ms | Allocations: 236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 7.5ms | Allocations: 2543)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 7132)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.4ms | Allocations: 8445)
+
+
+Started GET "/9/img/cart/cart1.png" for ::1 at 2021-07-21 13:07:22 +0100
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:07:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/img/cart/cart1.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:09:27 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (12.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 34.6ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 52.8ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 274.1ms | Allocations: 7966)
+Completed 200 OK in 298ms (Views: 278.1ms | ActiveRecord: 13.8ms | Allocations: 9285)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:09:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:09:46 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 18.9ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 7918)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 1.3ms | Allocations: 9231)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:09:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:09:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:10:08 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 30.4ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 24.3ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 109.4ms | Allocations: 7926)
+Completed 200 OK in 132ms (Views: 127.1ms | ActiveRecord: 1.7ms | Allocations: 9245)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:10:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:10:25 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1033)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.3ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 87.4ms | Allocations: 7929)
+Completed 200 OK in 110ms (Views: 104.3ms | ActiveRecord: 0.7ms | Allocations: 9249)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:10:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:10:34 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.8ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | Allocations: 7917)
+Completed 200 OK in 98ms (Views: 85.8ms | ActiveRecord: 2.9ms | Allocations: 9231)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:10:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:11:14 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1063)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 14.5ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 7959)
+Completed 200 OK in 71ms (Views: 68.0ms | ActiveRecord: 1.2ms | Allocations: 9278)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:11:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:11:38 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4397)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4466)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.2ms | Allocations: 5742)
+
+
+  
+ActionView::Template::Error (undefined method `qty' for #<Product id: 2, name: "Atiku Kaftan", merchant_id: 10, size: "L", image: "https://res.cloudinary.com/moaminu/image/upload/v1...", description: "Lorem Ipsum", num_available: 3, created_at: "2021-07-06 23:09:56.996250000 +0000", updated_at: "2021-07-19 21:03:16.519350000 +0000", price: 22000.0>):
+    30:                                     </td>
+    31:                                     <td>
+    32:                                         <div class="product_count">
+    33:                                             <input type="number" name="qty" id="sst" min="1" value="<%= item.qty %>" title="Quantity:"
+    34:                                                 class="input-text qty">                                      
+    35:                                         </div>
+    36:                                     </td>
+  
+app/views/products/cart.html.erb:33
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:11:52 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 21.6ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 58.2ms | Allocations: 7955)
+Completed 200 OK in 68ms (Views: 61.1ms | ActiveRecord: 1.7ms | Allocations: 9275)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:11:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:16:55 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.9ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 80.2ms | Allocations: 7971)
+Completed 200 OK in 86ms (Views: 79.4ms | ActiveRecord: 3.7ms | Allocations: 9290)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:16:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:17:14 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 22.1ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 50.5ms | Allocations: 7963)
+Completed 200 OK in 57ms (Views: 49.0ms | ActiveRecord: 6.6ms | Allocations: 9276)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:17:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:17:51 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.0ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 7963)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 1.7ms | Allocations: 9276)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:17:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:18:02 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 15.5ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 7976)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 5.6ms | Allocations: 9296)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:18:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:18:04 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 5.2ms | Allocations: 774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 39.2ms | Allocations: 2222)
+  Rendered layout layouts/application.html.erb (Duration: 72.2ms | Allocations: 6856)
+Completed 200 OK in 77ms (Views: 72.9ms | ActiveRecord: 1.8ms | Allocations: 7314)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:18:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:18:04 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 17.1ms | Allocations: 774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 21.4ms | Allocations: 2224)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 6861)
+Completed 200 OK in 74ms (Views: 69.6ms | ActiveRecord: 0.6ms | Allocations: 7317)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:18:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:18:05 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 7.7ms | Allocations: 774)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.3ms | Allocations: 2224)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 6860)
+Completed 200 OK in 44ms (Views: 37.5ms | ActiveRecord: 3.3ms | Allocations: 7316)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:18:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:18:14 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1078)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.8ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 7967)
+Completed 200 OK in 64ms (Views: 54.7ms | ActiveRecord: 1.8ms | Allocations: 9285)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:18:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:18:36 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 16.0ms | Allocations: 2988)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 3057)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms | Allocations: 4333)
+
+
+  
+ActionView::Template::Error (undefined method `to_str' for 2:Integer
+Did you mean?  to_s
+               to_r):
+    30:                                     </td>
+    31:                                     <td>
+    32:                                         <div class="product_count">
+    33:                                             <input type="number" name="qty" id="sst" min="1" value="<%= session[:cart][item.id.to_str] %>" title="Quantity:"
+    34:                                                 class="input-text qty">                                      
+    35:                                         </div>
+    36:                                     </td>
+  
+app/views/products/cart.html.erb:33
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:19:45 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1077)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.3ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 7973)
+Completed 200 OK in 75ms (Views: 67.8ms | ActiveRecord: 0.8ms | Allocations: 9292)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:19:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:19:50 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.8ms | Allocations: 776)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.3ms | Allocations: 2222)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 6855)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.7ms | Allocations: 7312)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:19:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:21:18 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2063)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2132)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms | Allocations: 3413)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Float):
+    35:                                         </div>
+    36:                                     </td>
+    37:                                     <td>
+    38:                                         <h5>$<%= item.price * session[:cart][item.id.to_s] %></h5>
+    39:                                     </td>
+    40:                                 </tr>
+    41:                             <% end %>
+  
+app/views/products/cart.html.erb:38:in `*'
+app/views/products/cart.html.erb:38
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:21:31 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2129)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms | Allocations: 3411)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Float):
+    35:                                         </div>
+    36:                                     </td>
+    37:                                     <td>
+    38:                                         <h5>$<%= item.price * session[:cart][item.id] %></h5>
+    39:                                     </td>
+    40:                                 </tr>
+    41:                             <% end %>
+  
+app/views/products/cart.html.erb:38:in `*'
+app/views/products/cart.html.erb:38
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:21:43 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.0ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2129)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms | Allocations: 3411)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Float):
+    35:                                         </div>
+    36:                                     </td>
+    37:                                     <td>
+    38:                                         <h5>$<%= item.price * session[:cart][item.id.to_f] %></h5>
+    39:                                     </td>
+    40:                                 </tr>
+    41:                             <% end %>
+  
+app/views/products/cart.html.erb:38:in `*'
+app/views/products/cart.html.erb:38
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:22:47 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (3.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 18.9ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 7989)
+Completed 200 OK in 67ms (Views: 57.1ms | ActiveRecord: 4.1ms | Allocations: 9308)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:22:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:23:04 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 23.2ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 7988)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 1.6ms | Allocations: 9307)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:23:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:23:16 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (6.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 2129)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 6.6ms | Allocations: 3411)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Float):
+    35:                                         </div>
+    36:                                     </td>
+    37:                                     <td>
+    38:                                         <h5>$<%= item.price * session[:cart][item.id.to_f] %></h5>
+    39:                                     </td>
+    40:                                 </tr>
+    41:                             <% end %>
+  
+app/views/products/cart.html.erb:38:in `*'
+app/views/products/cart.html.erb:38
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:23:41 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 20.7ms | Allocations: 2060)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 2129)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.2ms | Allocations: 3411)
+
+
+  
+ActionView::Template::Error (nil can't be coerced into Float):
+    35:                                         </div>
+    36:                                     </td>
+    37:                                     <td>
+    38:                                         <h5>$<%= item.price * session[:cart][item.id] %></h5>
+    39:                                     </td>
+    40:                                 </tr>
+    41:                             <% end %>
+  
+app/views/products/cart.html.erb:38:in `*'
+app/views/products/cart.html.erb:38
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:23:55 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.6ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 7993)
+Completed 200 OK in 48ms (Views: 44.1ms | ActiveRecord: 0.8ms | Allocations: 9312)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:23:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:24:23 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1092)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 47.4ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 83.0ms | Allocations: 7980)
+Completed 200 OK in 98ms (Views: 90.3ms | ActiveRecord: 2.9ms | Allocations: 9293)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:24:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:26:00 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.6ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 49.3ms | Allocations: 7992)
+Completed 200 OK in 59ms (Views: 54.7ms | ActiveRecord: 1.6ms | Allocations: 9312)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:26:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:26:18 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2061)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2130)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms | Allocations: 3406)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Float):
+    35:                                         </div>
+    36:                                     </td>
+    37:                                     <td>
+    38:                                         <h5>$<%= item.price * session[:cart][item.id.to_s] %></h5>
+    39:                                     </td>
+    40:                                 </tr>
+    41:                             <% end %>
+  
+app/views/products/cart.html.erb:38:in `*'
+app/views/products/cart.html.erb:38
+app/views/products/cart.html.erb:16
+Started GET "/9/cart" for ::1 at 2021-07-21 13:26:29 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1096)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 15.8ms | Allocations: 2539)
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 7993)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 2.7ms | Allocations: 9312)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:26:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:29:03 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 18.6ms | Allocations: 1098)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 20.9ms | Allocations: 2538)
+  Rendered layout layouts/application.html.erb (Duration: 108.9ms | Allocations: 7994)
+Completed 200 OK in 128ms (Views: 117.6ms | ActiveRecord: 1.7ms | Allocations: 9314)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:29:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:32:35 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 24.1ms | Allocations: 1120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 16.7ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 99.9ms | Allocations: 8008)
+Completed 200 OK in 113ms (Views: 109.4ms | ActiveRecord: 1.6ms | Allocations: 9321)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:32:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:37:51 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 42.3ms | Allocations: 1117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 55.8ms | Allocations: 2536)
+  Rendered layout layouts/application.html.erb (Duration: 183.6ms | Allocations: 8017)
+Completed 200 OK in 241ms (Views: 202.3ms | ActiveRecord: 2.8ms | Allocations: 9428)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:37:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/products/2" for ::1 at 2021-07-21 13:37:52 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 43.1ms | Allocations: 1686)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.8ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 77.4ms | Allocations: 7642)
+Completed 200 OK in 114ms (Views: 81.6ms | ActiveRecord: 0.9ms | Allocations: 9278)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-21 13:37:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/products/1" for ::1 at 2021-07-21 13:37:55 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.6ms | Allocations: 2225)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 7135)
+Completed 200 OK in 96ms (Views: 89.7ms | ActiveRecord: 0.7ms | Allocations: 8140)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-21 13:37:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started POST "/products/add_cart" for ::1 at 2021-07-21 13:37:57 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1", "qty"=>"1"}
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 26ms (ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started GET "/products/1" for ::1 at 2021-07-21 13:37:57 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1173)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 16.7ms | Allocations: 2236)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 7151)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.8ms | Allocations: 8165)
+
+
+Started GET "/products/js/main.js" for ::1 at 2021-07-21 13:37:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/products/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:38:01 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (3.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 6.6ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 24.9ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 7524)
+Completed 200 OK in 100ms (Views: 95.9ms | ActiveRecord: 3.6ms | Allocations: 7985)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:38:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:46:01 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 66.1ms | Allocations: 1893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 26.1ms | Allocations: 2571)
+  Rendered layout layouts/application.html.erb (Duration: 148.0ms | Allocations: 8817)
+Completed 200 OK in 238ms (Views: 226.0ms | ActiveRecord: 2.6ms | Allocations: 10135)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:46:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:46:21 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.0ms | Allocations: 2554)
+  Rendered layout layouts/application.html.erb (Duration: 188.6ms | Allocations: 8098)
+Completed 200 OK in 232ms (Views: 193.4ms | ActiveRecord: 2.5ms | Allocations: 9414)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:46:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:46:36 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.7ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 55.7ms | Allocations: 8094)
+Completed 200 OK in 68ms (Views: 65.2ms | ActiveRecord: 1.2ms | Allocations: 9416)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:46:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:53:14 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 24.3ms | Allocations: 1894)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 46.7ms | Allocations: 2573)
+  Rendered layout layouts/application.html.erb (Duration: 110.5ms | Allocations: 8822)
+Completed 200 OK in 140ms (Views: 130.4ms | ActiveRecord: 4.2ms | Allocations: 10135)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:53:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:53:38 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 21.5ms | Allocations: 2548)
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 8090)
+Completed 200 OK in 84ms (Views: 77.0ms | ActiveRecord: 3.3ms | Allocations: 9411)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:53:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:53:55 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 6.5ms | Allocations: 849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.6ms | Allocations: 2235)
+  Rendered layout layouts/application.html.erb (Duration: 66.2ms | Allocations: 6946)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 1.5ms | Allocations: 7405)
+
+
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:53:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/js/main.js" for ::1 at 2021-07-21 13:54:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/js/main.js"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-21 13:56:02 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 15.2ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 21.4ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 128.7ms | Allocations: 8090)
+Completed 200 OK in 141ms (Views: 136.0ms | ActiveRecord: 1.4ms | Allocations: 9410)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 13:56:32 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 7.8ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 27.4ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 72.1ms | Allocations: 6940)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 1.8ms | Allocations: 7399)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 13:57:08 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (6.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 24.4ms | Allocations: 1190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 31.9ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 94.1ms | Allocations: 8088)
+Completed 200 OK in 109ms (Views: 91.7ms | ActiveRecord: 7.1ms | Allocations: 9402)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 13:57:18 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 5.1ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 23.6ms | Allocations: 2235)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 6945)
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 3.0ms | Allocations: 7404)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 14:07:45 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 67.4ms | Allocations: 1900)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 84.1ms | Allocations: 2571)
+  Rendered layout layouts/application.html.erb (Duration: 593.0ms | Allocations: 8822)
+Completed 200 OK in 631ms (Views: 604.2ms | ActiveRecord: 4.8ms | Allocations: 10134)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 14:08:07 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.8ms | Allocations: 1193)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 48.1ms | Allocations: 2618)
+  Rendered layout layouts/application.html.erb (Duration: 109.2ms | Allocations: 8162)
+Completed 200 OK in 149ms (Views: 126.9ms | ActiveRecord: 2.1ms | Allocations: 9477)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 14:08:22 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 24.6ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 79.4ms | Allocations: 8093)
+Completed 200 OK in 107ms (Views: 92.2ms | ActiveRecord: 1.2ms | Allocations: 9414)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 14:08:50 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (3.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 56.9ms | Allocations: 1194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (30.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 47.5ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 287.1ms | Allocations: 8092)
+Completed 200 OK in 320ms (Views: 257.8ms | ActiveRecord: 34.2ms | Allocations: 9407)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 14:10:11 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (4.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 33.3ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 30.7ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 124.7ms | Allocations: 8099)
+Completed 200 OK in 146ms (Views: 137.0ms | ActiveRecord: 7.0ms | Allocations: 9421)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 14:10:52 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 32.5ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 22.5ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 118.7ms | Allocations: 8093)
+Completed 200 OK in 131ms (Views: 123.6ms | ActiveRecord: 1.6ms | Allocations: 9408)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 21:58:21 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/cart.html.erb:16
+  [1m[36mProduct Load (7.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 276.2ms | Allocations: 1899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 217.2ms | Allocations: 2571)
+  Rendered layout layouts/application.html.erb (Duration: 784.3ms | Allocations: 8825)
+Completed 200 OK in 1242ms (Views: 854.9ms | ActiveRecord: 12.6ms | Allocations: 10139)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 21:58:57 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (3.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 245.6ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 169.3ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 822.6ms | Allocations: 8091)
+Completed 200 OK in 903ms (Views: 864.2ms | ActiveRecord: 10.8ms | Allocations: 9407)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 21:59:16 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (4.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 27.7ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 98.7ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 237.9ms | Allocations: 8095)
+Completed 200 OK in 331ms (Views: 321.4ms | ActiveRecord: 6.5ms | Allocations: 9410)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:03:43 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 248.2ms | Allocations: 1198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 106.9ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 670.3ms | Allocations: 8099)
+Completed 200 OK in 805ms (Views: 748.5ms | ActiveRecord: 3.7ms | Allocations: 9421)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:04:33 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 72.7ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 86.0ms | Allocations: 2548)
+  Rendered layout layouts/application.html.erb (Duration: 397.5ms | Allocations: 8096)
+Completed 200 OK in 445ms (Views: 425.4ms | ActiveRecord: 2.8ms | Allocations: 9411)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:05:31 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 43.4ms | Allocations: 1199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 52.3ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 177.9ms | Allocations: 8099)
+Completed 200 OK in 206ms (Views: 186.1ms | ActiveRecord: 2.2ms | Allocations: 9414)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:08:13 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 51.5ms | Allocations: 1206)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 186.6ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 340.2ms | Allocations: 8106)
+Completed 200 OK in 358ms (Views: 349.8ms | ActiveRecord: 0.8ms | Allocations: 9427)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:08:25 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 34.7ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 77.2ms | Allocations: 2235)
+  Rendered layout layouts/application.html.erb (Duration: 164.0ms | Allocations: 6947)
+Completed 200 OK in 207ms (Views: 190.8ms | ActiveRecord: 4.6ms | Allocations: 7407)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:09:53 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 44.4ms | Allocations: 1210)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 54.7ms | Allocations: 2552)
+  Rendered layout layouts/application.html.erb (Duration: 199.1ms | Allocations: 8119)
+Completed 200 OK in 271ms (Views: 229.4ms | ActiveRecord: 1.8ms | Allocations: 9440)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:10:08 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 56.3ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 13.2ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 127.2ms | Allocations: 6940)
+Completed 200 OK in 131ms (Views: 125.6ms | ActiveRecord: 2.4ms | Allocations: 7399)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:12:34 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 30.6ms | Allocations: 1216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 33.2ms | Allocations: 2549)
+  Rendered layout layouts/application.html.erb (Duration: 120.8ms | Allocations: 8122)
+Completed 200 OK in 190ms (Views: 137.3ms | ActiveRecord: 3.7ms | Allocations: 9443)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:13:05 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 43.0ms | Allocations: 1212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 48.3ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 179.7ms | Allocations: 8116)
+Completed 200 OK in 213ms (Views: 194.6ms | ActiveRecord: 3.0ms | Allocations: 9431)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:14:27 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 49.6ms | Allocations: 1211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 55.4ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 181.6ms | Allocations: 8109)
+Completed 200 OK in 218ms (Views: 207.7ms | ActiveRecord: 5.1ms | Allocations: 9424)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:15:00 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 27.7ms | Allocations: 1211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 72.5ms | Allocations: 2550)
+  Rendered layout layouts/application.html.erb (Duration: 180.4ms | Allocations: 8112)
+Completed 200 OK in 199ms (Views: 190.0ms | ActiveRecord: 1.4ms | Allocations: 9427)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:15:14 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (4.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 36.4ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 35.2ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 142.5ms | Allocations: 6940)
+Completed 200 OK in 145ms (Views: 135.4ms | ActiveRecord: 8.4ms | Allocations: 7399)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-21 22:17:16 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/products/cart.html.erb:16
+  Rendered products/cart.html.erb within layouts/application (Duration: 42.6ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 2], ["id", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 89.2ms | Allocations: 2547)
+  Rendered layout layouts/application.html.erb (Duration: 310.1ms | Allocations: 8113)
+Completed 200 OK in 340ms (Views: 328.3ms | ActiveRecord: 2.2ms | Allocations: 9433)
+
+

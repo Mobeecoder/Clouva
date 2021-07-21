@@ -13,90 +13,34 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr>
-                              <td>
-                                  <div class="media">
-                                      <div class="d-flex">
-                                          <img src="img/cart/cart1.png" alt="">
-                                      </div>
-                                      <div class="media-body">
-                                          <p>Minimalistic shop for multipurpose use</p>
-                                      </div>
-                                  </div>
-                              </td>
-                              <td>
-                                  <h5>$360.00</h5>
-                              </td>
-                              <td>
-                                  <div class="product_count">
-                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                          class="input-text qty">
-                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                  </div>
-                              </td>
-                              <td>
-                                  <h5>$720.00</h5>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="media">
-                                      <div class="d-flex">
-                                          <img src="img/cart/cart2.png" alt="">
-                                      </div>
-                                      <div class="media-body">
-                                          <p>Minimalistic shop for multipurpose use</p>
-                                      </div>
-                                  </div>
-                              </td>
-                              <td>
-                                  <h5>$360.00</h5>
-                              </td>
-                              <td>
-                                  <div class="product_count">
-                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                          class="input-text qty">
-                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                  </div>
-                              </td>
-                              <td>
-                                  <h5>$720.00</h5>
-                              </td>
-                          </tr>
-                          <tr>
-                              <td>
-                                  <div class="media">
-                                      <div class="d-flex">
-                                          <img src="img/cart/cart3.png" alt="">
-                                      </div>
-                                      <div class="media-body">
-                                          <p>Minimalistic shop for multipurpose use</p>
-                                      </div>
-                                  </div>
-                              </td>
-                              <td>
-                                  <h5>$360.00</h5>
-                              </td>
-                              <td>
-                                  <div class="product_count">
-                                      <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                                          class="input-text qty">
-                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                                          class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                      <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                                          class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                                  </div>
-                              </td>
-                              <td>
-                                  <h5>$720.00</h5>
-                              </td>
-                          </tr>
+                            <% for item in cart_details %>
+                                <tr>
+                                    <td>
+                                        <div class="media">
+                                            <div class="d-flex">
+                                                <img width="50px" src="<%= item.image %>" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <p><%= item.name %></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 id="item-price">&#8358;<span class="item-price"><%= item.price %></span></h5>
+                                    </td>
+                                    <td>
+                                        <div class="product_count">
+                                            <input type="number" name="qty" id="sst" min="1" value="<%= session[:cart][item.id.to_s] %>" title="Quantity:"
+                                                class="input-text qty">                                      
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>&#8358;<span class="item-total"><%= item.price * session[:cart][item.id.to_s].to_i %></span>
+                                        </h5>
+                                    </td>
+                                </tr>
+                            <% end %>
+                          
                           <tr class="bottom_button">
                               <td>
                                   <a class="button" href="#">Update Cart</a>
@@ -187,3 +131,21 @@
       </div>
   </section>
   <!--================End Cart Area =================-->
+
+  <script>
+    const qtyInput = document.querySelectorAll('.qty')
+
+    const myFunction = function() {
+        let itemParent = this.closest('tr');
+        let price = itemParent.querySelector('.item-price').textContent;
+        let quantity = itemParent.querySelector('.qty').value
+
+        itemParent.querySelector('.item-total').textContent = (price * quantity).toFixed(2)
+
+    };
+
+    qtyInput.forEach(element => {
+      element.addEventListener('change', myFunction, false);
+    });
+
+  </script>
