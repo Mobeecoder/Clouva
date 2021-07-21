@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'products#index'
   resources :products, only: %i[show new create edit update]
   post '/products/add_cart', to: 'products#add_to_cart'
+  get '/:id/cart', to: 'products#cart'
 
 
   devise_for :users

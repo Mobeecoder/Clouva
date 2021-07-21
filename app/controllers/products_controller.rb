@@ -35,6 +35,10 @@ class ProductsController < ApplicationController
     redirect_to product_path(params[:id])
   end
 
+  def cart
+    
+  end
+
   def destroy
   end
 
