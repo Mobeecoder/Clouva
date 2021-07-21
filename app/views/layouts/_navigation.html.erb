@@ -27,7 +27,7 @@
                       <i class="ti-user" aria-hidden="true"></i>
                     </a>
                   </li>
-              <li class="nav-item"><button><a href="cart.html"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle">3</span></button> </li>
+              <li class="nav-item"><button><a href="cart.html"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
 
                 <% if user_signed_in? %>
                   <li class="nav-item font-weight-bold ml-5">

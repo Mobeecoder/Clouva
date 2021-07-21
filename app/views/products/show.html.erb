@@ -26,17 +26,16 @@
 						<p><%= @product.description[0...300] %>...</p>
 						<div class="product_count">
               <label for="qty">Quantity:</label>
-              <%# <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-							 class="increase items-count" type="button"><i class="ti-angle-left"></i></button> %>
-							<input type="number" name="qty" id="sst" size="2" min="1" value="1" title="Quantity:" class="input-text qty">
-							<%# <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-               class="reduced items-count" type="button"><i class="ti-angle-right"></i></button> %>
-							<a class="button primary-btn" href="cart.html">Add to Cart</a>               
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+                            <%= form_with(url: "/products/add_cart") do |form| %>
+                                <%= form.hidden_field :id, value: @product.id %>
+                                <%= form.number_field :qty, class: 'input-text qty', 'size':'2', 'min': 1, value: "1" %>
+                                
+                                <input type="submit" class="btn form-control rounded text-white" value="Add to Cart" style="width:110px; background-color: #32142D;">
+                            <% end %>
+    
 						</div>
-						<%# <div class="card_area d-flex align-items-center">
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
-						</div> %>
 					</div>
 				</div>
 			</div>

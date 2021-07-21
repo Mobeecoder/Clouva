@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'products#index'
   resources :products, only: %i[show new create edit update]
+  post '/products/add_cart', to: 'products#add_to_cart'
+
+
   devise_for :users
 
   # This is the mapping for the "quickstart" routes
