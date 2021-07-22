@@ -33141,3 +33141,44 @@ app/views/products/cart.html.erb:129
   [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" INNER JOIN "order_details" ON "orders"."id" = "order_details"."order_id" WHERE "order_details"."product_id" = ? /* loading for inspect */ LIMIT ?[0m  [["product_id", 1], ["LIMIT", 11]]
   [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" INNER JOIN "order_details" ON "orders"."id" = "order_details"."order_id" WHERE "order_details"."product_id" = ?[0m  [["product_id", 1]]
+Started GET "/9/cart" for ::1 at 2021-07-22 20:16:13 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/helpers/application_helper.rb:4:in `cart_details'
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 149.8ms | Allocations: 8691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 87.0ms | Allocations: 6797)
+  Rendered layout layouts/application.html.erb (Duration: 604.0ms | Allocations: 33988)
+Completed 200 OK in 655ms (Views: 615.7ms | ActiveRecord: 8.6ms | Allocations: 35972)
+
+
+Started GET "/checkout" for ::1 at 2021-07-22 20:16:24 +0100
+Processing by OrdersController#checkout as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/checkout.html.erb within layouts/application
+  Rendered orders/checkout.html.erb within layouts/application (Duration: 39.3ms | Allocations: 268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 67.3ms | Allocations: 2270)
+  Rendered layout layouts/application.html.erb (Duration: 554.2ms | Allocations: 6535)
+Completed 200 OK in 586ms (Views: 567.1ms | ActiveRecord: 2.1ms | Allocations: 8226)
+
+
+Started GET "/img/product/card.jpg" for ::1 at 2021-07-22 20:16:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/product/card.jpg"):
+  
