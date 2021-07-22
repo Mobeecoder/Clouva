@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_22_131029) do
+ActiveRecord::Schema.define(version: 2021_07_22_135503) do
+
+  create_table "order_details", force: :cascade do |t|
+    t.integer "order_id", null: false
+    t.integer "product_id", null: false
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["order_id"], name: "index_order_details_on_order_id"
+    t.index ["product_id"], name: "index_order_details_on_product_id"
+  end
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -52,6 +62,8 @@ ActiveRecord::Schema.define(version: 2021_07_22_131029) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "order_details", "orders"
+  add_foreign_key "order_details", "products"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "users", column: "merchant_id"
