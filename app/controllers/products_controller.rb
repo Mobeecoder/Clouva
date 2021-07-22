@@ -39,6 +39,10 @@ class ProductsController < ApplicationController
     
   end
 
+  def update_quantity
+    session[:cart][params[:id]] = params[:qty]
+  end
+
   def destroy
   end
 

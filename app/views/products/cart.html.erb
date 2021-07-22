@@ -15,7 +15,7 @@
                       <tbody>
 
                             <% for item in cart_details %>
-                                <tr>
+                                <tr data-id="<%= item.id %>">
                                     <td>
                                         <div class="media">
                                             <div class="d-flex">
@@ -42,7 +42,7 @@
                                 </tr>
                             <% end %>
                           
-                          <tr class="bottom_button">
+                          <%# <tr class="bottom_button">
                               <td>
                                   <a class="button" href="#">Update Cart</a>
                               </td>
@@ -59,7 +59,7 @@
                                       <a class="button" href="#">Have a Coupon?</a>
                                   </div>
                               </td>
-                          </tr>
+                          </tr> %>
                           <tr>
                               <td>
 
@@ -68,13 +68,13 @@
 
                               </td>
                               <td>
-                                  <h5>Subtotal</h5>
+                                  <h5>Total</h5>
                               </td>
                               <td>
                                   <h5>&#8358;<span id="sub-total"><%= cart_total %></span></h5>
                               </td>
                           </tr>
-                          <tr class="shipping_area">
+                          <%# <tr class="shipping_area">
                               <td class="d-none d-md-block">
 
                               </td>
@@ -82,17 +82,22 @@
 
                               </td>
                               <td>
-                                  <h5>Shipping</h5>
+                                  <h5>Delivery</h5>
                               </td>
                               <td>
                                   <div class="shipping_box">
                                       <ul class="list">
-                                          <li><a href="#">Flat Rate: $5.00</a></li>
-                                          <li><a href="#">Free Shipping</a></li>
-                                          <li><a href="#">Flat Rate: $10.00</a></li>
-                                          <li class="active"><a href="#">Local Delivery: $2.00</a></li>
+                                          <li class="d-flex align-items-center justify-content-end mb-0">
+                                            <p class="mr-1">Within Lagos: &#8358;2000</p>
+                                            <input type="radio" style="width:20px" name="delivery" value="2000" id="within-lagos">
+                                          </li>
+
+                                          <li class="d-flex align-items-center justify-content-end mt-0">
+                                            <p class="mr-1">Outside Lagos: &#8358;5000</p>
+                                            <input type="radio" style="width:20px" name="delivery" value="5000" id="outside-lagos">
+                                          </li>
                                       </ul>
-                                      <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
+                                      
                                       <select class="shipping_select">
                                           <option value="1">Bangladesh</option>
                                           <option value="2">India</option>
@@ -107,7 +112,7 @@
                                       <a class="gray_btn" href="#">Update Details</a>
                                   </div>
                               </td>
-                          </tr>
+                          </tr> %>
                           <tr class="out_button_area">
                               <td class="d-none-l">
 
@@ -119,9 +124,9 @@
 
                               </td>
                               <td>
-                                  <div class="checkout_btn_inner d-flex align-items-center">
-                                      <a class="gray_btn" href="category.html">Continue Shopping</a>
-                                      <a class="primary-btn ml-2" href="checkout.html">Proceed to checkout</a>
+                                  <div class="checkout_btn_inner d-flex align-items-center">                                      
+                                      <%= link_to 'Continue Shopping', root_path, class: 'gray_btn' %>
+                                      <%= link_to 'Proceed to checkout', checkout_path, class: 'primary-btn ml-2' %>                                      
                                   </div>
                               </td>
                           </tr>
@@ -149,10 +154,29 @@
         subTotal = 0
     }
 
+    const updateSessionQty = data => {
+        const token = document.querySelector('meta[name="csrf-token"]').content;
+
+        fetch("/update_quantity", {
+            method: 'POST',
+            headers:  {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "X-CSRF-Token": token,
+            },
+            body: JSON.stringify(data)
+        })
+    }
+
     const calcItemPrices = function() {
         let itemParent = this.closest('tr');
+        const productId = itemParent.getAttribute('data-id')
         let price = itemParent.querySelector('.item-price').textContent;
         let quantity = itemParent.querySelector('.qty').value
+
+        const data = {"id": productId, "qty": quantity}
+
+        updateSessionQty(data)
 
         itemParent.querySelector('.item-total').textContent = (price * quantity).toFixed(2)
 

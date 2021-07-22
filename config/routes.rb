@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :products, only: %i[show new create edit update]
   post '/products/add_cart', to: 'products#add_to_cart'
   get '/:id/cart', to: 'products#cart'
+  post '/update_quantity', to: 'products#update_quantity'
+  # get '/checkout', to: 'product'
 
 
   devise_for :users
