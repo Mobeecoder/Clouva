@@ -7,4 +7,5 @@ class User < ApplicationRecord
   scope :is_merchant, -> { where(merchant: true) }
 
   has_many :products, foreign_key: 'merchant_id'
+  has_many :orders
 end

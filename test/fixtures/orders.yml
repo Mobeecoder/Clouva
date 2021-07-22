@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  product: one
+  ref_number: 
+  address: MyText
+  city: MyString
+  state: MyString
+  due_date: 2021-07-22 14:10:29
+
+two:
+  user: two
+  product: two
+  ref_number: 
+  address: MyText
+  city: MyString
+  state: MyString
+  due_date: 2021-07-22 14:10:29
