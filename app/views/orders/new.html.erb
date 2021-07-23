@@ -1,7 +1,12 @@
   <!--================Checkout Area =================-->
   <section class="checkout_area section-margin--small">
     <div class="container">
-
+        <% if session[:cart].nil? %>
+          <div class="alert alert-info d-flex">
+            <h3 class="text-info">NO ITEM IN CART</h3>
+            <%= link_to 'Continue Shopping', root_path, class: 'btn btn-info ml-auto' %>
+          </div>
+        <% else %>
         <% if flash[:alert] %>
             <div class="alert alert-danger mt-0">
                 <ul>
@@ -93,9 +98,11 @@
                 </div>
 
                 <% end %>
-                <%# </form> %>
+
             </div>
         </div>
+
+        <% end %>
     </div>
   </section>
   <!--================End Checkout Area =================-->

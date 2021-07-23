@@ -50512,3 +50512,1009 @@ Processing by OrdersController#show as HTML
 Completed 200 OK in 102ms (Views: 95.8ms | ActiveRecord: 0.9ms | Allocations: 9222)
 
 
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 16:59:19 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 146.8ms | Allocations: 8490)
+  Rendered layout layouts/application.html.erb (Duration: 189.0ms | Allocations: 12497)
+Completed 200 OK in 246ms (Views: 187.3ms | ActiveRecord: 6.8ms | Allocations: 23362)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:00:31 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 292)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.7ms | Allocations: 2558)
+  Rendered layout layouts/application.html.erb (Duration: 86.5ms | Allocations: 7264)
+Completed 200 OK in 107ms (Views: 100.9ms | ActiveRecord: 0.9ms | Allocations: 9146)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:00:50 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 28.7ms | Allocations: 2551)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 7282)
+Completed 200 OK in 79ms (Views: 70.6ms | ActiveRecord: 1.1ms | Allocations: 9156)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:03:13 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (10.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.1ms | Allocations: 2553)
+  Rendered layout layouts/application.html.erb (Duration: 77.7ms | Allocations: 7288)
+Completed 200 OK in 129ms (Views: 84.7ms | ActiveRecord: 12.7ms | Allocations: 9162)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:03:32 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1264)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 1333)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms | Allocations: 3177)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    13:               </tr>
+    14:               <tr>
+    15:                 <td>Date</td>
+    16:                 <td>: <%= @order.created_at.strftime() %></td>
+    17:               </tr>
+    18:               <tr>
+    19:                 <td>Total</td>
+  
+app/views/orders/show.html.erb:16
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:04:12 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 52.0ms | Allocations: 2553)
+  Rendered layout layouts/application.html.erb (Duration: 108.6ms | Allocations: 7291)
+Completed 200 OK in 134ms (Views: 123.1ms | ActiveRecord: 1.3ms | Allocations: 9170)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:05:23 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 16.7ms | Allocations: 2551)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 7282)
+Completed 200 OK in 64ms (Views: 56.9ms | ActiveRecord: 1.9ms | Allocations: 9156)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:05:35 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 42.7ms | Allocations: 2551)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 7282)
+Completed 200 OK in 96ms (Views: 85.5ms | ActiveRecord: 2.7ms | Allocations: 9156)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:06:26 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (14.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 57.5ms | Allocations: 2553)
+  Rendered layout layouts/application.html.erb (Duration: 106.4ms | Allocations: 7294)
+Completed 200 OK in 156ms (Views: 101.3ms | ActiveRecord: 14.8ms | Allocations: 9175)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 17:07:55 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 325)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.7ms | Allocations: 2551)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 7282)
+Completed 200 OK in 56ms (Views: 50.5ms | ActiveRecord: 0.7ms | Allocations: 9156)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (2.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.8ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 17], ["LIMIT", 11]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 17], ["LIMIT", 11]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 17], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.6ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" IN (?, ?)[0m  [["product_id", 1], ["product_id", 2]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 17], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.9ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" IN (?, ?)[0m  [["product_id", 1], ["product_id", 2]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 17], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.3ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" IN (?, ?)[0m  [["product_id", 1], ["product_id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 17], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.7ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" IN (?, ?)[0m  [["product_id", 1], ["product_id", 2]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 17], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.4ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" IN (?, ?)[0m  [["product_id", 1], ["product_id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["order_id", 17], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.6ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["order_id", 17], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (6.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["order_id", 17], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.5ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["order_id", 17], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" INNER JOIN "order_details" ON "products"."id" = "order_details"."product_id" WHERE "order_details"."order_id" = ? ORDER BY "products"."id" ASC LIMIT ?[0m  [["order_id", 17], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.9ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ? /* loading for inspect */ LIMIT ?[0m  [["product_id", 1], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ? /* loading for inspect */ LIMIT ?[0m  [["product_id", 1], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (1.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.3ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 1], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrder Load (2.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.8ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.9ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.5ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.4ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 16]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ? /* loading for inspect */ LIMIT ?[0m  [["order_id", 16], ["LIMIT", 11]]
+  [1m[36mOrderDetail Load (0.3ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 16]]
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mOrderDetail Load (0.3ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 16]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Destroy (10.4ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrder Destroy (0.5ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (1.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 3]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 4]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 5]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 6]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 7]]
+  [1m[36mOrder Destroy (0.5ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 8]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 9]]
+  [1m[36mOrder Destroy (2.2ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 9]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 10]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 11]]
+  [1m[36mOrder Destroy (0.7ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 11]]
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 12]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 12]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 13]]
+  [1m[36mOrderDetail Destroy (0.9ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 1]]
+  [1m[36mOrderDetail Destroy (0.1ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 2]]
+  [1m[36mOrder Destroy (2.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 13]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 14]]
+  [1m[36mOrderDetail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 3]]
+  [1m[36mOrderDetail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 4]]
+  [1m[36mOrder Destroy (0.5ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 14]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 15]]
+  [1m[36mOrderDetail Destroy (0.8ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 5]]
+  [1m[36mOrderDetail Destroy (0.1ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 6]]
+  [1m[36mOrder Destroy (0.2ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.7ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 16]]
+  [1m[36mOrderDetail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 7]]
+  [1m[36mOrderDetail Destroy (0.1ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 8]]
+  [1m[36mOrder Destroy (0.2ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 17]]
+  [1m[36mOrderDetail Destroy (2.6ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 9]]
+  [1m[36mOrderDetail Destroy (0.2ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 10]]
+  [1m[36mOrder Destroy (0.4ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 17]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_details"[0m
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 22:13:26 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1409)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1478)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 2.0ms | Allocations: 6383)
+
+
+  
+ActionView::Template::Error (undefined method `ref_number' for nil:NilClass):
+     9:             <table class="order-rable">
+    10:               <tr>
+    11:                 <td>Order number</td>
+    12:                 <td>: <%= @order.ref_number %></td>
+    13:               </tr>
+    14:               <tr>
+    15:                 <td>Date</td>
+  
+app/views/orders/show.html.erb:12
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 22:17:11 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 357)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 68.0ms | Allocations: 9923)
+  Rendered layout layouts/application.html.erb (Duration: 127.9ms | Allocations: 14693)
+Completed 200 OK in 159ms (Views: 145.4ms | ActiveRecord: 7.0ms | Allocations: 16557)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 22:19:17 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 22.6ms | Allocations: 2533)
+  Rendered layout layouts/application.html.erb (Duration: 118.3ms | Allocations: 7376)
+Completed 200 OK in 144ms (Views: 129.5ms | ActiveRecord: 1.2ms | Allocations: 9244)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 22:19:47 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.5ms | Allocations: 2527)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 7357)
+Completed 200 OK in 68ms (Views: 59.8ms | ActiveRecord: 2.7ms | Allocations: 9216)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 22:20:13 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.0ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 7356)
+Completed 200 OK in 73ms (Views: 62.6ms | ActiveRecord: 1.4ms | Allocations: 9216)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 22:20:35 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 14.2ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 7356)
+Completed 200 OK in 63ms (Views: 56.1ms | ActiveRecord: 3.1ms | Allocations: 9215)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 22:20:51 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 427)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.7ms | Allocations: 2528)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 7364)
+Completed 200 OK in 59ms (Views: 50.0ms | ActiveRecord: 1.0ms | Allocations: 9229)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 22:21:29 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (3.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 60.8ms | Allocations: 14903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.0ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 106.2ms | Allocations: 20233)
+Completed 200 OK in 147ms (Views: 104.2ms | ActiveRecord: 8.9ms | Allocations: 30497)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 22:25:21 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 68.1ms | Allocations: 11321)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 11390)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 7.8ms | Allocations: 21493)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    77:                         <ul class="list list_2">
+    78:                             <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+    79:                             <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+    80:                             <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+    81:                         </ul>
+    82:                         
+    83:                         <div class="creat_account">
+  
+app/views/orders/new.html.erb:80
+app/views/orders/new.html.erb:20
+Started GET "/checkout" for ::1 at 2021-07-23 22:25:41 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4989)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5057)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms | Allocations: 5504)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    77:                         <ul class="list list_2">
+    78:                             <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+    79:                             <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+    80:                             <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+    81:                         </ul>
+    82:                         
+    83:                         <div class="creat_account">
+  
+app/views/orders/new.html.erb:80
+app/views/orders/new.html.erb:20
+Started GET "/checkout" for ::1 at 2021-07-23 22:45:22 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 155.3ms | Allocations: 13377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 7.7ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 211.3ms | Allocations: 18707)
+Completed 200 OK in 262ms (Views: 209.3ms | ActiveRecord: 5.4ms | Allocations: 28196)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 22:45:46 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 139.6ms | Allocations: 11335)
+  Rendered layout layouts/application.html.erb (Duration: 145.2ms | Allocations: 11404)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 3.7ms | Allocations: 21465)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    77:                         <ul class="list list_2">
+    78:                             <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+    79:                             <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+    80:                             <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+    81:                         </ul>
+    82:                         
+    83:                         <div class="creat_account">
+  
+app/views/orders/new.html.erb:80
+app/views/orders/new.html.erb:20
+Started GET "/checkout" for ::1 at 2021-07-23 22:46:53 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 53.8ms | Allocations: 11316)
+  Rendered layout layouts/application.html.erb (Duration: 55.1ms | Allocations: 11385)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 5.3ms | Allocations: 21491)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    77:                         <ul class="list list_2">
+    78:                             <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+    79:                             <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+    80:                             <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+    81:                         </ul>
+    82:                         
+    83:                         <div class="creat_account">
+  
+app/views/orders/new.html.erb:80
+app/views/orders/new.html.erb:20
+Started GET "/checkout" for ::1 at 2021-07-23 22:47:03 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 43.6ms | Allocations: 14166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.5ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 85.2ms | Allocations: 19517)
+Completed 200 OK in 122ms (Views: 86.3ms | ActiveRecord: 4.6ms | Allocations: 29652)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-23 22:47:06 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 26.5ms | Allocations: 2238)
+  Rendered layout layouts/application.html.erb (Duration: 64.4ms | Allocations: 8384)
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 3.2ms | Allocations: 9505)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 22:47:24 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 3926)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 3.0ms | Allocations: 1342)
+  Rendered layout layouts/application.html.erb (Duration: 65.8ms | Allocations: 9156)
+Completed 200 OK in 91ms (Views: 65.5ms | ActiveRecord: 1.0ms | Allocations: 9643)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-23 22:47:29 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1628)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 92.6ms | Allocations: 2220)
+  Rendered layout layouts/application.html.erb (Duration: 175.9ms | Allocations: 8355)
+Completed 200 OK in 183ms (Views: 180.9ms | ActiveRecord: 1.0ms | Allocations: 8817)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-23 22:48:48 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1943)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 14.7ms | Allocations: 2488)
+  Rendered layout layouts/application.html.erb (Duration: 94.5ms | Allocations: 8834)
+Completed 200 OK in 100ms (Views: 95.4ms | ActiveRecord: 1.5ms | Allocations: 10151)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-23 22:49:00 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.9ms | Allocations: 2488)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 8795)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.7ms | Allocations: 10106)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 22:49:02 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 37.5ms | Allocations: 6352)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 6421)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.0ms | Allocations: 7498)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    77:                         <ul class="list list_2">
+    78:                             <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+    79:                             <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+    80:                             <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+    81:                         </ul>
+    82:                         
+    83:                         <div class="creat_account">
+  
+app/views/orders/new.html.erb:80
+app/views/orders/new.html.erb:20
+Started GET "/9/cart" for ::1 at 2021-07-23 22:49:20 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1935)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 69.3ms | Allocations: 2490)
+  Rendered layout layouts/application.html.erb (Duration: 170.1ms | Allocations: 9407)
+Completed 200 OK in 188ms (Views: 172.1ms | ActiveRecord: 2.8ms | Allocations: 10724)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-23 22:49:21 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/products/cart.html.erb:17
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered products/cart.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 52.7ms | Allocations: 2185)
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 7543)
+Completed 200 OK in 103ms (Views: 98.8ms | ActiveRecord: 1.0ms | Allocations: 7996)
+
+
+Started GET "/9/cart" for ::1 at 2021-07-23 22:52:08 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  Rendered products/cart.html.erb within layouts/application (Duration: 2.6ms | Allocations: 608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.3ms | Allocations: 2494)
+  Rendered layout layouts/application.html.erb (Duration: 53.3ms | Allocations: 7505)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 1.7ms | Allocations: 8815)
+
+
+Started GET "/9/checkout" for ::1 at 2021-07-23 22:52:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/9/checkout"):
+  
+Started GET "/9/cart" for ::1 at 2021-07-23 22:53:20 +0100
+Processing by ProductsController#cart as HTML
+  Parameters: {"id"=>"9"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/cart.html.erb within layouts/application
+  Rendered products/cart.html.erb within layouts/application (Duration: 0.6ms | Allocations: 77)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.1ms | Allocations: 2188)
+  Rendered layout layouts/application.html.erb (Duration: 51.7ms | Allocations: 6176)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.4ms | Allocations: 6629)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 22:53:29 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 65.5ms | Allocations: 5756)
+  Rendered layout layouts/application.html.erb (Duration: 82.0ms | Allocations: 5825)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.8ms | Allocations: 6898)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    77:                         <ul class="list list_2">
+    78:                             <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+    79:                             <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+    80:                             <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+    81:                         </ul>
+    82:                         
+    83:                         <div class="creat_account">
+  
+app/views/orders/new.html.erb:80
+app/views/orders/new.html.erb:20
+Started GET "/checkout" for ::1 at 2021-07-23 22:55:40 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:44
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/orders/new.html.erb:71
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 5821)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 5890)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms | Allocations: 7193)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    82:                         <ul class="list list_2">
+    83:                             <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+    84:                             <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+    85:                             <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+    86:                         </ul>
+    87:                         
+    88:                         <div class="creat_account">
+  
+app/views/orders/new.html.erb:85
+app/views/orders/new.html.erb:25
+Started GET "/checkout" for ::1 at 2021-07-23 22:55:52 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 880)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 7.9ms | Allocations: 2496)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 7785)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 0.3ms | Allocations: 9125)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-07-23 22:56:11 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.1ms | Allocations: 2702)
+
+
+Started GET "/" for ::1 at 2021-07-23 22:56:11 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 9.6ms | Allocations: 2068)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 9490)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 1.8ms | Allocations: 10560)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    27:                       <i class="ti-user" aria-hidden="true"></i>
+    28:                     </a>
+    29:                   </li>
+    30:               <li class="nav-item"><button><a href="/<%= current_user.id%>/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+    31: 
+    32:                 <% if user_signed_in? %>
+    33:                   <li class="nav-item font-weight-bold ml-5">
+  
+app/views/layouts/_navigation.html.erb:30
+app/views/layouts/application.html.erb:19

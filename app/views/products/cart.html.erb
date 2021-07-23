@@ -3,6 +3,12 @@
       <div class="container">
           <div class="cart_inner">
               <div class="table-responsive">
+                <% if session[:cart].nil? %>
+                  <div class="alert alert-info d-flex">
+                    <h3 class="text-info">NO ITEM IN CART</h3>
+                    <%= link_to 'Continue Shopping', root_path, class: 'btn btn-info ml-auto' %>
+                 </div>
+                <% else %>
                   <table class="table">
                       <thead>
                           <tr>
@@ -13,7 +19,7 @@
                           </tr>
                       </thead>
                       <tbody>
-
+                            
                             <% for item in cart_details %>
                                 <tr data-id="<%= item.id %>">
                                     <td>
@@ -42,24 +48,6 @@
                                 </tr>
                             <% end %>
                           
-                          <%# <tr class="bottom_button">
-                              <td>
-                                  <a class="button" href="#">Update Cart</a>
-                              </td>
-                              <td>
-
-                              </td>
-                              <td>
-
-                              </td>
-                              <td>
-                                  <div class="cupon_text d-flex align-items-center">
-                                      <input type="text" placeholder="Coupon Code">
-                                      <a class="primary-btn" href="#">Apply</a>
-                                      <a class="button" href="#">Have a Coupon?</a>
-                                  </div>
-                              </td>
-                          </tr> %>
                           <tr>
                               <td>
 
@@ -74,45 +62,7 @@
                                   <h5>&#8358;<span id="sub-total"><%= cart_total %></span></h5>
                               </td>
                           </tr>
-                          <%# <tr class="shipping_area">
-                              <td class="d-none d-md-block">
-
-                              </td>
-                              <td>
-
-                              </td>
-                              <td>
-                                  <h5>Delivery</h5>
-                              </td>
-                              <td>
-                                  <div class="shipping_box">
-                                      <ul class="list">
-                                          <li class="d-flex align-items-center justify-content-end mb-0">
-                                            <p class="mr-1">Within Lagos: &#8358;2000</p>
-                                            <input type="radio" style="width:20px" name="delivery" value="2000" id="within-lagos">
-                                          </li>
-
-                                          <li class="d-flex align-items-center justify-content-end mt-0">
-                                            <p class="mr-1">Outside Lagos: &#8358;5000</p>
-                                            <input type="radio" style="width:20px" name="delivery" value="5000" id="outside-lagos">
-                                          </li>
-                                      </ul>
-                                      
-                                      <select class="shipping_select">
-                                          <option value="1">Bangladesh</option>
-                                          <option value="2">India</option>
-                                          <option value="4">Pakistan</option>
-                                      </select>
-                                      <select class="shipping_select">
-                                          <option value="1">Select a State</option>
-                                          <option value="2">Select a State</option>
-                                          <option value="4">Select a State</option>
-                                      </select>
-                                      <input type="text" placeholder="Postcode/Zipcode">
-                                      <a class="gray_btn" href="#">Update Details</a>
-                                  </div>
-                              </td>
-                          </tr> %>
+  
                           <tr class="out_button_area">
                               <td class="d-none-l">
 
@@ -132,6 +82,8 @@
                           </tr>
                       </tbody>
                   </table>
+
+                <% end %>
               </div>
           </div>
       </div>

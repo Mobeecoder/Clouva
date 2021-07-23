@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
 
     if order.save
       order.save_details(helpers.cart_details, session[:cart])
+      session[:cart] = nil
       redirect_to '/confirmation/' + order.ref_number.to_s
     else
       flash[:alert] = order.errors.full_messages

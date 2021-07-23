@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    # session[:cart] = nil
+    
     unless session[:cart]
       session[:cart] = {}
     end
@@ -46,10 +46,4 @@ class ProductsController < ApplicationController
   def destroy
   end
 
-  # private
-
-  # def key_value_in_hash?(hash, key, value)
-  #   p output = hash.keys.any?(key) && hash.values.any?(value)
-  #   output
-  # end
 end
