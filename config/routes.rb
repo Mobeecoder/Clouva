@@ -9,11 +9,13 @@ Rails.application.routes.draw do
   root 'products#index'
 
   resources :products, only: %i[show new create edit update]
+  resources :orders, except: %i[new]
 
   post '/products/add_cart', to: 'products#add_to_cart'
   get '/:id/cart', to: 'products#cart'
   post '/update_quantity', to: 'products#update_quantity'
-  get '/checkout', to: 'orders#checkout'
+  get '/checkout', to: 'orders#new'
+  # post '/checkout', to: 'orders#create'
 
 
   devise_for :users
