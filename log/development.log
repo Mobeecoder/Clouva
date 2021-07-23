@@ -50079,3 +50079,436 @@ Processing by OrdersController#new as HTML
 Completed 200 OK in 88ms (Views: 84.4ms | ActiveRecord: 1.3ms | Allocations: 9640)
 
 
+Started GET "/checkout" for ::1 at 2021-07-23 16:20:20 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 46.8ms | Allocations: 13224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 64.5ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 189.3ms | Allocations: 18554)
+Completed 200 OK in 234ms (Views: 196.5ms | ActiveRecord: 3.8ms | Allocations: 28004)
+
+
+Started POST "/orders" for ::1 at 2021-07-23 16:20:28 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"first_name"=>"Biodun", "last_name"=>"Bello", "phone"=>"+2347081520327", "email"=>"mobello@gmail.com", "address"=>"11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State", "lga"=>"Obafemi Owode LGA", "state"=>"Lagos"}, "commit"=>"Checkout"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10:in `create'
+  [1m[36mOrder Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 929132], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:39:in `rand_num'
+  [1m[36mCACHE Order Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 929132], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mOrder Create (9.0ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "ref_number", "address", "state", "created_at", "updated_at", "first_name", "last_name", "phone", "email", "lga") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["ref_number", 929132], ["address", "11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State"], ["state", "Lagos"], ["created_at", "2021-07-23 15:20:28.525504"], ["updated_at", "2021-07-23 15:20:28.525504"], ["first_name", "Biodun"], ["last_name", "Bello"], ["phone", 2347081520327], ["email", "mobello@gmail.com"], ["lga", "Obafemi Owode LGA"]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/models/order.rb:19:in `save_details'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (2.2ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 14], ["product_id", 1], ["quantity", 2], ["created_at", "2021-07-23 15:20:28.737553"], ["updated_at", "2021-07-23 15:20:28.737553"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (1.1ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 14], ["product_id", 2], ["quantity", 1], ["created_at", "2021-07-23 15:20:28.784294"], ["updated_at", "2021-07-23 15:20:28.784294"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 22.8ms | Allocations: 18737)
+
+
+  
+TypeError (no implicit conversion of Integer into String):
+  
+app/controllers/orders_controller.rb:14:in `+'
+app/controllers/orders_controller.rb:14:in `create'
+Started GET "/checkout" for ::1 at 2021-07-23 16:21:04 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 59.4ms | Allocations: 14166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 25.5ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 205.1ms | Allocations: 19496)
+Completed 200 OK in 312ms (Views: 241.4ms | ActiveRecord: 6.4ms | Allocations: 32703)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 16:21:06 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 26.2ms | Allocations: 3929)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.1ms | Allocations: 1346)
+  Rendered layout layouts/application.html.erb (Duration: 97.7ms | Allocations: 9163)
+Completed 200 OK in 104ms (Views: 101.0ms | ActiveRecord: 0.9ms | Allocations: 9648)
+
+
+Started POST "/orders" for ::1 at 2021-07-23 16:21:18 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"first_name"=>"Biodun", "last_name"=>"Bello", "phone"=>"+2347081520327", "email"=>"mobello@gmail.com", "address"=>"11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State", "lga"=>"Obafemi Owode LGA", "state"=>"Lagos"}, "commit"=>"Checkout"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10:in `create'
+  [1m[36mOrder Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 942249], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:39:in `rand_num'
+  [1m[36mCACHE Order Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 942249], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mOrder Create (0.6ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "ref_number", "address", "state", "created_at", "updated_at", "first_name", "last_name", "phone", "email", "lga") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["ref_number", 942249], ["address", "11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State"], ["state", "Lagos"], ["created_at", "2021-07-23 15:21:18.358489"], ["updated_at", "2021-07-23 15:21:18.358489"], ["first_name", "Biodun"], ["last_name", "Bello"], ["phone", 2347081520327], ["email", "mobello@gmail.com"], ["lga", "Obafemi Owode LGA"]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/models/order.rb:19:in `save_details'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (0.6ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 15], ["product_id", 1], ["quantity", 2], ["created_at", "2021-07-23 15:21:18.468835"], ["updated_at", "2021-07-23 15:21:18.468835"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (0.5ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 15], ["product_id", 2], ["quantity", 1], ["created_at", "2021-07-23 15:21:18.515300"], ["updated_at", "2021-07-23 15:21:18.515300"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+Redirected to http://localhost:3000/confirmation/15
+Completed 302 Found in 204ms (ActiveRecord: 23.4ms | Allocations: 26837)
+
+
+Started GET "/confirmation/15" for ::1 at 2021-07-23 16:21:18 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"15"}
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 41.3ms | Allocations: 6339)
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 10363)
+Completed 200 OK in 72ms (Views: 57.4ms | ActiveRecord: 9.0ms | Allocations: 10968)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 16:23:18 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 60.0ms | Allocations: 14166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.4ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 117.6ms | Allocations: 19496)
+Completed 200 OK in 150ms (Views: 115.6ms | ActiveRecord: 7.2ms | Allocations: 29595)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 16:23:20 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 20.6ms | Allocations: 3929)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 3.1ms | Allocations: 1342)
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 9159)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 1.0ms | Allocations: 9643)
+
+
+Started POST "/orders" for ::1 at 2021-07-23 16:23:28 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"first_name"=>"Biodun", "last_name"=>"Bello", "phone"=>"+2347081520327", "email"=>"mobello@gmail.com", "address"=>"11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State", "lga"=>"Obafemi Owode LGA", "state"=>"Lagos"}, "commit"=>"Checkout"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10:in `create'
+  [1m[36mOrder Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 786341], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:39:in `rand_num'
+  [1m[36mCACHE Order Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 786341], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "ref_number", "address", "state", "created_at", "updated_at", "first_name", "last_name", "phone", "email", "lga") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["ref_number", 786341], ["address", "11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State"], ["state", "Lagos"], ["created_at", "2021-07-23 15:23:28.979212"], ["updated_at", "2021-07-23 15:23:28.979212"], ["first_name", "Biodun"], ["last_name", "Bello"], ["phone", 2347081520327], ["email", "mobello@gmail.com"], ["lga", "Obafemi Owode LGA"]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/models/order.rb:19:in `save_details'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (0.5ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 16], ["product_id", 1], ["quantity", 2], ["created_at", "2021-07-23 15:23:29.146231"], ["updated_at", "2021-07-23 15:23:29.146231"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (1.9ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 16], ["product_id", 2], ["quantity", 1], ["created_at", "2021-07-23 15:23:29.169543"], ["updated_at", "2021-07-23 15:23:29.169543"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+Redirected to http://localhost:3000/confirmation/786341
+Completed 302 Found in 316ms (ActiveRecord: 13.0ms | Allocations: 22711)
+
+
+Started GET "/confirmation/786341" for ::1 at 2021-07-23 16:23:29 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"786341"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 786341], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 163.2ms | Allocations: 2379)
+  Rendered layout layouts/application.html.erb (Duration: 185.2ms | Allocations: 6333)
+Completed 200 OK in 198ms (Views: 185.2ms | ActiveRecord: 1.3ms | Allocations: 7498)
+
+
+Started GET "/confirmation/786341" for ::1 at 2021-07-23 16:23:54 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"786341"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 786341], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 124.6ms | Allocations: 8490)
+  Rendered layout layouts/application.html.erb (Duration: 157.1ms | Allocations: 12497)
+Completed 200 OK in 318ms (Views: 183.4ms | ActiveRecord: 3.4ms | Allocations: 27313)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 16:23:55 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 88.8ms | Allocations: 8004)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.9ms | Allocations: 1346)
+  Rendered layout layouts/application.html.erb (Duration: 114.3ms | Allocations: 13243)
+Completed 200 OK in 117ms (Views: 109.4ms | ActiveRecord: 7.3ms | Allocations: 13736)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 16:23:57 +0100
+Processing by OrdersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:39
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/orders/new.html.erb:66
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  [1m[36mCACHE Product Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/helpers/cart_helper.rb:5:in `map'
+  Rendered orders/new.html.erb within layouts/application (Duration: 25.6ms | Allocations: 3927)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.4ms | Allocations: 1344)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 9163)
+Completed 200 OK in 68ms (Views: 65.7ms | ActiveRecord: 1.0ms | Allocations: 9646)
+
+
+Started POST "/orders" for ::1 at 2021-07-23 16:24:03 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"first_name"=>"Biodun", "last_name"=>"Bello", "phone"=>"+2347081520327", "email"=>"mobello@gmail.com", "address"=>"11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State", "lga"=>"Obafemi Owode LGA", "state"=>"Lagos"}, "commit"=>"Checkout"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:10:in `create'
+  [1m[36mOrder Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:39:in `rand_num'
+  [1m[36mCACHE Order Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mOrder Create (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "ref_number", "address", "state", "created_at", "updated_at", "first_name", "last_name", "phone", "email", "lga") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 9], ["ref_number", 263661], ["address", "11, Iyanu Oluwa Street, Pakuro, Mowe, Ogun State"], ["state", "Lagos"], ["created_at", "2021-07-23 15:24:03.421134"], ["updated_at", "2021-07-23 15:24:03.421134"], ["first_name", "Biodun"], ["last_name", "Bello"], ["phone", 2347081520327], ["email", "mobello@gmail.com"], ["lga", "Obafemi Owode LGA"]]
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:12:in `create'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/models/order.rb:19:in `save_details'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (1.7ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 17], ["product_id", 1], ["quantity", 2], ["created_at", "2021-07-23 15:24:03.471020"], ["updated_at", "2021-07-23 15:24:03.471020"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mProduct Load (8.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mOrderDetail Create (0.8ms)[0m  [1m[32mINSERT INTO "order_details" ("order_id", "product_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["order_id", 17], ["product_id", 2], ["quantity", 1], ["created_at", "2021-07-23 15:24:03.514594"], ["updated_at", "2021-07-23 15:24:03.514594"]]
+  ↳ app/models/order.rb:21:in `block in save_details'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/order.rb:21:in `block in save_details'
+Redirected to http://localhost:3000/confirmation/263661
+Completed 302 Found in 126ms (ActiveRecord: 28.6ms | Allocations: 22612)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 16:24:03 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 32.4ms | Allocations: 2414)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 6367)
+Completed 200 OK in 73ms (Views: 54.9ms | ActiveRecord: 1.8ms | Allocations: 8175)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 16:55:09 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 112)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 28.9ms | Allocations: 2576)
+  Rendered layout layouts/application.html.erb (Duration: 88.9ms | Allocations: 7101)
+Completed 200 OK in 195ms (Views: 120.9ms | ActiveRecord: 5.2ms | Allocations: 9729)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 16:55:13 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 19.6ms | Allocations: 2236)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 6186)
+Completed 200 OK in 53ms (Views: 48.6ms | ActiveRecord: 0.8ms | Allocations: 7324)
+
+
+Started GET "/confirmation/263661" for ::1 at 2021-07-23 16:55:30 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"263661"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 263661], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.4ms | Allocations: 2553)
+  Rendered layout layouts/application.html.erb (Duration: 85.4ms | Allocations: 7228)
+Completed 200 OK in 102ms (Views: 95.8ms | ActiveRecord: 0.9ms | Allocations: 9222)
+
+

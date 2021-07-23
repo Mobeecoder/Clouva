@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
 
     if order.save
       order.save_details(helpers.cart_details, session[:cart])
+      redirect_to '/confirmation/' + order.ref_number.to_s
     else
       flash[:alert] = order.errors.full_messages
       redirect_to '/checkout'
@@ -19,6 +20,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find_by(ref_number: params[:ref])
   end
 
   def edit
