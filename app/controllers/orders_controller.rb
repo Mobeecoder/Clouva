@@ -9,8 +9,8 @@ class OrdersController < ApplicationController
   def create
     order = current_user.orders.build(order_params)
 
-    if order.valid?
-      p 'Hello'
+    if order.save
+      order.save_details(helpers.cart_details, session[:cart])
     else
       flash[:alert] = order.errors.full_messages
       redirect_to '/checkout'
