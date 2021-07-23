@@ -1,6 +1,16 @@
   <!--================Checkout Area =================-->
   <section class="checkout_area section-margin--small">
     <div class="container">
+
+        <% if flash[:alert] %>
+            <div class="alert alert-danger mt-0">
+                <ul>
+                    <% for error in flash[:alert] %>
+                        <li>* <%= error %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
         
         <div class="billing_details">
             <div class="row">
@@ -16,32 +26,32 @@
 
                         <div class="col-md-6 form-group p_star"> 
                             <%= f.label :last_name, "Last Name" %>
-                            <%= f.text_field :last_name, class: "form-control" %>                          
+                            <%= f.text_field :last_name, class: "form-control", 'required': 'required' %>                          
                         </div>
 
                         <div class="col-md-6 form-group p_star">
                             <%= f.label :phone, "Phone No." %>
-                            <%= f.text_field :phone, class: "form-control" %> 
+                            <%= f.text_field :phone, class: "form-control", 'required': 'required' %> 
                         </div>
 
                         <div class="col-md-6 form-group p_star">                            
                             <%= f.label :email, "Email" %>
-                            <%= f.text_field :email, class: "form-control", value: current_user.email %> 
+                            <%= f.text_field :email, class: "form-control", value: current_user.email, 'required': 'required' %> 
                         </div>
 
                         <div class="col-md-12 form-group p_star">
                             <%= f.label :address, "Address" %>
-                            <%= f.text_field :address, class: "form-control" %> 
+                            <%= f.text_field :address, class: "form-control", 'required': 'required' %> 
                         </div>
 
                         <div class="col-md-12 form-group p_star">
                             <%= f.label :lga, "Local Government Area" %>
-                            <%= f.text_field :lga, class: "form-control" %> 
+                            <%= f.text_field :lga, class: "form-control", 'required': 'required' %> 
                         </div>
 
                         <div class="col-md-12 form-group p_star">
                             <%= f.label :state, "State" %>                            
-                            <select id="state" name="order[state]" class="country_select">
+                            <select id="state" name="order[state]" class="country_select" required>
                                 <option value="Lagos">Lagos</option>                             
                             </select>
                         </div>

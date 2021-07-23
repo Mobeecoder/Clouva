@@ -7,8 +7,15 @@ class OrdersController < ApplicationController
   end
 
   def create
-    params[:order][:ref_number] = rand_num
-    p params
+    order = current_user.orders.build(order_params)
+
+    if order.valid?
+      p 'Hello'
+    else
+      flash[:alert] = order.errors.full_messages
+      redirect_to '/checkout'
+    end
+
   end
 
   def show
@@ -32,6 +39,11 @@ class OrdersController < ApplicationController
     end
 
     num
+  end
+
+  def order_params
+    params[:order][:ref_number] = rand_num
+    params.require(:order).permit(:first_name, :last_name, :phone, :email, :address, :lga, :state, :ref_number)
   end
 
 end
