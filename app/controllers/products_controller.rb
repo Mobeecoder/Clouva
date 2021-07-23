@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: %i[add_to_cart]
+
   def index
     @products = Product.all
   end
@@ -20,7 +22,6 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    
     unless session[:cart]
       session[:cart] = {}
     end

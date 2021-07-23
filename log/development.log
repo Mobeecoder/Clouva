@@ -51518,3 +51518,408 @@ ActionView::Template::Error (undefined method `id' for nil:NilClass):
   
 app/views/layouts/_navigation.html.erb:30
 app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-23 22:58:29 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 69.3ms | Allocations: 13062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.2ms | Allocations: 1768)
+  Rendered layout layouts/application.html.erb (Duration: 99.0ms | Allocations: 19148)
+Completed 200 OK in 118ms (Views: 103.2ms | ActiveRecord: 14.3ms | Allocations: 22555)
+
+
+Started GET "/products/1" for ::1 at 2021-07-23 22:59:02 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 35.3ms | Allocations: 3623)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.1ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 9377)
+Completed 200 OK in 110ms (Views: 97.4ms | ActiveRecord: 0.6ms | Allocations: 10637)
+
+
+Started GET "/products/1" for ::1 at 2021-07-23 23:01:03 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/products_controller.rb:15:in `show'
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.2ms | Allocations: 1502)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | Allocations: 6539)
+Completed 200 OK in 59ms (Views: 33.0ms | ActiveRecord: 2.3ms | Allocations: 15244)
+
+
+Started POST "/products/add_cart" for ::1 at 2021-07-23 23:01:09 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1", "qty"=>"1"}
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms | Allocations: 3590)
+
+
+  
+NoMethodError (undefined method `authenticate_user' for #<ProductsController:0x0000000006dad8>
+Did you mean?  authenticate_user!):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/products/1" for ::1 at 2021-07-23 23:02:23 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/products_controller.rb:15:in `show'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1180)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 16.5ms | Allocations: 1502)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 6539)
+Completed 200 OK in 97ms (Views: 54.8ms | ActiveRecord: 5.7ms | Allocations: 15223)
+
+
+Started GET "/products/1" for ::1 at 2021-07-23 23:02:25 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 4.2ms | Allocations: 1393)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 6387)
+Completed 200 OK in 29ms (Views: 22.6ms | ActiveRecord: 0.6ms | Allocations: 7389)
+
+
+Started POST "/products/add_cart" for ::1 at 2021-07-23 23:02:27 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1", "qty"=>"1"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 303)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:02:27 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 625)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.1ms | Allocations: 1386)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 7949)
+Completed 200 OK in 86ms (Views: 54.5ms | ActiveRecord: 1.4ms | Allocations: 13860)
+
+
+Started GET "/checkout" for ::1 at 2021-07-23 23:08:51 +0100
+Processing by OrdersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/orders_controller.rb:6:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/new.html.erb within layouts/application (Duration: 16.0ms | Allocations: 880)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.5ms | Allocations: 1397)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 6221)
+Completed 200 OK in 129ms (Views: 67.7ms | ActiveRecord: 3.3ms | Allocations: 16114)
+
+
+Started GET "/products/2" for ::1 at 2021-07-23 23:09:05 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1168)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 19.8ms | Allocations: 1390)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | Allocations: 6345)
+Completed 200 OK in 73ms (Views: 57.6ms | ActiveRecord: 1.5ms | Allocations: 7375)
+
+
+Started POST "/products/add_cart" for ::1 at 2021-07-23 23:09:06 +0100
+Processing by ProductsController#add_to_cart as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2", "qty"=>"1"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:09:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1009)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 13.7ms | Allocations: 1364)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 6320)
+Completed 200 OK in 64ms (Views: 60.0ms | ActiveRecord: 0.3ms | Allocations: 7007)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:27:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 9.4ms | Allocations: 534)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 2463)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 14.6ms | Allocations: 2394)
+  Rendered layout layouts/application.html.erb (Duration: 81.5ms | Allocations: 9286)
+Completed 200 OK in 100ms (Views: 96.3ms | ActiveRecord: 3.5ms | Allocations: 11160)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:28:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 534)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 7.8ms | Allocations: 1663)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 7586)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.6ms | Allocations: 9463)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:45:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.6ms | Allocations: 534)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 1489)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.4ms | Allocations: 2400)
+  Rendered layout layouts/application.html.erb (Duration: 129.7ms | Allocations: 8318)
+Completed 200 OK in 187ms (Views: 152.9ms | ActiveRecord: 1.1ms | Allocations: 10192)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:48:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 9.3ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1549)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 14.6ms | Allocations: 1653)
+  Rendered layout layouts/application.html.erb (Duration: 89.2ms | Allocations: 7635)
+Completed 200 OK in 105ms (Views: 98.0ms | ActiveRecord: 4.3ms | Allocations: 9522)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:49:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1544)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 14.6ms | Allocations: 1653)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 7630)
+Completed 200 OK in 73ms (Views: 68.2ms | ActiveRecord: 0.2ms | Allocations: 9509)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-07-23 23:49:19 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 219)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 151)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.4ms | Allocations: 1385)
+  Rendered layout layouts/application.html.erb (Duration: 52.9ms | Allocations: 7451)
+Completed 200 OK in 64ms (Views: 59.6ms | ActiveRecord: 0.2ms | Allocations: 8831)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-23 23:54:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.9ms | Allocations: 1651)
+  Rendered layout layouts/application.html.erb (Duration: 74.0ms | Allocations: 7621)
+Completed 200 OK in 100ms (Views: 96.9ms | ActiveRecord: 0.7ms | Allocations: 9498)
+
+
+Started GET "/" for ::1 at 2021-07-24 00:06:48 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (1.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 93.5ms | Allocations: 4321)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 34.5ms | Allocations: 1392)
+  Rendered layout layouts/application.html.erb (Duration: 176.9ms | Allocations: 9591)
+Completed 200 OK in 266ms (Views: 223.4ms | ActiveRecord: 4.8ms | Allocations: 10690)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-24 00:07:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.4ms | Allocations: 654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.2ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 5958)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.2ms | Allocations: 6635)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-07-24 00:07:41 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 211)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 113)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 30.1ms | Allocations: 1952)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 30.4ms | Allocations: 1385)
+  Rendered layout layouts/application.html.erb (Duration: 99.4ms | Allocations: 7341)
+Completed 200 OK in 107ms (Views: 103.7ms | ActiveRecord: 0.4ms | Allocations: 8588)
+
+
