@@ -53617,3 +53617,537 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 2.0ms | Allocations: 8863)
 
 
+Started GET "/" for ::1 at 2021-07-24 11:21:57 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 4.4ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 58.1ms | Allocations: 8258)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 1.4ms | Allocations: 9560)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 	<header class="header_area">
+
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container-fluid">
+          <a style="width:10%" class="navbar-brand logo_h" href="/"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item active"><a class="nav-link font-weight-bold"  href="/">Home</a></li>
+              <li class="nav-item">
+                <a href="/" class="nav-link font-weight-bold" role="button">Shop</a>
+              </li>
+              
+              <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="nav-shop" style="width: 520px">
+              <li class="nav-item"><button><i class="ti-search"></i></button></li>
+                <li class="nav-item">
+                    <a href="login.html" class="icons">
+                      <i class="ti-user" aria-hidden="true"></i>
+                    </a>
+                  </li>
+              <li class="nav-item"><button><a href="/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+
+                <% if user_signed_in? %>
+                  <li class="nav-item font-weight-bold ml-5">
+                    <%= current_user.email.split('@')[0].upcase.[0...3] %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+                  </li>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+                <% else %>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Login', new_user_session_path, class: 'btn btn-light ml-5' %></li>              
+                  <li class="nav-item font-weight-bold"><%= link_to 'Register', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+                <% end %>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+):
+1:    	<header class="header_area">
+2:    
+3:        <div class="main_menu">
+4:          <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+5:            <div class="container-fluid">
+6:              <a style="width:10%" class="navbar-brand logo_h" href="/"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
+7:              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+8:                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+9:                <span class="icon-bar"></span>
+10:                <span class="icon-bar"></span>
+11:                <span class="icon-bar"></span>
+12:              </button>
+13:              <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+14:                <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+15:                  <li class="nav-item active"><a class="nav-link font-weight-bold"  href="/">Home</a></li>
+16:                  <li class="nav-item">
+17:                    <a href="/" class="nav-link font-weight-bold" role="button">Shop</a>
+18:                  </li>
+19:                  
+20:                  <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
+21:                </ul>
+22:    
+23:                <ul class="nav-shop" style="width: 520px">
+24:                  <li class="nav-item"><button><i class="ti-search"></i></button></li>
+25:                    <li class="nav-item">
+26:                        <a href="login.html" class="icons">
+27:                          <i class="ti-user" aria-hidden="true"></i>
+28:                        </a>
+29:                      </li>
+30:                  <li class="nav-item"><button><a href="/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+31:    
+32:                    <% if user_signed_in? %>
+33:                      <li class="nav-item font-weight-bold ml-5">
+34:                        <%= current_user.email.split('@')[0].upcase.[0...3] %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+35:                      </li>
+36:                      <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+37:                    <% else %>
+38:                      <li class="nav-item font-weight-bold"><%= link_to 'Login', new_user_session_path, class: 'btn btn-light ml-5' %></li>              
+39:                      <li class="nav-item font-weight-bold"><%= link_to 'Register', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+40:                    <% end %>
+41:    
+42:                </ul>
+43:              </div>
+44:            </div>
+45:          </nav>
+46:        </div>
+47:      </header>
+  
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-24 11:22:22 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.3ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 8254)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.6ms | Allocations: 9552)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 	<header class="header_area">
+
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container-fluid">
+          <a style="width:10%" class="navbar-brand logo_h" href="/"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item active"><a class="nav-link font-weight-bold"  href="/">Home</a></li>
+              <li class="nav-item">
+                <a href="/" class="nav-link font-weight-bold" role="button">Shop</a>
+              </li>
+              
+              <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="nav-shop" style="width: 520px">
+              <li class="nav-item"><button><i class="ti-search"></i></button></li>
+                <li class="nav-item">
+                    <a href="login.html" class="icons">
+                      <i class="ti-user" aria-hidden="true"></i>
+                    </a>
+                  </li>
+              <li class="nav-item"><button><a href="/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+
+                <% if user_signed_in? %>
+                  <li class="nav-item font-weight-bold ml-5">
+                    <%= current_user.email.split('@')[0].upcase.[1...3] %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+                  </li>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+                <% else %>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Login', new_user_session_path, class: 'btn btn-light ml-5' %></li>              
+                  <li class="nav-item font-weight-bold"><%= link_to 'Register', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+                <% end %>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+):
+1:    	<header class="header_area">
+2:    
+3:        <div class="main_menu">
+4:          <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+5:            <div class="container-fluid">
+6:              <a style="width:10%" class="navbar-brand logo_h" href="/"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
+7:              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+8:                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+9:                <span class="icon-bar"></span>
+10:                <span class="icon-bar"></span>
+11:                <span class="icon-bar"></span>
+12:              </button>
+13:              <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+14:                <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+15:                  <li class="nav-item active"><a class="nav-link font-weight-bold"  href="/">Home</a></li>
+16:                  <li class="nav-item">
+17:                    <a href="/" class="nav-link font-weight-bold" role="button">Shop</a>
+18:                  </li>
+19:                  
+20:                  <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
+21:                </ul>
+22:    
+23:                <ul class="nav-shop" style="width: 520px">
+24:                  <li class="nav-item"><button><i class="ti-search"></i></button></li>
+25:                    <li class="nav-item">
+26:                        <a href="login.html" class="icons">
+27:                          <i class="ti-user" aria-hidden="true"></i>
+28:                        </a>
+29:                      </li>
+30:                  <li class="nav-item"><button><a href="/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+31:    
+32:                    <% if user_signed_in? %>
+33:                      <li class="nav-item font-weight-bold ml-5">
+34:                        <%= current_user.email.split('@')[0].upcase.[1...3] %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+35:                      </li>
+36:                      <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+37:                    <% else %>
+38:                      <li class="nav-item font-weight-bold"><%= link_to 'Login', new_user_session_path, class: 'btn btn-light ml-5' %></li>              
+39:                      <li class="nav-item font-weight-bold"><%= link_to 'Register', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+40:                    <% end %>
+41:    
+42:                </ul>
+43:              </div>
+44:            </div>
+45:          </nav>
+46:        </div>
+47:      </header>
+  
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:37: syntax error, unexpected `else', expecting ')'
+app/views/layouts/_navigation.html.erb:40: syntax error, unexpected `end', expecting ')'
+app/views/layouts/_navigation.html.erb:49: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-24 11:22:46 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 2.0ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 68.0ms | Allocations: 8254)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.4ms | Allocations: 9552)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 	<header class="header_area">
+
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container-fluid">
+          <a style="width:10%" class="navbar-brand logo_h" href="/"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item active"><a class="nav-link font-weight-bold"  href="/">Home</a></li>
+              <li class="nav-item">
+                <a href="/" class="nav-link font-weight-bold" role="button">Shop</a>
+              </li>
+              
+              <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="nav-shop" style="width: 520px">
+              <li class="nav-item"><button><i class="ti-search"></i></button></li>
+                <li class="nav-item">
+                    <a href="login.html" class="icons">
+                      <i class="ti-user" aria-hidden="true"></i>
+                    </a>
+                  </li>
+              <li class="nav-item"><button><a href="/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+
+                <% if user_signed_in? %>
+                  <li class="nav-item font-weight-bold ml-5">
+                    <%= current_user.email.split('@')[0].[1...3].upcase %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+                  </li>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+                <% else %>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Login', new_user_session_path, class: 'btn btn-light ml-5' %></li>              
+                  <li class="nav-item font-weight-bold"><%= link_to 'Register', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+                <% end %>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+):
+1:    	<header class="header_area">
+2:    
+3:        <div class="main_menu">
+4:          <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+5:            <div class="container-fluid">
+6:              <a style="width:10%" class="navbar-brand logo_h" href="/"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
+7:              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+8:                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+9:                <span class="icon-bar"></span>
+10:                <span class="icon-bar"></span>
+11:                <span class="icon-bar"></span>
+12:              </button>
+13:              <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+14:                <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+15:                  <li class="nav-item active"><a class="nav-link font-weight-bold"  href="/">Home</a></li>
+16:                  <li class="nav-item">
+17:                    <a href="/" class="nav-link font-weight-bold" role="button">Shop</a>
+18:                  </li>
+19:                  
+20:                  <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
+21:                </ul>
+22:    
+23:                <ul class="nav-shop" style="width: 520px">
+24:                  <li class="nav-item"><button><i class="ti-search"></i></button></li>
+25:                    <li class="nav-item">
+26:                        <a href="login.html" class="icons">
+27:                          <i class="ti-user" aria-hidden="true"></i>
+28:                        </a>
+29:                      </li>
+30:                  <li class="nav-item"><button><a href="/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+31:    
+32:                    <% if user_signed_in? %>
+33:                      <li class="nav-item font-weight-bold ml-5">
+34:                        <%= current_user.email.split('@')[0].[1...3].upcase %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+35:                      </li>
+36:                      <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+37:                    <% else %>
+38:                      <li class="nav-item font-weight-bold"><%= link_to 'Login', new_user_session_path, class: 'btn btn-light ml-5' %></li>              
+39:                      <li class="nav-item font-weight-bold"><%= link_to 'Register', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+40:                    <% end %>
+41:    
+42:                </ul>
+43:              </div>
+44:            </div>
+45:          </nav>
+46:        </div>
+47:      </header>
+  
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected '['
+app/views/layouts/_navigation.html.erb:34: syntax error, unexpected ']', expecting ')'
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-24 11:22:59 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 47.8ms | Allocations: 4494)
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 11468)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 1.1ms | Allocations: 12765)
+
+
+  
+ActionView::Template::Error (undefined method `call' for "fuad":String):
+    31: 
+    32:                 <% if user_signed_in? %>
+    33:                   <li class="nav-item font-weight-bold ml-5">
+    34:                     <%= current_user.email.split('@')[0].(1...3).upcase %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+    35:                   </li>
+    36:                   <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+    37:                 <% else %>
+  
+app/views/layouts/_navigation.html.erb:34
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-24 11:24:16 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 17.7ms | Allocations: 2487)
+  Rendered layout layouts/application.html.erb (Duration: 94.1ms | Allocations: 9484)
+Completed 200 OK in 147ms (Views: 117.2ms | ActiveRecord: 1.6ms | Allocations: 10818)
+
+
+Started GET "/" for ::1 at 2021-07-24 11:24:26 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 34.3ms | Allocations: 2593)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 11.2ms | Allocations: 2487)
+  Rendered layout layouts/application.html.erb (Duration: 75.8ms | Allocations: 9488)
+Completed 200 OK in 86ms (Views: 82.4ms | ActiveRecord: 1.1ms | Allocations: 10823)
+
+
+Started GET "/" for ::1 at 2021-07-24 11:24:45 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 2590)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 10.9ms | Allocations: 2486)
+  Rendered layout layouts/application.html.erb (Duration: 81.2ms | Allocations: 9478)
+Completed 200 OK in 87ms (Views: 83.0ms | ActiveRecord: 1.7ms | Allocations: 10806)
+
+
+Started GET "/" for ::1 at 2021-07-24 11:25:43 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2590)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 15.9ms | Allocations: 2485)
+  Rendered layout layouts/application.html.erb (Duration: 78.4ms | Allocations: 9477)
+Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 1.2ms | Allocations: 10805)
+
+
