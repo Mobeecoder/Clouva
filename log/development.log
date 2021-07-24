@@ -53497,3 +53497,123 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 0.3ms | Allocations: 9240)
 
 
+Started POST "/users" for ::1 at 2021-07-24 11:18:20 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "merchant"=>"0"}, "commit"=>"Register"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.1ms | Allocations: 766)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1853)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 13.5ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 68.9ms | Allocations: 7108)
+Completed 200 OK in 94ms (Views: 69.6ms | ActiveRecord: 0.2ms | Allocations: 9995)
+
+
+Started POST "/users" for ::1 at 2021-07-24 11:18:42 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"keji@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "merchant"=>"0"}, "commit"=>"Register"}
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "keji@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "keji@gmail.com"], ["encrypted_password", "$2a$12$falMdNy50gjgh3E5GeKZAOx9u8rt7O.NO/H7tPT6DRUq5KUHNjRH6"], ["created_at", "2021-07-24 10:18:42.955395"], ["updated_at", "2021-07-24 10:18:42.955395"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 302ms (ActiveRecord: 4.5ms | Allocations: 5855)
+
+
+Started GET "/" for ::1 at 2021-07-24 11:18:42 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 2637)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 25.8ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 65.1ms | Allocations: 8856)
+Completed 200 OK in 71ms (Views: 66.7ms | ActiveRecord: 3.1ms | Allocations: 9967)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-07-24 11:19:02 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.3ms | Allocations: 1833)
+
+
+Started GET "/" for ::1 at 2021-07-24 11:19:02 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 64.0ms | Allocations: 2284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.5ms | Allocations: 1384)
+  Rendered layout layouts/application.html.erb (Duration: 89.2ms | Allocations: 7594)
+Completed 200 OK in 92ms (Views: 89.3ms | ActiveRecord: 0.9ms | Allocations: 8067)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-07-24 11:19:07 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 629)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 62.1ms | Allocations: 1362)
+  Rendered layout layouts/application.html.erb (Duration: 100.6ms | Allocations: 6508)
+Completed 200 OK in 115ms (Views: 113.1ms | ActiveRecord: 0.2ms | Allocations: 7140)
+
+
+Started POST "/users" for ::1 at 2021-07-24 11:19:21 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"fuad@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "merchant"=>"1"}, "commit"=>"Register"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "fuad@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "merchant") VALUES (?, ?, ?, ?, ?)[0m  [["email", "fuad@gmail.com"], ["encrypted_password", "$2a$12$Jgl6sMONt.F69WqZ4M2CXOjQFGwDmvrNTxW0.bO6JG8H.5vHYIRca"], ["created_at", "2021-07-24 10:19:21.489224"], ["updated_at", "2021-07-24 10:19:21.489224"], ["merchant", 1]]
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 288ms (ActiveRecord: 8.9ms | Allocations: 5749)
+
+
+Started GET "/" for ::1 at 2021-07-24 11:19:21 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:32
+  Rendered layouts/_navigation.html.erb (Duration: 8.9ms | Allocations: 2190)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 8386)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 2.0ms | Allocations: 8863)
+
+
