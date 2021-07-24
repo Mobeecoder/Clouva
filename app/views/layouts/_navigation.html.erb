@@ -23,7 +23,7 @@
             <ul class="nav-shop" style="width: 520px">
               <li class="nav-item"><button><i class="ti-search"></i></button></li>
                 <li class="nav-item">
-                    <%= link_to '/user/' + current_user.id.to_s, class: 'icons' do %>
+                    <%= link_to current_user, class: 'icons' do %>
                       <i class="ti-user" aria-hidden="true"></i>
                     <% end %>
                 </li>
