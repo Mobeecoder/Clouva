@@ -10,7 +10,7 @@
       <% else %>
       <p class="text-center billing-alert">Thank you. Your order has been received.</p>
       <div class="row mb-5">
-        <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
+        <div class="col-md-6 col-xl-6 mb-4 mb-xl-0">
           <div class="confirmation-card">
             <h3 class="billing-title">Order Info</h3>
             <table class="order-rable">
@@ -24,7 +24,7 @@
               </tr>
               <tr>
                 <td>Total</td>
-                <td>: &#8358; 2210</td>
+                <td>: &#8358; <%= @order.total + 2000 %></td>
               </tr>
               <tr>
                 <td>Payment method</td>
@@ -33,48 +33,26 @@
             </table>
           </div>
         </div>
-        <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
+
+        <div class="col-md-6 col-xl-6 mb-4 mb-xl-0">
           <div class="confirmation-card">
-            <h3 class="billing-title">Billing Address</h3>
+            <h3 class="billing-title">Delivery Address</h3>
             <table class="order-rable">
               <tr>
                 <td>Street</td>
-                <td>: 56/8 panthapath</td>
+                <td>: <%= @order.address %></td>
               </tr>
               <tr>
-                <td>City</td>
-                <td>: Dhaka</td>
+                <td>LGA</td>
+                <td>: <%= @order.lga %></td>
               </tr>
               <tr>
-                <td>Country</td>
-                <td>: Bangladesh</td>
+                <td>State</td>
+                <td>: <%= @order.state %></td>
               </tr>
               <tr>
-                <td>Postcode</td>
-                <td>: 1205</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
-          <div class="confirmation-card">
-            <h3 class="billing-title">Shipping Address</h3>
-            <table class="order-rable">
-              <tr>
-                <td>Street</td>
-                <td>: 56/8 panthapath</td>
-              </tr>
-              <tr>
-                <td>City</td>
-                <td>: Dhaka</td>
-              </tr>
-              <tr>
-                <td>Country</td>
-                <td>: Bangladesh</td>
-              </tr>
-              <tr>
-                <td>Postcode</td>
-                <td>: 1205</td>
+                <td>Phone</td>
+                <td>: <%= @order.phone %></td>
               </tr>
             </table>
           </div>
@@ -92,39 +70,20 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <% for item in @order.order_details %>
+                  <tr>
                 <td>
-                  <p>Pixelstore fresh Blackberry</p>
+                  <p><%= item.product.name %></p>
                 </td>
                 <td>
-                  <h5>x 02</h5>
+                  <h5>x <%= item.quantity %></h5>
                 </td>
                 <td>
-                  <p>$720.00</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p>Pixelstore fresh Blackberry</p>
-                </td>
-                <td>
-                  <h5>x 02</h5>
-                </td>
-                <td>
-                  <p>$720.00</p>
+                  <p>&#8358;<%= item.product.price * item.quantity %></p>
                 </td>
               </tr>
-              <tr>
-                <td>
-                  <p>Pixelstore fresh Blackberry</p>
-                </td>
-                <td>
-                  <h5>x 02</h5>
-                </td>
-                <td>
-                  <p>$720.00</p>
-                </td>
-              </tr>
+              <% end %>
+              
               <tr>
                 <td>
                   <h4>Subtotal</h4>
@@ -133,18 +92,18 @@
                   <h5></h5>
                 </td>
                 <td>
-                  <p>$2160.00</p>
+                  <p>&#8358;<%= @order.total %></p>
                 </td>
               </tr>
               <tr>
                 <td>
-                  <h4>Shipping</h4>
+                  <h4>Delivery</h4>
                 </td>
                 <td>
                   <h5></h5>
                 </td>
                 <td>
-                  <p>Flat rate: $50.00</p>
+                  <p>Flat rate: &#8358;2000.00</p>
                 </td>
               </tr>
               <tr>
@@ -155,7 +114,7 @@
                   <h5></h5>
                 </td>
                 <td>
-                  <h4>$2210.00</h4>
+                  <h4>&#8358;<%= @order.total + 2000 %></h4>
                 </td>
               </tr>
             </tbody>
