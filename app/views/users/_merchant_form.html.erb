@@ -1,0 +1,55 @@
+  <!--================Login Box Area =================-->
+	<section class="login_box_area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="login_form_inner">
+						<h3>Upload Product</h3>
+
+            <%= form_for(product, id: 'contactForm', class: 'row login_form') do |f| %>
+							<div class="col-md-12 form-group">
+                                <%= f.label :name, "Product Name" %>
+                                <%= f.text_field :name, autofocus: true, class: 'form-control', autocomplete: "name", placeholder: 'Product Name', 'required': 'required' %>								
+							</div>
+							<div class="col-md-12 form-group">
+                                <%= f.label :size, "Select A Size" %>
+                                <select id="size" name="product[size]" class="form-control" required>
+                                    <option value="">Choose...</option>
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                    <option value="Extra Large">Extra Large</option>
+                                </select>					
+							</div>
+
+                            <div class="col-md-12 form-group">
+                                <%= f.label :image, "Product Image" %> <br/>
+                                <%= f.file_field :image, 'required': 'required' %>								
+							</div>
+
+                            <div class="col-md-12 form-group">
+                                <%= f.label :description, "Product Description" %>
+                                <%= f.text_area :description, class: 'form-control', 'style': 'height:150px', placeholder: 'Enter Product description', 'required': 'required' %>								
+							</div>
+
+                            <div class="col-md-12 form-group">
+                                <%= f.label :num_available, "Number In Stock" %>
+                                <%= f.number_field :num_available, autofocus: true, class: 'form-control', value: '1', 'required': 'required' %>								
+							</div>
+
+                            <div class="col-md-12 form-group">
+                                <%= f.label :price, "Product Price" %>
+                                <%= f.number_field :price, autofocus: true, class: 'form-control', value: '100', 'required': 'required' %>								
+							</div>
+
+							<div class="col-md-12 form-group">
+                                <%= f.submit 'Add Product', class: 'button button-login w-100' %>								
+							</div>
+
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
