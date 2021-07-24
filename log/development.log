@@ -57245,3 +57245,2345 @@ ActionView::Template::Error (809: unexpected token at 'https://res.cloudinary.co
   
 app/views/products/index.html.erb:104
 app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-24 23:10:39 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2065)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2135)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms | Allocations: 3433)
+
+
+  
+ActionView::Template::Error (809: unexpected token at 'https://res.cloudinary.com/moaminu/image/upload/v1625017380/Clouva/e2092723eb0fcbb4835f264c242d28f8_vkgd7f.jpg'):
+    101:               <div class="col-md-6 col-lg-4">
+    102:                 <div class="card text-center card-product">
+    103:                   <div class="card-product__img">
+    104:                     <img class="card-img" src="<%= product.image_url %>" alt="">
+    105:                     <ul class="card-product__imgOverlay">
+    106:                       <li><button><i class="ti-search"></i></button></li>
+    107:                       <li><button><i class="ti-shopping-cart"></i></button></li>
+  
+app/views/products/index.html.erb:104
+app/views/products/index.html.erb:100
+Started GET "/" for ::1 at 2021-07-24 23:14:35 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 2091)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 2160)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.3ms | Allocations: 3458)
+
+
+  
+ActionView::Template::Error (809: unexpected token at 'https://res.cloudinary.com/moaminu/image/upload/v1625017380/Clouva/e2092723eb0fcbb4835f264c242d28f8_vkgd7f.jpg'):
+    102:                 <div class="card text-center card-product">
+    103:                   <div class="card-product__img">
+    104:                     <%# <img class="card-img" src="<%= product.image_url %>
+    105:                     <%= image_tag product.image_url, class: 'card-img' %>
+    106: 
+    107:                     <ul class="card-product__imgOverlay">
+    108:                       <li><button><i class="ti-search"></i></button></li>
+  
+app/views/products/index.html.erb:105
+app/views/products/index.html.erb:100
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (10.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (2.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Destroy (9.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduct Destroy (1.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Destroy (4.4ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduct Destroy (5.4ms)[0m  [1m[31mDELETE FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.5ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 1]]
+  [1m[36mOrderDetail Destroy (1.4ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 11]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 2]]
+  [1m[36mOrderDetail Destroy (0.4ms)[0m  [1m[31mDELETE FROM "order_details" WHERE "order_details"."id" = ?[0m  [["id", 12]]
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.1ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 3]]
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 4]]
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 1]]
+  [1m[36mOrder Destroy (0.7ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "order_details"[0m
+Started GET "/" for ::1 at 2021-07-24 23:22:06 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  Rendered products/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1462)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 147.7ms | Allocations: 6939)
+  Rendered layout layouts/application.html.erb (Duration: 235.3ms | Allocations: 12850)
+Completed 200 OK in 262ms (Views: 245.2ms | ActiveRecord: 1.6ms | Allocations: 16122)
+
+
+Started GET "/users/12" for ::1 at 2021-07-24 23:22:16 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 12]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/_merchant_form.html.erb (Duration: 21.4ms | Allocations: 1258)
+  Rendered users/show.html.erb within layouts/application (Duration: 180.7ms | Allocations: 11017)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 27.3ms | Allocations: 1384)
+  Rendered layout layouts/application.html.erb (Duration: 333.7ms | Allocations: 16325)
+Completed 200 OK in 395ms (Views: 346.3ms | ActiveRecord: 17.9ms | Allocations: 19072)
+
+
+Started POST "/products" for ::1 at 2021-07-24 23:23:14 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Abaya two-pieces", "size"=>"Large", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f941f0f3038 @tempfile=#<Tempfile:/var/folders/q7/6zrtg0md0qd7rt0038fsngyc0000gn/T/RackMultipart20210724-3025-w6dll4.webp>, @original_filename="abaya.webp", @content_type="image/webp", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"abaya.webp\"\r\nContent-Type: image/webp\r\n">, "description"=>"A beautiful attire that makes Muslimahs feel elegant, dignified and classy.", "num_available"=>"5", "price"=>"10000"}, "commit"=>"Add Product"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "merchant_id", "size", "image_data", "description", "num_available", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Abaya two-pieces"], ["merchant_id", 12], ["size", "Large"], ["image_data", "{\"id\":\"98061548a9d24578295654f25ffc8ef8.webp\",\"storage\":\"cache\",\"metadata\":{\"filename\":\"abaya.webp\",\"size\":29796,\"mime_type\":\"image/webp\",\"width\":832,\"height\":834}}"], ["description", "A beautiful attire that makes Muslimahs feel elegant, dignified and classy."], ["num_available", 5], ["created_at", "2021-07-24 22:23:15.869763"], ["updated_at", "2021-07-24 22:23:15.869763"], ["price", 10000.0]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mProduct Update (1.1ms)[0m  [1m[33mUPDATE "products" SET "image_data" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image_data", "{\"id\":\"f5e55545ceee35639fcbb3ec1ac915a2.webp\",\"storage\":\"store\",\"metadata\":{\"filename\":\"abaya.webp\",\"size\":29796,\"mime_type\":\"image/webp\",\"width\":832,\"height\":834}}"], ["updated_at", "2021-07-24 22:23:17.498500"], ["id", 1]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+No template found for ProductsController#create, rendering head :no_content
+Completed 204 No Content in 3266ms (ActiveRecord: 4.1ms | Allocations: 20001)
+
+
+Started GET "/users/12" for ::1 at 2021-07-24 23:23:30 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 12]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/_merchant_form.html.erb (Duration: 1.6ms | Allocations: 710)
+  Rendered users/show.html.erb within layouts/application (Duration: 19.5ms | Allocations: 2569)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.2ms | Allocations: 1351)
+  Rendered layout layouts/application.html.erb (Duration: 77.5ms | Allocations: 7887)
+Completed 200 OK in 92ms (Views: 79.2ms | ActiveRecord: 1.2ms | Allocations: 9437)
+
+
+Started POST "/products" for ::1 at 2021-07-24 23:26:57 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Female Adire Gown", "size"=>"Large", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f941c19d298 @tempfile=#<Tempfile:/var/folders/q7/6zrtg0md0qd7rt0038fsngyc0000gn/T/RackMultipart20210724-3025-ho93pj.jpeg>, @original_filename="adire gown.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"adire gown.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"This gown is every woman's dream. Brightly coloured and affordable.", "num_available"=>"3", "price"=>"7000"}, "commit"=>"Add Product"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/products_controller.rb:12:in `create'
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "merchant_id", "size", "image_data", "description", "num_available", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Female Adire Gown"], ["merchant_id", 12], ["size", "Large"], ["image_data", "{\"id\":\"c811fe1217afc03bafb0c329d87b8abe.jpg\",\"storage\":\"cache\",\"metadata\":{\"filename\":\"adire gown.jpeg\",\"size\":144414,\"mime_type\":\"image/jpeg\",\"width\":1080,\"height\":1350}}"], ["description", "This gown is every woman's dream. Brightly coloured and affordable."], ["num_available", 3], ["created_at", "2021-07-24 22:27:00.766828"], ["updated_at", "2021-07-24 22:27:00.766828"], ["price", 7000.0]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (13.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mProduct Update (9.3ms)[0m  [1m[33mUPDATE "products" SET "image_data" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image_data", "{\"id\":\"d563d6c7f3105921aa4fd0a7f8c302c8.jpg\",\"storage\":\"store\",\"metadata\":{\"filename\":\"adire gown.jpeg\",\"size\":144414,\"mime_type\":\"image/jpeg\",\"width\":1080,\"height\":1350}}"], ["updated_at", "2021-07-24 22:27:04.360456"], ["id", 2]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+Completed 500 Internal Server Error in 6302ms (ActiveRecord: 52.9ms | Allocations: 31566)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"products"}, missing required keys: [:id]
+Did you mean?  product_url
+               products_url
+               products_path
+               products_add_cart_url):
+  
+app/controllers/products_controller.rb:20:in `create'
+Started GET "/users/12" for ::1 at 2021-07-24 23:28:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 18.0ms | Allocations: 3912)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3981)
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 1.6ms | Allocations: 11805)
+
+
+  
+ActionView::Template::Error (undefined method `null_scope?' for nil:NilClass):
+    119:                                     </h6>
+    120: 
+    121:                                     <div class="d-flex justify-content-between">
+    122:                                         <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+    123:                                         <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+    124:                                     </div>  
+    125: 
+  
+app/views/users/show.html.erb:122
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."merchant_id" = ? /* loading for inspect */ LIMIT ?[0m  [["merchant_id", 9], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 9]]
+Started GET "/users/12" for ::1 at 2021-07-24 23:29:13 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1488)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1556)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms | Allocations: 3061)
+
+
+  
+ActionView::Template::Error (undefined method `null_scope?' for nil:NilClass):
+    119:                                     </h6>
+    120: 
+    121:                                     <div class="d-flex justify-content-between">
+    122:                                         <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+    123:                                         <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+    124:                                     </div>  
+    125: 
+  
+app/views/users/show.html.erb:122
+Started GET "/users/12" for ::1 at 2021-07-24 23:29:42 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/show.html.erb within layouts/application (Duration: 196.2ms | Allocations: 8183)
+  Rendered layout layouts/application.html.erb (Duration: 196.6ms | Allocations: 8252)
+Completed 500 Internal Server Error in 229ms (ActiveRecord: 1.3ms | Allocations: 10621)
+
+
+  
+ActionView::Template::Error (undefined method `build' for nil:NilClass):
+    197:             </form>
+    198: 
+    199:                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    200:                                 <%= render 'merchant_form', product: current_user.products.build %>                                
+    201:                             </div>
+    202: 
+    203:                         </div>
+  
+app/views/users/show.html.erb:200
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."merchant_id" = ? /* loading for inspect */ LIMIT ?[0m  [["merchant_id", 9], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/12" for ::1 at 2021-07-24 23:31:09 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2045)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2114)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms | Allocations: 4484)
+
+
+  
+ActionView::Template::Error (undefined method `null_scope?' for nil:NilClass):
+    119:                                     </h6>
+    120: 
+    121:                                     <div class="d-flex justify-content-between">
+    122:                                         <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+    123:                                         <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+    124:                                     </div>  
+    125: 
+  
+app/views/users/show.html.erb:122
+Started GET "/" for ::1 at 2021-07-24 23:31:15 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 141.6ms | Allocations: 8454)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 48.5ms | Allocations: 2708)
+  Rendered layout layouts/application.html.erb (Duration: 227.4ms | Allocations: 15544)
+Completed 200 OK in 235ms (Views: 229.5ms | ActiveRecord: 3.3ms | Allocations: 16742)
+
+
+Started GET "/users/12" for ::1 at 2021-07-24 23:31:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1488)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1556)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 3062)
+
+
+  
+ActionView::Template::Error (undefined method `null_scope?' for nil:NilClass):
+    119:                                     </h6>
+    120: 
+    121:                                     <div class="d-flex justify-content-between">
+    122:                                         <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+    123:                                         <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+    124:                                     </div>  
+    125: 
+  
+app/views/users/show.html.erb:122
+Started GET "/users/12" for ::1 at 2021-07-25 00:03:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 12]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/_merchant_form.html.erb (Duration: 10.6ms | Allocations: 1263)
+  Rendered users/show.html.erb within layouts/application (Duration: 123.4ms | Allocations: 12554)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 13.6ms | Allocations: 1528)
+  Rendered layout layouts/application.html.erb (Duration: 180.4ms | Allocations: 18008)
+Completed 200 OK in 257ms (Views: 183.6ms | ActiveRecord: 2.5ms | Allocations: 25362)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:07:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 12]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/_merchant_form.html.erb (Duration: 3.8ms | Allocations: 824)
+  Rendered users/show.html.erb within layouts/application (Duration: 71.1ms | Allocations: 12887)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 8.8ms | Allocations: 1528)
+  Rendered layout layouts/application.html.erb (Duration: 108.1ms | Allocations: 18341)
+Completed 200 OK in 173ms (Views: 111.3ms | ActiveRecord: 5.2ms | Allocations: 26196)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-07-25 00:07:36 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.3ms | Allocations: 4706)
+
+
+  
+NoMethodError (undefined method `configure_permitted_parameters' for #<Devise::SessionsController:0x00000000039418>):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/mapper.rb:19:in `block in <class:Constraints>'
+actionpack (6.1.4) lib/action_dispatch/routing/mapper.rb:49:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for ::1 at 2021-07-25 00:08:15 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms (ActiveRecord: 15.1ms | Allocations: 9621)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:08:15 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 181.4ms | Allocations: 8116)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.8ms | Allocations: 2278)
+  Rendered layout layouts/application.html.erb (Duration: 222.3ms | Allocations: 14359)
+Completed 200 OK in 237ms (Views: 213.2ms | ActiveRecord: 12.1ms | Allocations: 17063)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:08:26 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 324)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-25 00:08:26 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.5ms | Allocations: 627)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 48.1ms | Allocations: 2078)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.0ms | Allocations: 1496)
+  Rendered layout layouts/application.html.erb (Duration: 104.7ms | Allocations: 7645)
+Completed 200 OK in 119ms (Views: 116.1ms | ActiveRecord: 0.6ms | Allocations: 9377)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-07-25 00:08:50 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"mobello@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "mobello@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 363ms (ActiveRecord: 1.9ms | Allocations: 6145)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:08:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 9]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/show.html.erb within layouts/application (Duration: 21.1ms | Allocations: 7608)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 7677)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.9ms | Allocations: 9361)
+
+
+  
+ActionView::Template::Error (undefined method `each' for "Signed in successfully.":String):
+    136:                                     <% if flash[:notice] %>
+    137:                                         <div class="alert alert-success mt-0">
+    138:                                             <ul>
+    139:                                                 <% for notice in flash[:notice] %>
+    140:                                                     <li><%= notice %></li>
+    141:                                                 <% end %>
+    142:                                             </ul>
+  
+app/views/users/show.html.erb:139
+Started GET "/users/12" for ::1 at 2021-07-25 00:11:02 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 9]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/_merchant_form.html.erb (Duration: 5.9ms | Allocations: 1205)
+  Rendered users/show.html.erb within layouts/application (Duration: 30.5ms | Allocations: 3694)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.0ms | Allocations: 1702)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 9850)
+Completed 200 OK in 84ms (Views: 73.0ms | ActiveRecord: 2.3ms | Allocations: 12262)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:11:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 9]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/_merchant_form.html.erb (Duration: 3.0ms | Allocations: 824)
+  Rendered users/show.html.erb within layouts/application (Duration: 45.9ms | Allocations: 12890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.9ms | Allocations: 1526)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 18342)
+Completed 200 OK in 100ms (Views: 66.1ms | ActiveRecord: 4.9ms | Allocations: 26198)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:12:47 +0100
+  
+SyntaxError (/Users/admin/Documents/Clouva/app/controllers/application_controller.rb:14: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/application_controller.rb:14: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:14: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:14: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/users/12" for ::1 at 2021-07-25 00:12:57 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 9]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/_merchant_form.html.erb (Duration: 1.8ms | Allocations: 824)
+  Rendered users/show.html.erb within layouts/application (Duration: 43.7ms | Allocations: 12912)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 26.6ms | Allocations: 1526)
+  Rendered layout layouts/application.html.erb (Duration: 106.4ms | Allocations: 18364)
+Completed 200 OK in 135ms (Views: 105.9ms | ActiveRecord: 5.0ms | Allocations: 26219)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:16:44 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1552)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 1622)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 3.2ms | Allocations: 10151)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <style>
+    body{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+</style>
+
+
+<div class="container emp-profile" style="padding-top: 70px">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        <%= current_user.email.split('@')[0][0...8].upcase %>
+                                    </h5>
+                                    <h6>
+                                        <%= current_user.merchant ? 'Merchant' : 'Customer'%>
+                                    </h6>
+
+                                    <div class="d-flex justify-content-between">
+                                        <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+                                        <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+                                    </div>  
+
+                                    <% if flash[:alert] %>
+                                        <div class="alert alert-danger mt-0">
+                                            <%= flash[:alert] %>
+                                        </div>
+                                    <% end %>
+
+                                    <% if flash[:notice] %>
+                                        <div class="alert alert-success mt-0">
+                                            <%= flash[:notice] %>
+                                        </div>
+                                    <% end %>
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+
+                                <%= if current_user.merchant %>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upload Product</a>
+                                    </li>
+                                <% end %>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>WORK LINK</p>
+                            <a href="">Website Link</a><br/>
+                            <a href="">Bootsnipp Profile</a><br/>
+                            <a href="">Bootply Profile</a>
+                            <p>SKILLS</p>
+                            <a href="">Web Designer</a><br/>
+                            <a href="">Web Developer</a><br/>
+                            <a href="">WordPress</a><br/>
+                            <a href="">WooCommerce</a><br/>
+                            <a href="">PHP, .Net</a><br/>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= current_user.email %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>123 456 7890</p>
+                                            </div>
+                                        </div>
+                                        
+                            </div>
+            </form>
+                            <%= if current_user.merchant %>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <%= render 'merchant_form', product: current_user.products.build %>                                
+                                </div>
+                            <% end %>
+
+                        </div>
+                    </div>
+                </div>
+                   
+        </div>
+):
+1:    <style>
+2:        body{
+3:        background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+4:    }
+5:    .emp-profile{
+6:        padding: 3%;
+7:        margin-top: 3%;
+8:        margin-bottom: 3%;
+9:        border-radius: 0.5rem;
+10:        background: #fff;
+11:    }
+12:    .profile-img{
+13:        text-align: center;
+14:    }
+15:    .profile-img img{
+16:        width: 70%;
+17:        height: 100%;
+18:    }
+19:    .profile-img .file {
+20:        position: relative;
+21:        overflow: hidden;
+22:        margin-top: -20%;
+23:        width: 70%;
+24:        border: none;
+25:        border-radius: 0;
+26:        font-size: 15px;
+27:        background: #212529b8;
+28:    }
+29:    .profile-img .file input {
+30:        position: absolute;
+31:        opacity: 0;
+32:        right: 0;
+33:        top: 0;
+34:    }
+35:    .profile-head h5{
+36:        color: #333;
+37:    }
+38:    .profile-head h6{
+39:        color: #0062cc;
+40:    }
+41:    .profile-edit-btn{
+42:        border: none;
+43:        border-radius: 1.5rem;
+44:        width: 70%;
+45:        padding: 2%;
+46:        font-weight: 600;
+47:        color: #6c757d;
+48:        cursor: pointer;
+49:    }
+50:    .proile-rating{
+51:        font-size: 12px;
+52:        color: #818182;
+53:        margin-top: 5%;
+54:    }
+55:    .proile-rating span{
+56:        color: #495057;
+57:        font-size: 15px;
+58:        font-weight: 600;
+59:    }
+60:    .profile-head .nav-tabs{
+61:        margin-bottom:5%;
+62:    }
+63:    .profile-head .nav-tabs .nav-link{
+64:        font-weight:600;
+65:        border: none;
+66:    }
+67:    .profile-head .nav-tabs .nav-link.active{
+68:        border: none;
+69:        border-bottom:2px solid #0062cc;
+70:    }
+71:    .profile-work{
+72:        padding: 14%;
+73:        margin-top: -15%;
+74:    }
+75:    .profile-work p{
+76:        font-size: 12px;
+77:        color: #818182;
+78:        font-weight: 600;
+79:        margin-top: 10%;
+80:    }
+81:    .profile-work a{
+82:        text-decoration: none;
+83:        color: #495057;
+84:        font-weight: 600;
+85:        font-size: 14px;
+86:    }
+87:    .profile-work ul{
+88:        list-style: none;
+89:    }
+90:    .profile-tab label{
+91:        font-weight: 600;
+92:    }
+93:    .profile-tab p{
+94:        font-weight: 600;
+95:        color: #0062cc;
+96:    }
+97:    </style>
+98:    
+99:    
+100:    <div class="container emp-profile" style="padding-top: 70px">
+101:                <form method="post">
+102:                    <div class="row">
+103:                        <div class="col-md-4">
+104:                            <div class="profile-img">
+105:                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+106:                                <div class="file btn btn-lg btn-primary">
+107:                                    Change Photo
+108:                                    <input type="file" name="file"/>
+109:                                </div>
+110:                            </div>
+111:                        </div>
+112:                        <div class="col-md-6">
+113:                            <div class="profile-head">
+114:                                        <h5>
+115:                                            <%= current_user.email.split('@')[0][0...8].upcase %>
+116:                                        </h5>
+117:                                        <h6>
+118:                                            <%= current_user.merchant ? 'Merchant' : 'Customer'%>
+119:                                        </h6>
+120:    
+121:                                        <div class="d-flex justify-content-between">
+122:                                            <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+123:                                            <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+124:                                        </div>  
+125:    
+126:                                        <% if flash[:alert] %>
+127:                                            <div class="alert alert-danger mt-0">
+128:                                                <%= flash[:alert] %>
+129:                                            </div>
+130:                                        <% end %>
+131:    
+132:                                        <% if flash[:notice] %>
+133:                                            <div class="alert alert-success mt-0">
+134:                                                <%= flash[:notice] %>
+135:                                            </div>
+136:                                        <% end %>
+137:    
+138:                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+139:                                    <li class="nav-item">
+140:                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+141:                                    </li>
+142:    
+143:                                    <%= if current_user.merchant %>
+144:                                        <li class="nav-item">
+145:                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upload Product</a>
+146:                                        </li>
+147:                                    <% end %>
+148:    
+149:                                </ul>
+150:                            </div>
+151:                        </div>
+152:                        <div class="col-md-2">
+153:                            <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+154:                        </div>
+155:                    </div>
+156:                    <div class="row">
+157:                        <div class="col-md-4">
+158:                            <div class="profile-work">
+159:                                <p>WORK LINK</p>
+160:                                <a href="">Website Link</a><br/>
+161:                                <a href="">Bootsnipp Profile</a><br/>
+162:                                <a href="">Bootply Profile</a>
+163:                                <p>SKILLS</p>
+164:                                <a href="">Web Designer</a><br/>
+165:                                <a href="">Web Developer</a><br/>
+166:                                <a href="">WordPress</a><br/>
+167:                                <a href="">WooCommerce</a><br/>
+168:                                <a href="">PHP, .Net</a><br/>
+169:                            </div>
+170:                        </div>
+171:                        <div class="col-md-8">
+172:                            <div class="tab-content profile-tab" id="myTabContent">
+173:                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+174:                                            
+175:                                            <div class="row">
+176:                                                <div class="col-md-6">
+177:                                                    <label>Email</label>
+178:                                                </div>
+179:                                                <div class="col-md-6">
+180:                                                    <p><%= current_user.email %></p>
+181:                                                </div>
+182:                                            </div>
+183:                                            <div class="row">
+184:                                                <div class="col-md-6">
+185:                                                    <label>Phone</label>
+186:                                                </div>
+187:                                                <div class="col-md-6">
+188:                                                    <p>123 456 7890</p>
+189:                                                </div>
+190:                                            </div>
+191:                                            
+192:                                </div>
+193:                </form>
+194:                                <%= if current_user.merchant %>
+195:                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+196:                                        <%= render 'merchant_form', product: current_user.products.build %>                                
+197:                                    </div>
+198:                                <% end %>
+199:    
+200:                            </div>
+201:                        </div>
+202:                    </div>
+203:                       
+204:            </div>
+  
+app/views/users/show.html.erb:143: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:147: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:194: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:198: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:206: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:143: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:147: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:194: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:198: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:206: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:143: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:147: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:194: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:198: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:206: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:143: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:147: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:194: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:198: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:206: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:143: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:147: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:194: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:198: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:206: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:143: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:147: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:194: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:198: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:206: syntax error, unexpected `end', expecting ')'
+Started GET "/users/12" for ::1 at 2021-07-25 00:17:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 9]]
+  ↳ app/views/users/show.html.erb:122
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:123
+  Rendered users/show.html.erb within layouts/application (Duration: 60.5ms | Allocations: 8574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.8ms | Allocations: 1871)
+  Rendered layout layouts/application.html.erb (Duration: 111.8ms | Allocations: 14819)
+Completed 200 OK in 130ms (Views: 112.8ms | ActiveRecord: 4.3ms | Allocations: 17226)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:17:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1669)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms | Allocations: 4041)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <style>
+    body{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+</style>
+
+
+<div class="container emp-profile" style="padding-top: 70px">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                            <div class="file btn btn-lg btn-primary">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        <%= current_user.email.split('@')[0][0...8].upcase %>
+                                    </h5>
+                                    <h6>
+                                        <%= current_user.merchant ? 'Merchant' : 'Customer'%>
+                                    </h6>
+
+                                    <div class="d-flex justify-content-between">
+                                        <%= if current_user.merchant %>
+                                            <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+                                        <% end %>
+                                        <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+                                    </div>  
+
+                                    <% if flash[:alert] %>
+                                        <div class="alert alert-danger mt-0">
+                                            <%= flash[:alert] %>
+                                        </div>
+                                    <% end %>
+
+                                    <% if flash[:notice] %>
+                                        <div class="alert alert-success mt-0">
+                                            <%= flash[:notice] %>
+                                        </div>
+                                    <% end %>
+
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+
+                                <% if current_user.merchant %>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upload Product</a>
+                                    </li>
+                                <% end %>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>WORK LINK</p>
+                            <a href="">Website Link</a><br/>
+                            <a href="">Bootsnipp Profile</a><br/>
+                            <a href="">Bootply Profile</a>
+                            <p>SKILLS</p>
+                            <a href="">Web Designer</a><br/>
+                            <a href="">Web Developer</a><br/>
+                            <a href="">WordPress</a><br/>
+                            <a href="">WooCommerce</a><br/>
+                            <a href="">PHP, .Net</a><br/>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p><%= current_user.email %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>123 456 7890</p>
+                                            </div>
+                                        </div>
+                                        
+                            </div>
+            </form>
+                            <% if current_user.merchant %>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <%= render 'merchant_form', product: current_user.products.build %>                                
+                                </div>
+                            <% end %>
+
+                        </div>
+                    </div>
+                </div>
+                   
+        </div>
+):
+1:    <style>
+2:        body{
+3:        background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+4:    }
+5:    .emp-profile{
+6:        padding: 3%;
+7:        margin-top: 3%;
+8:        margin-bottom: 3%;
+9:        border-radius: 0.5rem;
+10:        background: #fff;
+11:    }
+12:    .profile-img{
+13:        text-align: center;
+14:    }
+15:    .profile-img img{
+16:        width: 70%;
+17:        height: 100%;
+18:    }
+19:    .profile-img .file {
+20:        position: relative;
+21:        overflow: hidden;
+22:        margin-top: -20%;
+23:        width: 70%;
+24:        border: none;
+25:        border-radius: 0;
+26:        font-size: 15px;
+27:        background: #212529b8;
+28:    }
+29:    .profile-img .file input {
+30:        position: absolute;
+31:        opacity: 0;
+32:        right: 0;
+33:        top: 0;
+34:    }
+35:    .profile-head h5{
+36:        color: #333;
+37:    }
+38:    .profile-head h6{
+39:        color: #0062cc;
+40:    }
+41:    .profile-edit-btn{
+42:        border: none;
+43:        border-radius: 1.5rem;
+44:        width: 70%;
+45:        padding: 2%;
+46:        font-weight: 600;
+47:        color: #6c757d;
+48:        cursor: pointer;
+49:    }
+50:    .proile-rating{
+51:        font-size: 12px;
+52:        color: #818182;
+53:        margin-top: 5%;
+54:    }
+55:    .proile-rating span{
+56:        color: #495057;
+57:        font-size: 15px;
+58:        font-weight: 600;
+59:    }
+60:    .profile-head .nav-tabs{
+61:        margin-bottom:5%;
+62:    }
+63:    .profile-head .nav-tabs .nav-link{
+64:        font-weight:600;
+65:        border: none;
+66:    }
+67:    .profile-head .nav-tabs .nav-link.active{
+68:        border: none;
+69:        border-bottom:2px solid #0062cc;
+70:    }
+71:    .profile-work{
+72:        padding: 14%;
+73:        margin-top: -15%;
+74:    }
+75:    .profile-work p{
+76:        font-size: 12px;
+77:        color: #818182;
+78:        font-weight: 600;
+79:        margin-top: 10%;
+80:    }
+81:    .profile-work a{
+82:        text-decoration: none;
+83:        color: #495057;
+84:        font-weight: 600;
+85:        font-size: 14px;
+86:    }
+87:    .profile-work ul{
+88:        list-style: none;
+89:    }
+90:    .profile-tab label{
+91:        font-weight: 600;
+92:    }
+93:    .profile-tab p{
+94:        font-weight: 600;
+95:        color: #0062cc;
+96:    }
+97:    </style>
+98:    
+99:    
+100:    <div class="container emp-profile" style="padding-top: 70px">
+101:                <form method="post">
+102:                    <div class="row">
+103:                        <div class="col-md-4">
+104:                            <div class="profile-img">
+105:                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+106:                                <div class="file btn btn-lg btn-primary">
+107:                                    Change Photo
+108:                                    <input type="file" name="file"/>
+109:                                </div>
+110:                            </div>
+111:                        </div>
+112:                        <div class="col-md-6">
+113:                            <div class="profile-head">
+114:                                        <h5>
+115:                                            <%= current_user.email.split('@')[0][0...8].upcase %>
+116:                                        </h5>
+117:                                        <h6>
+118:                                            <%= current_user.merchant ? 'Merchant' : 'Customer'%>
+119:                                        </h6>
+120:    
+121:                                        <div class="d-flex justify-content-between">
+122:                                            <%= if current_user.merchant %>
+123:                                                <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+124:                                            <% end %>
+125:                                            <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
+126:                                        </div>  
+127:    
+128:                                        <% if flash[:alert] %>
+129:                                            <div class="alert alert-danger mt-0">
+130:                                                <%= flash[:alert] %>
+131:                                            </div>
+132:                                        <% end %>
+133:    
+134:                                        <% if flash[:notice] %>
+135:                                            <div class="alert alert-success mt-0">
+136:                                                <%= flash[:notice] %>
+137:                                            </div>
+138:                                        <% end %>
+139:    
+140:                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+141:                                    <li class="nav-item">
+142:                                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+143:                                    </li>
+144:    
+145:                                    <% if current_user.merchant %>
+146:                                        <li class="nav-item">
+147:                                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upload Product</a>
+148:                                        </li>
+149:                                    <% end %>
+150:    
+151:                                </ul>
+152:                            </div>
+153:                        </div>
+154:                        <div class="col-md-2">
+155:                            <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+156:                        </div>
+157:                    </div>
+158:                    <div class="row">
+159:                        <div class="col-md-4">
+160:                            <div class="profile-work">
+161:                                <p>WORK LINK</p>
+162:                                <a href="">Website Link</a><br/>
+163:                                <a href="">Bootsnipp Profile</a><br/>
+164:                                <a href="">Bootply Profile</a>
+165:                                <p>SKILLS</p>
+166:                                <a href="">Web Designer</a><br/>
+167:                                <a href="">Web Developer</a><br/>
+168:                                <a href="">WordPress</a><br/>
+169:                                <a href="">WooCommerce</a><br/>
+170:                                <a href="">PHP, .Net</a><br/>
+171:                            </div>
+172:                        </div>
+173:                        <div class="col-md-8">
+174:                            <div class="tab-content profile-tab" id="myTabContent">
+175:                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+176:                                            
+177:                                            <div class="row">
+178:                                                <div class="col-md-6">
+179:                                                    <label>Email</label>
+180:                                                </div>
+181:                                                <div class="col-md-6">
+182:                                                    <p><%= current_user.email %></p>
+183:                                                </div>
+184:                                            </div>
+185:                                            <div class="row">
+186:                                                <div class="col-md-6">
+187:                                                    <label>Phone</label>
+188:                                                </div>
+189:                                                <div class="col-md-6">
+190:                                                    <p>123 456 7890</p>
+191:                                                </div>
+192:                                            </div>
+193:                                            
+194:                                </div>
+195:                </form>
+196:                                <% if current_user.merchant %>
+197:                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+198:                                        <%= render 'merchant_form', product: current_user.products.build %>                                
+199:                                    </div>
+200:                                <% end %>
+201:    
+202:                            </div>
+203:                        </div>
+204:                    </div>
+205:                       
+206:            </div>
+  
+app/views/users/show.html.erb:122: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:124: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:208: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:122: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:124: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:208: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:122: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:124: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:208: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:122: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:124: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:208: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:122: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:124: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:208: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:122: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:124: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:208: syntax error, unexpected `end', expecting ')'
+Started GET "/users/12" for ::1 at 2021-07-25 00:18:02 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 15.2ms | Allocations: 1722)
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 7675)
+Completed 200 OK in 86ms (Views: 78.1ms | ActiveRecord: 0.8ms | Allocations: 10081)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:18:24 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.5ms | Allocations: 1716)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 7638)
+Completed 200 OK in 65ms (Views: 53.3ms | ActiveRecord: 0.9ms | Allocations: 10039)
+
+
+Started POST "/users/12" for ::1 at 2021-07-25 00:18:46 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"file"=>"", "btnAddMore"=>"Edit Profile", "id"=>"12"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 556)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.4) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.4) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.8.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.4) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.4) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started POST "/users/12" for ::1 at 2021-07-25 00:18:46 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"file"=>"", "btnAddMore"=>"Edit Profile", "id"=>"12"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 479)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.1.4) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.1.4) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+devise (4.8.0) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.1.4) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+activesupport (6.1.4) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/users/12" for ::1 at 2021-07-25 00:18:51 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.8ms | Allocations: 1367)
+  Rendered layout layouts/application.html.erb (Duration: 36.2ms | Allocations: 6240)
+Completed 200 OK in 44ms (Views: 36.7ms | ActiveRecord: 0.9ms | Allocations: 7782)
+
+
+Started GET "/users/12" for ::1 at 2021-07-25 00:19:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1485)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.3ms | Allocations: 1719)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 7673)
+Completed 200 OK in 80ms (Views: 68.7ms | ActiveRecord: 0.9ms | Allocations: 10079)
+
+
+Started GET "/users/9" for ::1 at 2021-07-25 00:19:35 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 20.7ms | Allocations: 1457)
+  Rendered layout layouts/application.html.erb (Duration: 60.8ms | Allocations: 6796)
+Completed 200 OK in 71ms (Views: 60.7ms | ActiveRecord: 1.0ms | Allocations: 8341)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-07-25 00:19:38 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms | Allocations: 2162)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:19:38 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 170.3ms | Allocations: 7950)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.8ms | Allocations: 2122)
+  Rendered layout layouts/application.html.erb (Duration: 330.9ms | Allocations: 14019)
+Completed 200 OK in 363ms (Views: 350.0ms | ActiveRecord: 1.8ms | Allocations: 15141)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-25 00:19:41 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.2ms | Allocations: 913)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.8ms | Allocations: 1963)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.0ms | Allocations: 1490)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 7691)
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.3ms | Allocations: 9388)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-07-25 00:19:55 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2021-07-24 23:19:55.525495"], ["updated_at", "2021-07-24 23:19:55.525722"], ["id", 10]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 346ms (ActiveRecord: 11.5ms | Allocations: 7052)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:19:55 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 2646)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.2ms | Allocations: 2236)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 8862)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.8ms | Allocations: 9342)
+
+
+Started GET "/users/10" for ::1 at 2021-07-25 00:20:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/_merchant_form.html.erb (Duration: 14.5ms | Allocations: 1184)
+  Rendered users/show.html.erb within layouts/application (Duration: 39.9ms | Allocations: 3232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.3ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 104.6ms | Allocations: 9115)
+Completed 200 OK in 111ms (Views: 104.5ms | ActiveRecord: 1.2ms | Allocations: 10662)
+
+
+Started POST "/products" for ::1 at 2021-07-25 00:21:47 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Ankara suit", "size"=>"Medium", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f941f999e08 @tempfile=#<Tempfile:/var/folders/q7/6zrtg0md0qd7rt0038fsngyc0000gn/T/RackMultipart20210725-3025-x5uths.png>, @original_filename="ankara suit.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"ankara suit.png\"\r\nContent-Type: image/png\r\n">, "description"=>"You sef go like am if you wear am commot. Na for better men.", "num_available"=>"6", "price"=>"27000"}, "commit"=>"Add Product"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "merchant_id", "size", "image_data", "description", "num_available", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ankara suit"], ["merchant_id", 10], ["size", "Medium"], ["image_data", "{\"id\":\"a2ceb2b90931ba7984e6ac359209104b.png\",\"storage\":\"cache\",\"metadata\":{\"filename\":\"ankara suit.png\",\"size\":415783,\"mime_type\":\"image/png\",\"width\":461,\"height\":500}}"], ["description", "You sef go like am if you wear am commot. Na for better men."], ["num_available", 6], ["created_at", "2021-07-24 23:21:50.723612"], ["updated_at", "2021-07-24 23:21:50.723612"], ["price", 27000.0]]
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "image_data" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image_data", "{\"id\":\"dbd07f6df09c585f785e56040a751fce.png\",\"storage\":\"store\",\"metadata\":{\"filename\":\"ankara suit.png\",\"size\":415783,\"mime_type\":\"image/png\",\"width\":461,\"height\":500}}"], ["updated_at", "2021-07-24 23:21:52.546058"], ["id", 3]]
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+Completed 500 Internal Server Error in 5120ms (ActiveRecord: 14.8ms | Allocations: 21152)
+
+
+  
+NameError (undefined local variable or method `show_path' for #<ProductsController:0x00000000046438>):
+  
+app/controllers/products_controller.rb:21:in `create'
+Started GET "/users/10" for ::1 at 2021-07-25 00:23:42 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/_merchant_form.html.erb (Duration: 2.2ms | Allocations: 824)
+  Rendered users/show.html.erb within layouts/application (Duration: 45.0ms | Allocations: 12893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.8ms | Allocations: 1528)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 18347)
+Completed 200 OK in 114ms (Views: 68.6ms | ActiveRecord: 6.6ms | Allocations: 26202)
+
+
+Started POST "/products" for ::1 at 2021-07-25 00:25:24 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Lace for men", "size"=>"Medium", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f941f3c0ec8 @tempfile=#<Tempfile:/var/folders/q7/6zrtg0md0qd7rt0038fsngyc0000gn/T/RackMultipart20210725-3025-ym3s7u.jpeg>, @original_filename="men-lace.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"men-lace.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"This lace is for the rich bros. Na for better men.", "num_available"=>"5", "price"=>"30000"}, "commit"=>"Add Product"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "merchant_id", "size", "image_data", "description", "num_available", "created_at", "updated_at", "price") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lace for men"], ["merchant_id", 10], ["size", "Medium"], ["image_data", "{\"id\":\"5682622361b699b476ad6e5a3e967884.jpg\",\"storage\":\"cache\",\"metadata\":{\"filename\":\"men-lace.jpeg\",\"size\":39638,\"mime_type\":\"image/jpeg\",\"width\":425,\"height\":640}}"], ["description", "This lace is for the rich bros. Na for better men."], ["num_available", 5], ["created_at", "2021-07-24 23:25:25.981433"], ["updated_at", "2021-07-24 23:25:25.981433"], ["price", 30000.0]]
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "image_data" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image_data", "{\"id\":\"10b0915017691239776353eafec1bc27.jpg\",\"storage\":\"store\",\"metadata\":{\"filename\":\"men-lace.jpeg\",\"size\":39638,\"mime_type\":\"image/jpeg\",\"width\":425,\"height\":640}}"], ["updated_at", "2021-07-24 23:25:27.381606"], ["id", 4]]
+  ↳ app/controllers/products_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:15:in `create'
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 3146ms (ActiveRecord: 11.9ms | Allocations: 18416)
+
+
+Started GET "/users/10" for ::1 at 2021-07-25 00:25:27 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/_merchant_form.html.erb (Duration: 1.7ms | Allocations: 710)
+  Rendered users/show.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 7.8ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 12099)
+Completed 200 OK in 53ms (Views: 48.4ms | ActiveRecord: 1.0ms | Allocations: 13650)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:25:49 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 93.5ms | Allocations: 15093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 30.5ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 165.6ms | Allocations: 21556)
+Completed 200 OK in 189ms (Views: 169.6ms | ActiveRecord: 3.8ms | Allocations: 24846)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-07-25 00:26:15 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2021-07-24 23:26:15.466245"], ["id", 10]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 43ms (ActiveRecord: 8.8ms | Allocations: 5322)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:26:15 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 4604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.3ms | Allocations: 2112)
+  Rendered layout layouts/application.html.erb (Duration: 57.0ms | Allocations: 10697)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 1.1ms | Allocations: 11172)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-25 00:26:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 742)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.0ms | Allocations: 1490)
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 6298)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.2ms | Allocations: 7174)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-07-25 00:26:26 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"mobello@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "mobello@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 387ms (ActiveRecord: 0.5ms | Allocations: 2449)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:26:27 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 4604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.1ms | Allocations: 2227)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 10811)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.9ms | Allocations: 11291)
+
+
+Started GET "/users/9" for ::1 at 2021-07-25 00:26:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/show.html.erb within layouts/application (Duration: 37.7ms | Allocations: 4120)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 39.6ms | Allocations: 1517)
+  Rendered layout layouts/application.html.erb (Duration: 140.2ms | Allocations: 10029)
+Completed 200 OK in 152ms (Views: 145.9ms | ActiveRecord: 1.4ms | Allocations: 11824)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:26:34 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 57.2ms | Allocations: 4608)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 26.0ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 207.3ms | Allocations: 11390)
+Completed 200 OK in 212ms (Views: 209.0ms | ActiveRecord: 1.4ms | Allocations: 11868)
+
+
+Started GET "/products/4" for ::1 at 2021-07-25 00:26:42 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 3353)
+
+
+  
+NoMethodError (undefined method `auth_merchant' for #<ProductsController:0x0000000004ada8>):
+  
+activesupport (6.1.4) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.4) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.4) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.4) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.4) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.4) lib/action_text/engine.rb:59:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.4) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.4) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.4) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.4) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.4) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.4) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.4) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.4) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-07-25 00:26:58 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 133.3ms | Allocations: 15162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 41.0ms | Allocations: 2526)
+  Rendered layout layouts/application.html.erb (Duration: 215.9ms | Allocations: 21639)
+Completed 200 OK in 236ms (Views: 220.0ms | ActiveRecord: 3.0ms | Allocations: 24911)
+
+
+Started GET "/" for ::1 at 2021-07-25 00:27:00 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 28.0ms | Allocations: 4605)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.0ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 10805)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 1.2ms | Allocations: 11274)
+
+
+Started GET "/products/4" for ::1 at 2021-07-25 00:27:07 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1749)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 33.2ms | Allocations: 2241)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | Allocations: 8416)
+Completed 200 OK in 121ms (Views: 112.3ms | ActiveRecord: 0.7ms | Allocations: 9685)
+
+
+Started GET "/products/4" for ::1 at 2021-07-25 00:27:07 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 15.0ms | Allocations: 1225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 41.4ms | Allocations: 2244)
+  Rendered layout layouts/application.html.erb (Duration: 97.4ms | Allocations: 7331)
+Completed 200 OK in 124ms (Views: 99.5ms | ActiveRecord: 0.9ms | Allocations: 8338)
+
+

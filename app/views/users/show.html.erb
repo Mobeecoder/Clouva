@@ -119,27 +119,21 @@
                                     </h6>
 
                                     <div class="d-flex justify-content-between">
-                                        <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+                                        <% if current_user.merchant %>
+                                            <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
+                                        <% end %>
                                         <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
                                     </div>  
 
                                     <% if flash[:alert] %>
                                         <div class="alert alert-danger mt-0">
-                                            <ul>
-                                                <% for error in flash[:alert] %>
-                                                    <li><%= error %></li>
-                                                <% end %>
-                                            </ul>
+                                            <%= flash[:alert] %>
                                         </div>
                                     <% end %>
 
                                     <% if flash[:notice] %>
                                         <div class="alert alert-success mt-0">
-                                            <ul>
-                                                <% for notice in flash[:notice] %>
-                                                    <li><%= notice %></li>
-                                                <% end %>
-                                            </ul>
+                                            <%= flash[:notice] %>
                                         </div>
                                     <% end %>
 
@@ -147,30 +141,23 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upload Product</a>
-                                </li>
+
+                                <% if current_user.merchant %>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Upload Product</a>
+                                    </li>
+                                <% end %>
+
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <%# <div class="col-md-2">
                         <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-                    </div>
+                    </div> %>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="profile-work">
-                            <p>WORK LINK</p>
-                            <a href="">Website Link</a><br/>
-                            <a href="">Bootsnipp Profile</a><br/>
-                            <a href="">Bootply Profile</a>
-                            <p>SKILLS</p>
-                            <a href="">Web Designer</a><br/>
-                            <a href="">Web Developer</a><br/>
-                            <a href="">WordPress</a><br/>
-                            <a href="">WooCommerce</a><br/>
-                            <a href="">PHP, .Net</a><br/>
-                        </div>
+                        
                     </div>
                     <div class="col-md-8">
                         <div class="tab-content profile-tab" id="myTabContent">
@@ -195,10 +182,11 @@
                                         
                             </div>
             </form>
-
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <%= render 'merchant_form', product: current_user.products.build %>                                
-                            </div>
+                            <% if current_user.merchant %>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <%= render 'merchant_form', product: current_user.products.build %>                                
+                                </div>
+                            <% end %>
 
                         </div>
                     </div>

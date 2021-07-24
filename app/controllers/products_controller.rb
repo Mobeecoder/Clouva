@@ -12,10 +12,12 @@ class ProductsController < ApplicationController
     product = current_user.products.build(product_params)
 
     if product.save
-      flash[:notice] = ['Product Successfully Uploaded']
+      flash[:notice] = 'Product Successfully Uploaded'
     else
-      flash[:alert] = ['An Error Occured while uploading. Try Again']
+      flash[:alert] = 'An Error Occured while uploading. Try Again'
     end
+
+    redirect_to current_user
   end
 
   def show
