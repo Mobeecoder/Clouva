@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :users, only: [:show]
+
   # This is the mapping for the "quickstart" routes
   devise_for :admin,
     class_name: 'User',

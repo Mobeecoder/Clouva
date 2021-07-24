@@ -54151,3 +54151,141 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 1.2ms | Allocations: 10805)
 
 
+Started GET "/" for ::1 at 2021-07-24 11:33:40 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 3344)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 50.5ms | Allocations: 5283)
+  Rendered layout layouts/application.html.erb (Duration: 117.7ms | Allocations: 13006)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 9.3ms | Allocations: 14296)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user_path' for #<ActionView::Base:0x000000000778a8>):
+    23:             <ul class="nav-shop" style="width: 520px">
+    24:               <li class="nav-item"><button><i class="ti-search"></i></button></li>
+    25:                 <li class="nav-item">
+    26:                     <%= link_to user_path, class: 'icons' do %>
+    27:                       <i class="ti-user" aria-hidden="true"></i>
+    28:                     <% end %>
+    29:                 </li>
+  
+app/views/layouts/_navigation.html.erb:26
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-24 11:33:56 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 13.9ms | Allocations: 5308)
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 12282)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.6ms | Allocations: 13579)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_path' for #<ActionView::Base:0x00000000077d30>
+Did you mean?  user_session_path):
+    23:             <ul class="nav-shop" style="width: 520px">
+    24:               <li class="nav-item"><button><i class="ti-search"></i></button></li>
+    25:                 <li class="nav-item">
+    26:                     <%= link_to users_path, class: 'icons' do %>
+    27:                       <i class="ti-user" aria-hidden="true"></i>
+    28:                     <% end %>
+    29:                 </li>
+  
+app/views/layouts/_navigation.html.erb:26
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-24 11:34:11 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  Rendered layouts/_navigation.html.erb (Duration: 23.6ms | Allocations: 5216)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 12190)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.9ms | Allocations: 13487)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x000000000781e0>):
+    23:             <ul class="nav-shop" style="width: 520px">
+    24:               <li class="nav-item"><button><i class="ti-search"></i></button></li>
+    25:                 <li class="nav-item">
+    26:                     <%= link_to current_user, class: 'icons' do %>
+    27:                       <i class="ti-user" aria-hidden="true"></i>
+    28:                     <% end %>
+    29:                 </li>
+  
+app/views/layouts/_navigation.html.erb:26
+app/views/layouts/application.html.erb:19
+Started GET "/" for ::1 at 2021-07-24 11:35:23 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 66.1ms | Allocations: 2559)
+  Rendered layout layouts/application.html.erb (Duration: 127.5ms | Allocations: 9556)
+Completed 200 OK in 154ms (Views: 129.3ms | ActiveRecord: 15.9ms | Allocations: 10904)
+
+
+Started GET "/user/12" for ::1 at 2021-07-24 11:35:28 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/user/12"):
+  
+Started GET "/" for ::1 at 2021-07-24 11:35:34 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:114
+  Rendered products/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 2281)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 58.5ms | Allocations: 2213)
+  Rendered layout layouts/application.html.erb (Duration: 173.1ms | Allocations: 8985)
+Completed 200 OK in 180ms (Views: 176.4ms | ActiveRecord: 1.7ms | Allocations: 9455)
+
+
