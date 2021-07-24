@@ -59587,3 +59587,21 @@ Processing by ProductsController#show as HTML
 Completed 200 OK in 124ms (Views: 99.5ms | ActiveRecord: 0.9ms | Allocations: 8338)
 
 
+Started GET "/products/4" for ::1 at 2021-07-25 00:28:17 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:24:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1773)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 37.0ms | Allocations: 2592)
+  Rendered layout layouts/application.html.erb (Duration: 90.5ms | Allocations: 8702)
+Completed 200 OK in 100ms (Views: 94.2ms | ActiveRecord: 2.0ms | Allocations: 10573)
+
+
