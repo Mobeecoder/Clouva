@@ -9,6 +9,13 @@ class ProductsController < ApplicationController
   end
 
   def create
+    product = current_user.products.build(product_params)
+
+    if product.save
+      flash[:notice] = ['Product Successfully Uploaded']
+    else
+      flash[:alert] = ['An Error Occured while uploading. Try Again']
+    end
   end
 
   def show
@@ -45,6 +52,12 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:name, :size, :image, :description, :num_available, :price)
   end
 
 end

@@ -6,7 +6,7 @@
 					<div class="login_form_inner">
 						<h3>Upload Product</h3>
 
-            <%= form_for(product, id: 'contactForm', class: 'row login_form') do |f| %>
+            <%= form_for(product, url: products_path(product), id: 'contactForm', class: 'row login_form') do |f| %>
 							<div class="col-md-12 form-group">
                                 <%= f.label :name, "Product Name" %>
                                 <%= f.text_field :name, autofocus: true, class: 'form-control', autocomplete: "name", placeholder: 'Product Name', 'required': 'required' %>								
@@ -24,7 +24,7 @@
 
                             <div class="col-md-12 form-group">
                                 <%= f.label :image, "Product Image" %> <br/>
-                                <%= f.file_field :image, 'required': 'required' %>								
+                                <%= f.file_field :image, required: true %>	                                							
 							</div>
 
                             <div class="col-md-12 form-group">

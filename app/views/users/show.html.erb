@@ -121,7 +121,27 @@
                                     <div class="d-flex justify-content-between">
                                         <p class="proile-rating">NO. OF PRODUCTS : <span><%= current_user.products.count %></span></p>
                                         <p class="proile-rating">NO. OF ORDERS : <span><%= current_user.orders.count %></span></p>
-                                    </div>                                    
+                                    </div>  
+
+                                    <% if flash[:alert] %>
+                                        <div class="alert alert-danger mt-0">
+                                            <ul>
+                                                <% for error in flash[:alert] %>
+                                                    <li><%= error %></li>
+                                                <% end %>
+                                            </ul>
+                                        </div>
+                                    <% end %>
+
+                                    <% if flash[:notice] %>
+                                        <div class="alert alert-success mt-0">
+                                            <ul>
+                                                <% for notice in flash[:notice] %>
+                                                    <li><%= notice %></li>
+                                                <% end %>
+                                            </ul>
+                                        </div>
+                                    <% end %>
 
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -161,7 +181,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
+                                                <p><%= current_user.email %></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -174,6 +194,7 @@
                                         </div>
                                         
                             </div>
+            </form>
 
                             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                 <%= render 'merchant_form', product: current_user.products.build %>                                
@@ -182,5 +203,5 @@
                         </div>
                     </div>
                 </div>
-            </form>           
+                   
         </div>
