@@ -16,6 +16,18 @@
 					</div>
 				</div>
 				<div class="col-lg-6 offset-lg-1">
+					<% if flash[:alert] %>
+                        <div class="alert alert-danger mt-0">
+                            <%= flash[:alert] %>
+                        </div>
+                    <% end %>
+
+                    <% if flash[:notice] %>
+						<div class="alert alert-success mt-0">
+							<%= flash[:notice] %>
+						</div>
+                    <% end %>
+
 					<div class="s_product_text">
 						<h3><%= @product.name %></h3>
 						<h2>&#8358;<%= @product.price %></h2>
@@ -26,8 +38,6 @@
 						<p><%= @product.description[0...300] %>...</p>
 						<div class="product_count">
               <label for="qty">Quantity:</label>
-    <%= flash[:notice] %>
-    <%= flash[:alert] %>
                             <%= form_with(url: "/products/add_cart") do |form| %>
                                 <%= form.hidden_field :id, value: @product.id %>
                                 <%= form.number_field :qty, class: 'input-text qty', 'size':'2', 'min': 1, value: "1" %>
