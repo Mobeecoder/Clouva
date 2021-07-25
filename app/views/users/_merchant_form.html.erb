@@ -42,6 +42,11 @@
                                 <%= f.number_field :price, autofocus: true, class: 'form-control', value: '100', 'required': 'required' %>								
 							</div>
 
+                            <div class="col-md-12 form-group">
+                                <%= f.label :price, "Product Category" %>
+                                <%= f.collection_select :category_id, Category.all, :id, :name, {prompt: "Select Category"}, class: 'form-control', required: true %>
+							</div>
+
 							<div class="col-md-12 form-group">
                                 <%= f.submit 'Add Product', class: 'button button-login w-100' %>								
 							</div>

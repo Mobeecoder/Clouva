@@ -62385,3 +62385,292 @@ ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
   [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."category_id" = ? /* loading for inspect */ LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
   [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+Started GET "/" for ::1 at 2021-07-25 10:05:11 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/products/index.html.erb:41
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:41
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  Rendered products/index.html.erb within layouts/application (Duration: 113.8ms | Allocations: 15844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 22.8ms | Allocations: 2527)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 167.7ms | Allocations: 23145)
+Completed 200 OK in 190ms (Views: 172.9ms | ActiveRecord: 6.3ms | Allocations: 27289)
+
+
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 10:05:12 +0100
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 10:05:12 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 10:05:12 +0100
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 10:05:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 10:05:12 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 10:05:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/" for ::1 at 2021-07-25 10:05:18 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:41
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:57
+  Rendered products/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 4604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 17.3ms | Allocations: 1508)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 10:05:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+  Rendered layout layouts/application.html.erb (Duration: 88.0ms | Allocations: 10192)
+Completed 200 OK in 160ms (Views: 153.9ms | ActiveRecord: 3.5ms | Allocations: 21543)
+
+
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 10:05:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 10:05:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 10:05:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 10:05:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 10:05:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-07-25 10:05:20 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.7ms | Allocations: 544)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.1ms | Allocations: 1570)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.7ms | Allocations: 1491)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 7776)
+Completed 200 OK in 97ms (Views: 91.8ms | ActiveRecord: 0.4ms | Allocations: 9609)
+
+
+Started GET "/users/img/gallery/r1.jpg" for ::1 at 2021-07-25 10:05:20 +0100
+Started GET "/users/img/gallery/r3.jpg" for ::1 at 2021-07-25 10:05:20 +0100
+Started GET "/users/img/gallery/r2.jpg" for ::1 at 2021-07-25 10:05:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r3.jpg"):
+  
+Started GET "/users/img/gallery/r5.jpg" for ::1 at 2021-07-25 10:05:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r1.jpg"):
+  
+Started GET "/users/img/gallery/r8.jpg" for ::1 at 2021-07-25 10:05:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r8.jpg"):
+  
+Started GET "/users/img/gallery/r7.jpg" for ::1 at 2021-07-25 10:05:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r7.jpg"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-07-25 10:05:30 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/confirmation/451026
+Completed 302 Found in 412ms (ActiveRecord: 2.2ms | Allocations: 3540)
+
+
+Started GET "/confirmation/451026" for ::1 at 2021-07-25 10:05:30 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"451026"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 451026], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 83.6ms | Allocations: 602)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 45.1ms | Allocations: 1446)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 309.5ms | Allocations: 6208)
+Completed 200 OK in 365ms (Views: 316.5ms | ActiveRecord: 1.6ms | Allocations: 11699)
+
+
+Started GET "/confirmation/img/gallery/r1.jpg" for ::1 at 2021-07-25 10:05:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/confirmation/img/gallery/r1.jpg"):
+  
+Started GET "/confirmation/img/gallery/r2.jpg" for ::1 at 2021-07-25 10:05:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/confirmation/img/gallery/r2.jpg"):
+  
+Started GET "/confirmation/img/gallery/r3.jpg" for ::1 at 2021-07-25 10:05:31 +0100
+Started GET "/confirmation/img/gallery/r8.jpg" for ::1 at 2021-07-25 10:05:31 +0100
+Started GET "/confirmation/img/gallery/r7.jpg" for ::1 at 2021-07-25 10:05:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/confirmation/img/gallery/r8.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/confirmation/img/gallery/r3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/confirmation/img/gallery/r7.jpg"):
+  
+Started GET "/confirmation/img/gallery/r5.jpg" for ::1 at 2021-07-25 10:05:32 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/confirmation/img/gallery/r5.jpg"):
+  
+Started GET "/users/10" for ::1 at 2021-07-25 10:05:36 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (12.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  Rendered users/_merchant_form.html.erb (Duration: 95.7ms | Allocations: 6018)
+  Rendered users/show.html.erb within layouts/application (Duration: 141.0ms | Allocations: 10466)
+  Rendered layout layouts/application.html.erb (Duration: 156.6ms | Allocations: 10535)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 13.4ms | Allocations: 12788)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `form' for #<ActionView::Base:0x0000000007ba70>
+Did you mean?  for
+               fork):
+    44: 
+    45:                             <div class="col-md-12 form-group">
+    46:                                 <%= f.label :price, "Product Category" %>
+    47:                                 <%= form.collection_select :category_id, Category.all, :id, :name, {prompt: "Select Category"}, class: 'form-control', required: true %>
+    48: 							</div>
+    49: 
+    50: 							<div class="col-md-12 form-group">
+  
+app/views/users/_merchant_form.html.erb:47
+app/views/users/_merchant_form.html.erb:9
+app/views/users/show.html.erb:187
+Started GET "/users/img/gallery/r2.jpg" for ::1 at 2021-07-25 10:05:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r2.jpg"):
+  
+Started GET "/users/img/gallery/r1.jpg" for ::1 at 2021-07-25 10:05:37 +0100
+Started GET "/users/img/gallery/r3.jpg" for ::1 at 2021-07-25 10:05:37 +0100
+Started GET "/users/img/gallery/r8.jpg" for ::1 at 2021-07-25 10:05:37 +0100
+Started GET "/users/img/gallery/r7.jpg" for ::1 at 2021-07-25 10:05:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r7.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r8.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r1.jpg"):
+  
+Started GET "/users/img/gallery/r5.jpg" for ::1 at 2021-07-25 10:05:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r5.jpg"):
+  
+Started GET "/users/10" for ::1 at 2021-07-25 10:05:53 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/users/_merchant_form.html.erb:47
+  Rendered users/_merchant_form.html.erb (Duration: 37.2ms | Allocations: 7372)
+  Rendered users/show.html.erb within layouts/application (Duration: 56.1ms | Allocations: 9949)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.6ms | Allocations: 1699)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 85.0ms | Allocations: 16396)
+Completed 200 OK in 116ms (Views: 103.5ms | ActiveRecord: 2.8ms | Allocations: 18802)
+
+
+Started GET "/users/img/gallery/r2.jpg" for ::1 at 2021-07-25 10:05:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r2.jpg"):
+  
+Started GET "/users/img/gallery/r3.jpg" for ::1 at 2021-07-25 10:05:53 +0100
+Started GET "/users/img/gallery/r5.jpg" for ::1 at 2021-07-25 10:05:53 +0100
+Started GET "/users/img/gallery/r7.jpg" for ::1 at 2021-07-25 10:05:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r7.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r3.jpg"):
+  
+Started GET "/users/img/gallery/r1.jpg" for ::1 at 2021-07-25 10:05:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r1.jpg"):
+  
+Started GET "/users/img/gallery/r8.jpg" for ::1 at 2021-07-25 10:05:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r8.jpg"):
+  
