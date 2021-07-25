@@ -66773,3 +66773,345 @@ Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 14:43:28 +0100
   
 ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
   
+Started GET "/" for ::1 at 2021-07-25 14:46:29 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (4.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mCategory Load (3.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:67
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:69
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:72
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/products/index.html.erb:72
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:67
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:69
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/products/index.html.erb:72
+  Rendered products/index.html.erb within layouts/application (Duration: 83.9ms | Allocations: 11208)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.6ms | Allocations: 1691)
+  Rendered layouts/_footer.html.erb (Duration: 2.3ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 168.3ms | Allocations: 17772)
+Completed 200 OK in 212ms (Views: 191.9ms | ActiveRecord: 11.1ms | Allocations: 19107)
+
+
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 14:46:30 +0100
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 14:46:30 +0100
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 14:46:30 +0100
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 14:46:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 14:46:30 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 14:46:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/users/10" for ::1 at 2021-07-25 14:46:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/users/_merchant_form.html.erb:47
+  Rendered users/_merchant_form.html.erb (Duration: 12.9ms | Allocations: 2202)
+  Rendered users/show.html.erb within layouts/application (Duration: 47.3ms | Allocations: 7990)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 8.2ms | Allocations: 1379)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 13398)
+Completed 200 OK in 95ms (Views: 84.9ms | ActiveRecord: 6.6ms | Allocations: 15665)
+
+
+Started GET "/users/img/gallery/r2.jpg" for ::1 at 2021-07-25 14:46:39 +0100
+Started GET "/users/img/gallery/r5.jpg" for ::1 at 2021-07-25 14:46:39 +0100
+Started GET "/users/img/gallery/r7.jpg" for ::1 at 2021-07-25 14:46:39 +0100
+Started GET "/users/img/gallery/r3.jpg" for ::1 at 2021-07-25 14:46:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r7.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r3.jpg"):
+  
+Started GET "/users/img/gallery/r1.jpg" for ::1 at 2021-07-25 14:46:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r1.jpg"):
+  
+Started GET "/users/img/gallery/r8.jpg" for ::1 at 2021-07-25 14:46:40 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r8.jpg"):
+  
+Started POST "/products" for ::1 at 2021-07-25 14:47:44 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Lace for men", "size"=>"Large", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fed3dd89320 @tempfile=#<Tempfile:/var/folders/q7/6zrtg0md0qd7rt0038fsngyc0000gn/T/RackMultipart20210725-7854-3bi92v.jpeg>, @original_filename="men-lace.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"product[image]\"; filename=\"men-lace.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Wonderful lace attire. You are going to love this piece.", "num_available"=>"4", "price"=>"12000", "category_id"=>"1"}, "commit"=>"Add Product"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("name", "merchant_id", "size", "image_data", "description", "num_available", "created_at", "updated_at", "price", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lace for men"], ["merchant_id", 10], ["size", "Large"], ["image_data", "{\"id\":\"dbd69d1eb3ac6b6d6895b94b86c48889.jpg\",\"storage\":\"cache\",\"metadata\":{\"filename\":\"men-lace.jpeg\",\"size\":39638,\"mime_type\":\"image/jpeg\",\"width\":425,\"height\":640}}"], ["description", "Wonderful lace attire. You are going to love this piece."], ["num_available", 4], ["created_at", "2021-07-25 13:47:46.312928"], ["updated_at", "2021-07-25 13:47:46.312928"], ["price", 12000.0], ["category_id", 1]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mProduct Update (0.5ms)[0m  [1m[33mUPDATE "products" SET "image_data" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["image_data", "{\"id\":\"d47281916c027e07c30d8a2246129f5e.jpg\",\"storage\":\"store\",\"metadata\":{\"filename\":\"men-lace.jpeg\",\"size\":39638,\"mime_type\":\"image/jpeg\",\"width\":425,\"height\":640}}"], ["updated_at", "2021-07-25 13:47:47.930317"], ["id", 3]]
+  ↳ app/controllers/products_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:14:in `create'
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 3499ms (ActiveRecord: 15.4ms | Allocations: 19262)
+
+
+Started GET "/users/10" for ::1 at 2021-07-25 14:47:47 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/users/_merchant_form.html.erb:47
+  Rendered users/_merchant_form.html.erb (Duration: 51.4ms | Allocations: 1632)
+  Rendered users/show.html.erb within layouts/application (Duration: 88.9ms | Allocations: 8245)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 26.3ms | Allocations: 1495)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 212.6ms | Allocations: 13811)
+Completed 200 OK in 256ms (Views: 213.7ms | ActiveRecord: 2.7ms | Allocations: 15360)
+
+
+Started GET "/users/img/gallery/r1.jpg" for ::1 at 2021-07-25 14:47:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r1.jpg"):
+  
+Started GET "/users/img/gallery/r2.jpg" for ::1 at 2021-07-25 14:47:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r2.jpg"):
+  
+Started GET "/users/img/gallery/r3.jpg" for ::1 at 2021-07-25 14:47:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r3.jpg"):
+  
+Started GET "/users/img/gallery/r7.jpg" for ::1 at 2021-07-25 14:47:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r7.jpg"):
+  
+Started GET "/users/img/gallery/r5.jpg" for ::1 at 2021-07-25 14:47:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r5.jpg"):
+  
+Started GET "/users/img/gallery/r8.jpg" for ::1 at 2021-07-25 14:47:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r8.jpg"):
+  
+Started GET "/" for ::1 at 2021-07-25 14:47:54 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:67
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:69
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:72
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/products/index.html.erb:72
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:67
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:69
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/products/index.html.erb:72
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:67
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:69
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/products/index.html.erb:72
+  Rendered products/index.html.erb within layouts/application (Duration: 361.1ms | Allocations: 13747)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 12.6ms | Allocations: 1354)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 400.3ms | Allocations: 19192)
+Completed 200 OK in 408ms (Views: 400.2ms | ActiveRecord: 4.4ms | Allocations: 19667)
+
+
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 14:47:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 14:47:54 +0100
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 14:47:54 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 14:47:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 14:47:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 14:47:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+Started DELETE "/products/3" for ::1 at 2021-07-25 14:48:02 +0100
+Processing by ProductsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mProduct Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:57:in `destroy'
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:58:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mOrderDetail Load (0.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."product_id" = ?[0m  [["product_id", 3]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:59:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 1243ms (ActiveRecord: 3.5ms | Allocations: 11304)
+
+
+Started GET "/" for ::1 at 2021-07-25 14:48:04 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:67
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:69
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:72
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/products/index.html.erb:72
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:67
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:69
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "products"."id" FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/products/index.html.erb:72
+  Rendered products/index.html.erb within layouts/application (Duration: 48.9ms | Allocations: 10729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 5.9ms | Allocations: 1354)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 76.3ms | Allocations: 16165)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 2.5ms | Allocations: 16642)
+
+
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 14:48:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 14:48:04 +0100
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 14:48:04 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 14:48:04 +0100
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 14:48:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 14:48:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  

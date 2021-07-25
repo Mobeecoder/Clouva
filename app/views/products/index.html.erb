@@ -19,7 +19,20 @@
           </div>
 
         </div>
+
         <div class="col-xl-9 col-lg-8 col-md-7">
+
+          <% if flash[:alert] %>
+              <div class="alert alert-danger mt-0">
+                <%= flash[:alert] %>
+            </div>
+          <% end %>
+
+          <% if flash[:notice] %>
+						<div class="alert alert-success mt-0">
+							<%= flash[:notice] %>
+						</div>
+          <% end %>
           <!-- Start Filter Bar -->
           <div class="filter-bar d-flex flex-wrap align-items-center">
 
