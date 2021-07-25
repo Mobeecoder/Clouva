@@ -1,7 +1,26 @@
 <!-- ================ category section start ================= -->		  
   <section class="section-margin--small mb-5">
     <div class="container">
+
+      <div class="card p-3 mb-3">
+          <div class="row">
+            <div class="col-12 col-lg-4 col-md-5">
+              <img class="img-fluid" src="https://res.cloudinary.com/moaminu/image/upload/v1627223193/Clouva/undraw_web_shopping_dd4l_rherhd.svg" alt="">
+            </div>
+
+            <div class="col-12 col-lg-8 col-md-5 text-center my-auto">
+              <h1 style="color: #32142D">Shop From Elegant And Affordable Fashion Designers On Clouva!</h1>              
+
+              <% unless current_user %>
+                <%=  link_to 'CREATE FREE ACCOUNT', new_user_session_path, class: 'btn btn-lg text-white', style: 'background-color: #32142D' %>
+              <% end %>
+
+            </div>
+          </div>          
+      </div>
+
       <div class="row">
+
         <div class="col-xl-3 col-lg-4 col-md-5">
           <div class="sidebar-categories">
             <div class="head">Browse Categories</div>
