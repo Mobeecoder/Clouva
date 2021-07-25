@@ -55,7 +55,13 @@
                     <h4 class="card-product__title"><%= link_to(product.name, product) %>
                     <p><%= product.merchant.email.split('@')[0] %></p>
                     <p class="card-product__price">&#8358;<%= product.price %></p>
+
+                    <% if current_user && (current_user.merchant && current_user.products.pluck('id').include?(product.id)) %>
+                      <br>
+                      <%= link_to 'Delete', product, class: 'btn btn-danger text-white', method: :delete %>
+                    <% end %>
                   </div>
+
                 </div>
               </div>
               <% end %>
