@@ -9,6 +9,7 @@ class Product < ApplicationRecord
     validates :price, presence: true
 
     belongs_to :merchant, class_name: 'User'
+    belongs_to :category
 
     has_many :order_details, dependent: :destroy
     has_many :orders, through: :order_details
