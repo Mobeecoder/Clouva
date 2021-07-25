@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   post 'users/:id', to: 'products#create'
+  delete '/products/:id', to: 'products#destroy'
 
   # This is the mapping for the "quickstart" routes
   # devise_for :admin,

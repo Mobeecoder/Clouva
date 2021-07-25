@@ -54,6 +54,14 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    if Product.exists?(id: params[:id])
+      product = Product.find(params[:id])
+      product.destroy
+      redirect_to root_path, notice: "You Successfully Deleted the product: #{product.name.capitalize}."
+    else
+      redirect_to root_path, alert: "The Product You Tried To Delete Doesn't Exist."
+    end
+
   end
 
   private
