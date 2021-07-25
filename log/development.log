@@ -63138,3 +63138,758 @@ Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 11:59:28 +0100
   
 ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
   
+Started GET "/" for ::1 at 2021-07-25 12:26:46 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210725110841_add_price_to_products.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:65:in `execute_if_updated'
+activerecord (6.1.4) lib/active_record/migration.rb:597:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 12:26:47 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 12:26:47 +0100
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 12:26:47 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 12:26:47 +0100
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 12:26:47 +0100
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210725110841_add_price_to_products.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210725110841_add_price_to_products.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210725110841_add_price_to_products.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210725110841_add_price_to_products.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210725110841_add_price_to_products.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 12:26:48 +0100
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20210725110841_add_price_to_products.rb
+
+
+):
+  
+activerecord (6.1.4) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.4) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.4) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.4) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.2) lib/mini_profiler/profiler.rb:384:in `call'
+webpacker (5.4.0) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.1.4) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPriceToProducts (20210725110841)
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "products" ADD "price" float[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPriceToProducts (20210725110841)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210725110841"]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-07-25 12:27:43 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:41
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  Rendered products/index.html.erb within layouts/application (Duration: 494.9ms | Allocations: 28060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 121.1ms | Allocations: 2518)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 665.6ms | Allocations: 35361)
+Completed 200 OK in 730ms (Views: 685.7ms | ActiveRecord: 16.3ms | Allocations: 39504)
+
+
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 12:27:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 12:27:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 12:27:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 12:27:45 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 12:27:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 12:27:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/" for ::1 at 2021-07-25 12:27:47 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:41
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  Rendered products/index.html.erb within layouts/application (Duration: 276.8ms | Allocations: 13471)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.1ms | Allocations: 1480)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 312.0ms | Allocations: 19040)
+Completed 200 OK in 319ms (Views: 315.7ms | ActiveRecord: 2.9ms | Allocations: 19509)
+
+
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 12:27:47 +0100
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 12:27:47 +0100
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 12:27:47 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 12:27:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 12:27:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 12:27:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/users/sign_in" for ::1 at 2021-07-25 12:27:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.0ms | Allocations: 722)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 179.6ms | Allocations: 3187)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 71.2ms | Allocations: 1494)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 398.4ms | Allocations: 8842)
+Completed 200 OK in 426ms (Views: 413.7ms | ActiveRecord: 0.7ms | Allocations: 10919)
+
+
+Started GET "/users/img/gallery/r2.jpg" for ::1 at 2021-07-25 12:27:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r2.jpg"):
+  
+Started GET "/users/img/gallery/r8.jpg" for ::1 at 2021-07-25 12:27:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r8.jpg"):
+  
+Started GET "/users/img/gallery/r3.jpg" for ::1 at 2021-07-25 12:27:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r3.jpg"):
+  
+Started GET "/users/img/gallery/r1.jpg" for ::1 at 2021-07-25 12:27:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r1.jpg"):
+  
+Started GET "/users/img/gallery/r7.jpg" for ::1 at 2021-07-25 12:27:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r7.jpg"):
+  
+Started GET "/users/img/gallery/r5.jpg" for ::1 at 2021-07-25 12:27:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r5.jpg"):
+  
+Started POST "/users/sign_in" for ::1 at 2021-07-25 12:27:55 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 456ms (ActiveRecord: 0.7ms | Allocations: 5829)
+
+
+Started GET "/" for ::1 at 2021-07-25 12:27:56 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 1]]
+  ↳ app/views/products/index.html.erb:12
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 2]]
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[35m (78.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."category_id" = ?[0m  [["category_id", 3]]
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:41
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:54
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:56
+  Rendered products/index.html.erb within layouts/application (Duration: 528.3ms | Allocations: 13466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 82.3ms | Allocations: 2327)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 643.3ms | Allocations: 19896)
+Completed 200 OK in 648ms (Views: 560.4ms | ActiveRecord: 83.4ms | Allocations: 20373)
+
+
+Started GET "/img/gallery/r1.jpg" for ::1 at 2021-07-25 12:27:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r1.jpg"):
+  
+Started GET "/img/gallery/r2.jpg" for ::1 at 2021-07-25 12:27:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r2.jpg"):
+  
+Started GET "/img/gallery/r8.jpg" for ::1 at 2021-07-25 12:27:57 +0100
+Started GET "/img/gallery/r3.jpg" for ::1 at 2021-07-25 12:27:57 +0100
+Started GET "/img/gallery/r7.jpg" for ::1 at 2021-07-25 12:27:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r7.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r3.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r8.jpg"):
+  
+Started GET "/img/gallery/r5.jpg" for ::1 at 2021-07-25 12:27:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/img/gallery/r5.jpg"):
+  
+Started GET "/users/10" for ::1 at 2021-07-25 12:28:01 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."merchant_id" = ?[0m  [["merchant_id", 10]]
+  ↳ app/views/users/show.html.erb:123
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 10]]
+  ↳ app/views/users/show.html.erb:125
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/users/_merchant_form.html.erb:47
+  Rendered users/_merchant_form.html.erb (Duration: 27.6ms | Allocations: 2673)
+  Rendered users/show.html.erb within layouts/application (Duration: 204.0ms | Allocations: 9691)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 7.8ms | Allocations: 1379)
+  Rendered layouts/_footer.html.erb (Duration: 2.7ms | Allocations: 38)
+  Rendered layout layouts/application.html.erb (Duration: 236.3ms | Allocations: 15099)
+Completed 200 OK in 269ms (Views: 249.1ms | ActiveRecord: 5.4ms | Allocations: 17368)
+
+
+Started GET "/users/img/gallery/r2.jpg" for ::1 at 2021-07-25 12:28:02 +0100
+Started GET "/users/img/gallery/r3.jpg" for ::1 at 2021-07-25 12:28:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r3.jpg"):
+  
+Started GET "/users/img/gallery/r5.jpg" for ::1 at 2021-07-25 12:28:02 +0100
+Started GET "/users/img/gallery/r7.jpg" for ::1 at 2021-07-25 12:28:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r2.jpg"):
+  
+Started GET "/users/img/gallery/r1.jpg" for ::1 at 2021-07-25 12:28:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r5.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r7.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r1.jpg"):
+  
+Started GET "/users/img/gallery/r8.jpg" for ::1 at 2021-07-25 12:28:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users/img/gallery/r8.jpg"):
+  
