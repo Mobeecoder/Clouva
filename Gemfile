@@ -25,11 +25,11 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem :development do
+group :development do
   gem 'sqlite3', '~> 1.4'
 end
 
-gem :production do
+group :production do
   gem 'pg'
 end
 
