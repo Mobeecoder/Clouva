@@ -3,9 +3,9 @@
     <div class="container">
 
       <% if !current_user.orders.pluck('ref_number').include?(@order.ref_number) %>
-        div class="alert alert-info d-flex">
+        <div class="alert alert-danger d-flex">
            <h3 class="text-danger">You Do Not Have Access To This Order</h3>
-           <%= link_to 'Continue Shopping', root_path, class: 'btn btn-info ml-auto' %>
+           <%= link_to 'Continue Shopping', root_path, class: 'btn btn-danger ml-auto' %>
         </div>
       <% elsif @order.nil? %>
         <div class="alert alert-info d-flex">

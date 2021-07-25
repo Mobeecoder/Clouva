@@ -60592,3 +60592,209 @@ ActionView::Template::Error (undefined method `orders' for nil:NilClass):
     8:            <%= link_to 'Continue Shopping', root_path, class: 'btn btn-info ml-auto' %>
   
 app/views/orders/show.html.erb:5
+Started GET "/confirmation/636587" for ::1 at 2021-07-25 09:24:42 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"636587"}
+Completed 401 Unauthorized in 6ms (Allocations: 917)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-25 09:24:42 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 544)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 48.5ms | Allocations: 4676)
+  Rendered layout layouts/application.html.erb (Duration: 111.6ms | Allocations: 10719)
+Completed 200 OK in 149ms (Views: 118.6ms | ActiveRecord: 6.3ms | Allocations: 17301)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-07-25 09:24:59 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"mobello@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "mobello@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/confirmation/636587
+Completed 302 Found in 283ms (ActiveRecord: 2.0ms | Allocations: 3593)
+
+
+Started GET "/confirmation/636587" for ::1 at 2021-07-25 09:24:59 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"636587"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 636587], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "orders"."ref_number" FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 9]]
+  ↳ app/views/orders/show.html.erb:5
+  [1m[36mOrderDetail Load (1.2ms)[0m  [1m[34mSELECT "order_details".* FROM "order_details" WHERE "order_details"."order_id" = ?[0m  [["order_id", 2]]
+  ↳ app/models/order.rb:26:in `reduce'
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/order.rb:26:in `block in total'
+  Rendered orders/show.html.erb within layouts/application (Duration: 81.8ms | Allocations: 11979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 10.3ms | Allocations: 1411)
+  Rendered layout layouts/application.html.erb (Duration: 116.6ms | Allocations: 17342)
+Completed 200 OK in 165ms (Views: 115.9ms | ActiveRecord: 4.1ms | Allocations: 27111)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-07-25 09:25:12 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.3ms | Allocations: 1998)
+
+
+Started GET "/" for ::1 at 2021-07-25 09:25:12 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 96.3ms | Allocations: 5909)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 15.6ms | Allocations: 1503)
+  Rendered layout layouts/application.html.erb (Duration: 131.7ms | Allocations: 11360)
+Completed 200 OK in 136ms (Views: 131.5ms | ActiveRecord: 3.0ms | Allocations: 12559)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-07-25 09:25:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.0ms | Allocations: 1461)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 6117)
+Completed 200 OK in 145ms (Views: 143.4ms | ActiveRecord: 0.3ms | Allocations: 7369)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-07-25 09:25:21 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"fuad@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "fuad@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 279ms (ActiveRecord: 0.2ms | Allocations: 2380)
+
+
+Started GET "/" for ::1 at 2021-07-25 09:25:22 +0100
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:100
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:116
+  Rendered products/index.html.erb within layouts/application (Duration: 21.1ms | Allocations: 4604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/layouts/_navigation.html.erb:26
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 11.4ms | Allocations: 2238)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 10836)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 2.1ms | Allocations: 11311)
+
+
+Started GET "/confirmation/636587" for ::1 at 2021-07-25 09:25:40 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"636587"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 636587], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "orders"."ref_number" FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/orders/show.html.erb:5
+  Rendered orders/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 862)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 9.8ms | Allocations: 1351)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 6183)
+Completed 200 OK in 62ms (Views: 46.7ms | ActiveRecord: 5.7ms | Allocations: 8278)
+
+
+Started GET "/confirmation/636587" for ::1 at 2021-07-25 09:26:15 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"636587"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 636587], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "orders"."ref_number" FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/orders/show.html.erb:5
+  Rendered orders/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1391)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.5ms | Allocations: 1694)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 7549)
+Completed 200 OK in 57ms (Views: 47.3ms | ActiveRecord: 0.9ms | Allocations: 10507)
+
+
+Started GET "/confirmation/636587" for ::1 at 2021-07-25 09:26:29 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"636587"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 636587], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "orders"."ref_number" FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/orders/show.html.erb:5
+  Rendered orders/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.2ms | Allocations: 1694)
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 7545)
+Completed 200 OK in 70ms (Views: 57.3ms | ActiveRecord: 2.5ms | Allocations: 10498)
+
+
+Started GET "/confirmation/636587" for ::1 at 2021-07-25 09:26:44 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"ref"=>"636587"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."ref_number" = ? LIMIT ?[0m  [["ref_number", 636587], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:26:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "orders"."ref_number" FROM "orders" WHERE "orders"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/views/orders/show.html.erb:5
+  Rendered orders/show.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "products" WHERE "products"."id" IS NULL[0m
+  ↳ app/views/layouts/_navigation.html.erb:30
+  Rendered layouts/_navigation.html.erb (Duration: 6.5ms | Allocations: 1694)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 7545)
+Completed 200 OK in 59ms (Views: 46.3ms | ActiveRecord: 1.9ms | Allocations: 10498)
+
+
