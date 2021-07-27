@@ -46,7 +46,12 @@ class ProductsController < ApplicationController
   end
 
   def cart
-    
+  end
+
+  def clear_cart
+    session[:cart] = nil
+    flash[:notice] = 'Cart Successfully Cleared'
+    redirect_to root_path
   end
 
   def update_quantity

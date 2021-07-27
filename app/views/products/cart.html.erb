@@ -76,7 +76,8 @@
                               <td>
                                   <div class="checkout_btn_inner d-flex align-items-center">                                      
                                       <%= link_to 'Continue Shopping', root_path, class: 'gray_btn' %>
-                                      <%= link_to 'Proceed to checkout', checkout_path, class: 'primary-btn ml-2' %>                                      
+                                      <%= link_to 'Proceed to checkout', checkout_path, class: 'primary-btn ml-2' %>    
+                                      <%= link_to 'Clear Cart', '/products/clear_cart', method: :delete, class: 'primary-btn ml-2', style: 'background-color: darkred' %>                                  
                                   </div>
                               </td>
                           </tr>

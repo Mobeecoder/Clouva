@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :orders, except: %i[new show]
 
   post '/products/add_cart', to: 'products#add_to_cart'
+  delete '/products/clear_cart', to: 'products#clear_cart'
   get '/cart', to: 'products#cart'
   post '/update_quantity', to: 'products#update_quantity'
   get '/checkout', to: 'orders#new'
