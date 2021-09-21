@@ -1,0 +1,108 @@
+  <!--================Checkout Area =================-->
+  <section class="checkout_area section-margin--small">
+    <div class="container">
+        <% if session[:cart].nil? %>
+          <div class="alert alert-info d-flex">
+            <h3 class="text-info">NO ITEM IN CART</h3>
+            <%= link_to 'Continue Shopping', root_path, class: 'btn btn-info ml-auto' %>
+          </div>
+        <% else %>
+        <% if flash[:alert] %>
+            <div class="alert alert-danger mt-0">
+                <ul>
+                    <% for error in flash[:alert] %>
+                        <li>* <%= error %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+        
+        <div class="billing_details">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Delivery Details</h3>
+
+                <%= form_with(model: @order, class: 'row contact_form', 'novalidate': 'novalidate') do |f| %>
+
+                        <div class="col-md-6 form-group p_star">
+                            <%= f.label :first_name, "First Name" %>
+                            <%= f.text_field :first_name, class: "form-control", 'required': 'required' %>                       
+                        </div>
+
+                        <div class="col-md-6 form-group p_star"> 
+                            <%= f.label :last_name, "Last Name" %>
+                            <%= f.text_field :last_name, class: "form-control", 'required': 'required' %>                          
+                        </div>
+
+                        <div class="col-md-6 form-group p_star">
+                            <%= f.label :phone, "Phone No." %>
+                            <%= f.text_field :phone, class: "form-control", 'required': 'required' %> 
+                        </div>
+
+                        <div class="col-md-6 form-group p_star">                            
+                            <%= f.label :email, "Email" %>
+                            <%= f.text_field :email, class: "form-control", value: current_user.email, 'required': 'required' %> 
+                        </div>
+
+                        <div class="col-md-12 form-group p_star">
+                            <%= f.label :address, "Address" %>
+                            <%= f.text_field :address, class: "form-control", 'required': 'required' %> 
+                        </div>
+
+                        <div class="col-md-12 form-group p_star">
+                            <%= f.label :lga, "Local Government Area" %>
+                            <%= f.text_field :lga, class: "form-control", 'required': 'required' %> 
+                        </div>
+
+                        <div class="col-md-12 form-group p_star">
+                            <%= f.label :state, "State" %>                            
+                            <select id="state" name="order[state]" class="country_select" required>
+                                <option value="Lagos">Lagos</option>                             
+                            </select>
+                        </div>
+                                               
+                </div>
+                <div class="col-lg-4">
+                    <div class="order_box">
+                        <h2>Your Order</h2>
+                        <ul class="list">
+                            <li><a href="#"><h4>Product <span>Total</span></h4></a></li>
+
+                            <% for item in cart_details %>
+                            <li>
+                                <a href="#">
+                                    <%= item.name %> 
+                                    <span class="middle">x <%= session[:cart][item.id.to_s] %></span> 
+                                    <span class="last">&#8358;<%= item.price * session[:cart][item.id.to_s].to_i %></span>
+                                </a>
+                            </li>
+                            <% end %>
+                            
+                        </ul>
+                        <ul class="list list_2">
+                            <li><a href="#">Subtotal <span>&#8358;<%= cart_total %></span></a></li>
+                            <li><a href="#">Delivery <span>Flat rate: &#8358;2000.0</span></a></li>
+                            <li><a href="#">Total <span>&#8358;<%= cart_total + 2000 %></span></a></li>
+                        </ul>
+                        
+                        <div class="creat_account">
+                            <input type="checkbox" id="f-option4" name="selector">
+                            <label for="f-option4">I’ve read and accept the </label>
+                            <a href="#">terms & conditions*</a>
+                        </div>
+
+                        <div class="text-center">                          
+                          <%= f.submit 'Checkout', class: 'button button-paypal' %>
+                        </div>
+                    </div>
+                </div>
+
+                <% end %>
+
+            </div>
+        </div>
+
+        <% end %>
+    </div>
+  </section>
+  <!--================End Checkout Area =================-->

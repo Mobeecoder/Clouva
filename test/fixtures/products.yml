@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_available: 
+  name: MyString
+  merchant_id: 
+  size: MyString
+  image: MyText
+  description: MyText
+
+two:
+  num_available: 
+  name: MyString
+  merchant_id: 
+  size: MyString
+  image: MyText
+  description: MyText

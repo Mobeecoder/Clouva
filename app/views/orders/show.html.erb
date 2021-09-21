@@ -1,0 +1,133 @@
+<!--================Order Details Area =================-->
+  <section class="order_details section-margin--small">
+    <div class="container">
+
+      <% if !@order.nil? && !current_user.orders.pluck('ref_number').include?(@order.ref_number) %>
+        <div class="alert alert-danger d-flex">
+           <h3 class="text-danger">You Do Not Have Access To This Order</h3>
+           <%= link_to 'Continue Shopping', root_path, class: 'btn btn-danger ml-auto' %>
+        </div>
+      <% elsif @order.nil? %>
+        <div class="alert alert-info d-flex">
+           <h3 class="text-info">There's no such Order</h3>
+           <%= link_to 'Continue Shopping', root_path, class: 'btn btn-info ml-auto' %>
+        </div>
+      <% else %>
+      <h4 class="text-center alert alert alert-success">Thank you. Your order has been received.</h4>
+      <div class="row mb-5">
+        <div class="col-md-6 col-xl-6 mb-4 mb-xl-0">
+          <div class="confirmation-card">
+            <h3 class="billing-title">Order Info</h3>
+            <table class="order-rable">
+              <tr>
+                <td>Order number</td>
+                <td>: <%= @order.ref_number %></td>
+              </tr>
+              <tr>
+                <td>Date</td>
+                <td>: <%= @order.created_at.strftime("%^b %d, %Y") %></td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>: &#8358; <%= @order.total + 2000 %></td>
+              </tr>
+              <tr>
+                <td>Payment method</td>
+                <td>: Pay On Delivery</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-6 mb-4 mb-xl-0">
+          <div class="confirmation-card">
+            <h3 class="billing-title">Delivery Address</h3>
+            <table class="order-rable">
+              <tr>
+                <td>Street</td>
+                <td>: <%= @order.address %></td>
+              </tr>
+              <tr>
+                <td>LGA</td>
+                <td>: <%= @order.lga %></td>
+              </tr>
+              <tr>
+                <td>State</td>
+                <td>: <%= @order.state %></td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>: <%= @order.phone %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="order_details_table">
+        <h2>Order Details</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for item in @order.order_details %>
+                  <tr>
+                <td>
+                  <p><%= item.product.name %></p>
+                </td>
+                <td>
+                  <h5>x <%= item.quantity %></h5>
+                </td>
+                <td>
+                  <p>&#8358;<%= item.product.price * item.quantity %></p>
+                </td>
+              </tr>
+              <% end %>
+              
+              <tr>
+                <td>
+                  <h4>Subtotal</h4>
+                </td>
+                <td>
+                  <h5></h5>
+                </td>
+                <td>
+                  <p>&#8358;<%= @order.total %></p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Delivery</h4>
+                </td>
+                <td>
+                  <h5></h5>
+                </td>
+                <td>
+                  <p>Flat rate: &#8358;2000.00</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h4>Total</h4>
+                </td>
+                <td>
+                  <h5></h5>
+                </td>
+                <td>
+                  <h4>&#8358;<%= @order.total + 2000 %></h4>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+  </section>
+  <!--================End Order Details Area =================-->

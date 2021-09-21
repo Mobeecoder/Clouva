@@ -1,0 +1,47 @@
+	<header class="header_area">
+
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container-fluid">
+          <a style="width:10%" class="navbar-brand logo_h" href="/"><%= image_tag('cover.png', width: '100%', height: '80px') %></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
+              <li class="nav-item active"><a class="nav-link font-weight-bold"  href="/">Home</a></li>
+              <li class="nav-item">
+                <a href="/" class="nav-link font-weight-bold" role="button">Shop</a>
+              </li>
+              
+              <li class="nav-item"><a class="nav-link font-weight-bold" href="contact.html">Contact</a></li>
+            </ul>
+
+            <ul class="nav-shop" style="width: 520px">
+              <li class="nav-item"><button><i class="ti-search"></i></button></li>
+                <li class="nav-item">
+                    <%= link_to current_user, class: 'icons' do %>
+                      <i class="ti-user" aria-hidden="true"></i>
+                    <% end %>
+                </li>
+              <li class="nav-item"><button><a href="/cart"><i class="ti-shopping-cart"></i></a><span class="nav-shop__circle"><%= cart_details.count %></span></button> </li>
+
+                <% if user_signed_in? %>
+                  <li class="nav-item font-weight-bold ml-5">
+                    <%= current_user.email.split('@')[0][0...8].upcase %> <span class="text-muted"><%= '| merchant' if current_user.merchant %></span>
+                  </li>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-light ml-2' %></li>
+                <% else %>
+                  <li class="nav-item font-weight-bold"><%= link_to 'Login', new_user_session_path, class: 'btn btn-light ml-5' %></li>              
+                  <li class="nav-item font-weight-bold"><%= link_to 'Register', new_user_registration_path, class: 'btn btn-light m-0' %></li>
+                <% end %>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>

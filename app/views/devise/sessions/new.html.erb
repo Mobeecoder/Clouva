@@ -1,0 +1,47 @@
+  <!--================Login Box Area =================-->
+	<section class="login_box_area section-margin">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="login_box_img">
+						<div class="hover">
+							<h4>New to our website?</h4>
+							<p>Sign up now to begin shopping from some of the most amazing and affordable designers you'll ever meet!</p>							
+              <%= link_to 'Create an Account', new_user_registration_path, class: 'button button-account'%>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="login_form_inner">
+						<h3>Log in to enter</h3>
+
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), id: 'contactForm', class: 'row login_form') do |f| %>
+							<div class="col-md-12 form-group">
+                <%= f.email_field :email, autofocus: true, class: 'form-control', autocomplete: "email", placeholder: 'Email' %>								
+							</div>
+							<div class="col-md-12 form-group">
+                <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control', placeholder: 'Password' %>					
+							</div>
+
+              <% if devise_mapping.rememberable? %>
+                <div class="col-md-12 form-group">
+								<div class="creat_account">
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me, "Keep me logged in" %>									
+								</div>
+							</div>
+              <% end %>
+
+							<div class="col-md-12 form-group">
+								<button type="submit" value="submit" class="button button-login w-100">Log In</button>
+								<a href="#">Forgot Password?</a>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Login Box Area =================-->
+
+<%= render "devise/shared/links" %>

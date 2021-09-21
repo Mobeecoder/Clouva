@@ -1,0 +1,144 @@
+  <!--================Cart Area =================-->
+  <section class="cart_area">
+      <div class="container">
+          <div class="cart_inner">
+              <div class="table-responsive">
+                <% if session[:cart].nil? %>
+                  <div class="alert alert-info d-flex">
+                    <h3 class="text-info">NO ITEM IN CART</h3>
+                    <%= link_to 'Continue Shopping', root_path, class: 'btn btn-info ml-auto' %>
+                 </div>
+                <% else %>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Product</th>
+                              <th scope="col">Price</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Total</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                            
+                            <% for item in cart_details %>
+                                <tr data-id="<%= item.id %>">
+                                    <td>
+                                        <div class="media">
+                                            <div class="d-flex">
+                                                <img width="50px" src="<%= item.image_url %>" alt="">
+                                            </div>
+                                            <div class="media-body">
+                                                <p><%= item.name %></p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5 id="item-price">&#8358;<span class="item-price"><%= item.price %></span></h5>
+                                    </td>
+                                    <td>
+                                        <div class="product_count">
+                                            <input type="number" name="qty" id="sst" min="1" value="<%= session[:cart][item.id.to_s] %>" title="Quantity:"
+                                                class="input-text qty">                                      
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <h5>&#8358;<span class="item-total"><%= item.price * session[:cart][item.id.to_s].to_i %></span>
+                                        </h5>
+                                    </td>
+                                </tr>
+                            <% end %>
+                          
+                          <tr>
+                              <td>
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  <h5>Total</h5>
+                              </td>
+                              <td>
+                                  <h5>&#8358;<span id="sub-total"><%= cart_total %></span></h5>
+                              </td>
+                          </tr>
+  
+                          <tr class="out_button_area">
+                              <td class="d-none-l">
+
+                              </td>
+                              <td class="">
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  <div class="checkout_btn_inner d-flex align-items-center">                                      
+                                      <%= link_to 'Continue Shopping', root_path, class: 'gray_btn' %>
+                                      <%= link_to 'Proceed to checkout', checkout_path, class: 'primary-btn ml-2' %>    
+                                      <%= link_to 'Clear Cart', '/products/clear_cart', method: :delete, class: 'primary-btn ml-2', style: 'background-color: darkred' %>                                  
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+
+                <% end %>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!--================End Cart Area =================-->
+
+  <script>
+    const qtyInput = document.querySelectorAll('.qty')
+
+    let subTotal = 0
+
+    const calcSubTotal = () => {
+        itemTotals = document.querySelectorAll('.item-total');
+
+        itemTotals.forEach(element => {
+            subTotal += parseInt(element.textContent)
+        });
+
+        document.querySelector('#sub-total').textContent = subTotal.toFixed(2)
+        subTotal = 0
+    }
+
+    const updateSessionQty = data => {
+        const token = document.querySelector('meta[name="csrf-token"]').content;
+
+        fetch("/update_quantity", {
+            method: 'POST',
+            headers:  {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "X-CSRF-Token": token,
+            },
+            body: JSON.stringify(data)
+        })
+    }
+
+    const calcItemPrices = function() {
+        let itemParent = this.closest('tr');
+        const productId = itemParent.getAttribute('data-id')
+        let price = itemParent.querySelector('.item-price').textContent;
+        let quantity = itemParent.querySelector('.qty').value
+
+        const data = {"id": productId, "qty": quantity}
+
+        updateSessionQty(data)
+
+        itemParent.querySelector('.item-total').textContent = (price * quantity).toFixed(2)
+
+        calcSubTotal()
+        
+    };
+
+    qtyInput.forEach(element => {
+      element.addEventListener('change', calcItemPrices, false);
+    });
+
+  </script>

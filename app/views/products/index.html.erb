@@ -1,0 +1,104 @@
+<!-- ================ category section start ================= -->		  
+  <section class="section-margin--small mb-5">
+    <div class="container">
+
+      <div class="card p-3 mb-3">
+          <div class="row">
+            <div class="col-6 col-lg-4 col-md-5 mx-auto">
+              <img class="img-fluid" src="https://res.cloudinary.com/moaminu/image/upload/v1627223193/Clouva/undraw_web_shopping_dd4l_rherhd.svg" alt="">
+            </div>
+
+            <div class="col-12 col-lg-8 col-md-7 text-center my-auto">
+              <h1 style="color: #32142D">Shop From Elegant And Affordable Fashion Designers On Clouva!</h1>              
+
+              <% unless current_user %>
+                <%=  link_to 'CREATE FREE ACCOUNT', new_user_session_path, class: 'btn btn-lg text-white', style: 'background-color: #32142D' %>
+              <% end %>
+
+            </div>
+          </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-xl-3 col-lg-4 col-md-5">
+          <div class="sidebar-categories">
+            <div class="head">Browse Categories</div>
+            <ul class="main-categories">
+              <li class="common-filter">
+                <form action="#">
+                  <ul>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="men" name="brand"><label for="men">Men<span> (<%= Category.find(1).products.count %>)</span></label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="women" name="brand"><label for="women">Women<span> (<%= Category.find(2).products.count %>)</span></label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="accessories" name="brand"><label for="accessories">Children<span> (<%= Category.find(3).products.count %>)</span></label></li>                    
+                  </ul>
+                </form>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="col-xl-9 col-lg-8 col-md-7">
+
+          <% if flash[:alert] %>
+              <div class="alert alert-danger mt-0">
+                <%= flash[:alert] %>
+            </div>
+          <% end %>
+
+          <% if flash[:notice] %>
+						<div class="alert alert-success mt-0">
+							<%= flash[:notice] %>
+						</div>
+          <% end %>
+          <!-- Start Filter Bar -->
+          <div class="filter-bar d-flex flex-wrap align-items-center">
+
+            <div class="ml-auto">
+              <div class="input-group filter-bar-search">
+                <input type="text" placeholder="Search">
+                <div class="input-group-append">
+                  <button type="button"><i class="ti-search"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Filter Bar -->
+
+                    <!-- Start Best Seller -->
+          <section class="lattest-product-area pb-40 category-list">
+            <div class="row">
+             
+             <%for product in @products%>
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">                    
+                    <%= image_tag product.image_url, class: 'card-img' %>
+
+                    <ul class="card-product__imgOverlay">
+                      <li><button><i class="ti-search"></i></button></li>
+                      <li><button><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <p><%= product.category.name %></p>
+                    <h4 class="card-product__title"><%= link_to(product.name, product) %>
+                    <p><%= product.merchant.email.split('@')[0] %></p>
+                    <p class="card-product__price">&#8358;<%= product.price %></p>
+
+                    <% if current_user && (current_user.merchant && current_user.products.pluck('id').include?(product.id)) %>
+                      <br>
+                      <%= link_to 'Delete', product, class: 'btn btn-danger text-white', method: :delete %>
+                    <% end %>
+                  </div>
+
+                </div>
+              </div>
+              <% end %>
+
+            </div>
+          </section>
+
+  </section>
